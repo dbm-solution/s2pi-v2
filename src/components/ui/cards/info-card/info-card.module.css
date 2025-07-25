@@ -1,0 +1,137 @@
+.infoCard {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+}
+
+.infoCard.interactive {
+  cursor: pointer;
+}
+
+.infoCard.interactive:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.infoCard.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.infoCard.loading {
+  pointer-events: none;
+}
+
+/* Variant-specific hover effects */
+.infoCard.primary:hover {
+  background-color: #1a3d63;
+}
+
+.infoCard.secondary:hover {
+  background-color: #3d5a8a;
+}
+
+.infoCard.success:hover {
+  background-color: #16a34a;
+}
+
+.infoCard.warning:hover {
+  background-color: #d97706;
+}
+
+.infoCard.danger:hover {
+  background-color: #dc2626;
+}
+
+.infoCard.info:hover {
+  background-color: #2563eb;
+}
+
+.infoCard.dark:hover {
+  background-color: #111827;
+}
+
+.infoCard.light:hover {
+  background-color: #f9fafb;
+}
+
+.infoCard.coral:hover {
+  background-color: #d35400;
+}
+
+.infoCard.teal:hover {
+  background-color: #0f766e;
+}
+
+.infoCard.purple:hover {
+  background-color: #7c3aed;
+}
+
+.infoCard.pink:hover {
+  background-color: #db2777;
+}
+
+/* Animation variants */
+.infoCard.hoverScale:hover {
+  transform: scale(1.02) translateY(-2px);
+}
+
+.infoCard.bounce:hover {
+  animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .infoCard.responsive {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Focus states for accessibility */
+.infoCard:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .infoCard {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .infoCard {
+    transition: none;
+  }
+
+  .infoCard:hover {
+    transform: none;
+  }
+}

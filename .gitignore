@@ -1,41 +1,321 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
+# ========================================
+# DEPENDENCIES
+# ========================================
+node_modules/
 /.pnp
-.pnp.*
+.pnp.js
+.yarn/install-state.gz
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
 
-# testing
+# ========================================
+# TESTING
+# ========================================
 /coverage
+.nyc_output
+*.lcov
+.jest/
 
-# next.js
+# ========================================
+# NEXT.JS
+# ========================================
 /.next/
 /out/
+.next/
+next-env.d.ts
 
-# production
+# ========================================
+# PRODUCTION
+# ========================================
 /build
+/dist
 
-# misc
-.DS_Store
-*.pem
+# ========================================
+# ENVIRONMENT VARIABLES
+# ========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
 
-# debug
+# ========================================
+# DEBUG LOGS
+# ========================================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+lerna-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# ========================================
+# RUNTIME DATA
+# ========================================
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# vercel
+# ========================================
+# COVERAGE DIRECTORY USED BY TOOLS LIKE ISTANBUL
+# ========================================
+coverage/
+*.lcov
+
+# ========================================
+# EDITOR DIRECTORIES AND FILES
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ========================================
+# OS GENERATED FILES
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========================================
+# LOGS
+# ========================================
+logs
+*.log
+
+# ========================================
+# RUNTIME DATA
+# ========================================
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ========================================
+# OPTIONAL NPM CACHE DIRECTORY
+# ========================================
+.npm
+
+# ========================================
+# OPTIONAL ESLINT CACHE
+# ========================================
+.eslintcache
+
+# ========================================
+# MICROBUNDLE CACHE
+# ========================================
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ========================================
+# OPTIONAL REPL HISTORY
+# ========================================
+.node_repl_history
+
+# ========================================
+# OUTPUT OF 'NPM PACK'
+# ========================================
+*.tgz
+
+# ========================================
+# YARN INTEGRITY FILE
+# ========================================
+.yarn-integrity
+
+# ========================================
+# DOTENV ENVIRONMENT VARIABLES FILE
+# ========================================
+.env.test
+
+# ========================================
+# PARCEL-BUNDLER CACHE (https://parceljs.org/)
+# ========================================
+.cache
+.parcel-cache
+
+# ========================================
+# NEXT.JS BUILD OUTPUT
+# ========================================
+.next
+
+# ========================================
+# NUXT.JS BUILD / GENERATE OUTPUT
+# ========================================
+.nuxt
+dist
+
+# ========================================
+# GATSBY FILES
+# ========================================
+.cache/
+public
+
+# ========================================
+# STORYBOOK BUILD OUTPUTS
+# ========================================
+.out
+.storybook-out
+
+# ========================================
+# TEMPORARY FOLDERS
+# ========================================
+tmp/
+temp/
+
+# ========================================
+# DOCKER
+# ========================================
+.dockerignore
+
+# ========================================
+# VERCEL
+# ========================================
 .vercel
 
-# typescript
+# ========================================
+# TYPESCRIPT
+# ========================================
 *.tsbuildinfo
-next-env.d.ts
+
+# ========================================
+# LOCAL NETLIFY FOLDER
+# ========================================
+.netlify
+
+# ========================================
+# SENTRY
+# ========================================
+.sentryclirc
+
+# ========================================
+# TURBO
+# ========================================
+.turbo
+
+# ========================================
+# VITE
+# ========================================
+.vite
+
+# ========================================
+# ROLLUP
+# ========================================
+.rollup.cache
+
+# ========================================
+# WEBPACK
+# ========================================
+.webpack
+
+# ========================================
+# BABEL
+# ========================================
+.babel-cache
+
+# ========================================
+# METRO
+# ========================================
+.metro-health-check*
+
+# ========================================
+# FUSEBOX CACHE
+# ========================================
+.fusebox/
+
+# ========================================
+# DYNAMODB LOCAL FILES
+# ========================================
+.dynamodb/
+
+# ========================================
+# TERNJS PORT FILE
+# ========================================
+.tern-port
+
+# ========================================
+# STORES VSCODE VERSIONS USED FOR TESTING VSCODE EXTENSIONS
+# ========================================
+.vscode-test
+
+# ========================================
+# YARN V2
+# ========================================
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ========================================
+# PROJECT SPECIFIC
+# ========================================
+# Uploaded files
+uploads/
+public/uploads/
+
+# Generated PDFs
+public/pdf/generated/
+
+# Backup files
+*.backup
+*.bak
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificate files
+*.pem
+*.key
+*.crt
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mkv
+*.m4v
+*.3gp
+*.ogv
+
+# ========================================
+# MONOREPO (if using)
+# ========================================
+# packages/*/node_modules
+# packages/*/.next
+# packages/*/dist
+# packages/*/build
+
+# ========================================
+# CI/CD
+# ========================================
+# .github/workflows/*.log
+# .gitlab-ci.yml.local
+
+# ========================================
+# SECURITY
+# ========================================
+# Keep .env.example but ignore actual .env files
+!.env.example
+!.env.sample
+!.env.template

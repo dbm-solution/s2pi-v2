@@ -1,0 +1,52 @@
+/* styles/responsive/mobile.css */
+
+/* =============================================================================
+   MOBILE-SPECIFIC STYLES
+   ============================================================================= */
+
+/* Mobile Navigation Overrides */
+@media (max-width: 768px) {
+  
+  /* Mobile Menu */
+  .mobile-menu-active {
+    overflow: hidden;
+  }
+  
+  /* Mobile Typography */
+  .mobile-text-center {
+    text-align: center;
+  }
+  
+  .mobile-text-left {
+    text-align: left;
+  }
+  
+  /* Mobile Spacing */
+  .mobile-p-sm {
+    padding: 15px;
+  }
+  
+  .mobile-m-sm {
+    margin: 15px 0;
+  }
+  
+  /* Mobile Buttons */
+  .mobile-btn-full {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Mobile Images */
+  .mobile-img-full {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile Touch Targets */
+@media (max-width: 768px) {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

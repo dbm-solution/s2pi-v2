@@ -1,0 +1,285 @@
+/* SocialIcon Component Styles */
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.socialIcon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Variants */
+.header {
+  color: white;
+  padding: 8px;
+}
+
+.header:hover {
+  color: rgb(229, 231, 235); /* gray-200 */
+}
+
+.articleBar {
+  color: rgb(75, 85, 99); /* gray-600 */
+  padding: 4px;
+}
+
+.articleBar:hover {
+  color: rgb(31, 41, 55); /* gray-800 */
+}
+
+.footer {
+  color: white;
+  padding: 8px;
+}
+
+.footer:hover {
+  color: rgb(209, 213, 219); /* gray-300 */
+}
+
+/* New TopBar variant for TopBar component */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #0077b5;
+  color: white;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.topbar:hover {
+  background-color: #005885;
+  transform: scale(1.05);
+}
+
+/* New S2PI Standard variant - matches browser inspector specs */
+.s2piStandard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+  font-family: 'Roboto', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 17px;
+  line-height: 31px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  text-decoration: none solid rgb(35, 35, 35);
+  background-color: #F9F9F9;
+  background-position: 0% 0%;
+  color: #232323;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Platform-specific colors for S2PI Standard */
+.s2piStandard.linkedin {
+  background-color: #0077b5;
+  color: white;
+  font-weight: 300;
+}
+
+.s2piStandard.linkedin:hover {
+  background-color: #005885;
+  transform: scale(1.05);
+}
+
+.s2piStandard.facebook {
+  background-color: #1877f2;
+  color: white;
+  font-weight: 300;
+}
+
+.s2piStandard.facebook:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+.s2piStandard.twitter {
+  background-color: #1da1f2;
+  color: white;
+  font-weight: 300;
+}
+
+.s2piStandard.twitter:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
+
+.s2piStandard.email {
+  background-color: #666;
+  color: white;
+  font-weight: 300;
+}
+
+.s2piStandard.email:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.s2piStandard.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  font-weight: 300;
+}
+
+.s2piStandard.instagram:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Icon wrapper for s2pi standard */
+.s2piStandard .iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  line-height: 31px;
+  font-weight: 300;
+}
+
+/* Sizes */
+.small svg {
+  width: 16px;
+  height: 16px;
+}
+
+.medium svg {
+  width: 20px;
+  height: 20px;
+}
+
+.large svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* S2PI specific size */
+.s2piSize svg,
+.s2piSize i,
+.s2piSize .iconWrapper {
+  width: 17px;
+  height: 17px;
+  font-size: 17px;
+  line-height: 31px;
+  font-weight: 300;
+}
+
+/* Text content for LinkedIn */
+.s2piStandard.linkedin .iconWrapper {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 38px;
+}
+
+/* LinkedIn specific styling for header */
+.linkedinHeader {
+  background: transparent;
+  border: none;
+}
+
+.linkedinHeader:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Screen reader text */
+.screenReaderText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Article bar specific styles */
+.articleBarWrapper {
+  display: inline-flex;
+}
+
+.articleBarLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: rgb(243, 244, 246); /* gray-100 */
+  color: rgb(55, 65, 81); /* gray-700 */
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.articleBarLink:hover {
+  background-color: rgb(229, 231, 235); /* gray-200 */
+  color: rgb(17, 24, 39); /* gray-900 */
+}
+
+/* Platform specific colors */
+.facebook.articleBarLink:hover {
+  background-color: #1877f2;
+  color: white;
+}
+
+.linkedin.articleBarLink:hover {
+  background-color: #0077b5;
+  color: white;
+}
+
+.twitter.articleBarLink:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.email.articleBarLink:hover {
+  background-color: rgb(75, 85, 99); /* gray-600 */
+  color: white;
+}
+
+.instagram.articleBarLink:hover {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  color: white;
+} 
+
+/* Icon font support */
+.socialIcon i {
+  font-style: normal;
+  speak: none;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon wrapper to ensure proper sizing */
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.iconWrapper svg {
+  fill: currentColor;
+}

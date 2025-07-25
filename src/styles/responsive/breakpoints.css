@@ -1,0 +1,38 @@
+/* styles/responsive/breakpoints.css */
+
+/* =============================================================================
+   BREAKPOINT MIXINS AND UTILITIES
+   ============================================================================= 
+*/
+
+/* Standard Media Query Mixins (for reference in CSS Modules) */
+
+/* 
+Usage in component CSS modules:
+
+@media (max-width: 767px) {
+  .component { mobile styles }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .component { tablet styles }
+}
+
+@media (min-width: 1024px) {
+  .component { desktop styles }
+}
+*/
+
+/* S2PI Specific Breakpoints */
+/* Mobile First: 0px - 767px */
+/* Tablet: 768px - 1023px */
+/* Desktop Small: 1024px - 1199px */
+/* Desktop Large: 1200px - 1339px */
+/* Desktop XL: 1340px+ */
+
+/* Container Queries for Modern Browsers */
+@container (max-width: 768px) {
+  .container-responsive-element {
+    flex-direction: column;
+  }
+}
