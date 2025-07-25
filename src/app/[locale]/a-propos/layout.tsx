@@ -1,13 +1,13 @@
 import { MainLayout } from "@/components/layout/main-layout/MainLayout";
 
-interface HomeLayoutProps {
+interface AProposLayoutProps {
   children: React.ReactNode;
   params: {
     locale: string;
   };
 }
 
-export default async function AboutLayout({ children, params }: HomeLayoutProps) {
+export default async function AProposLayout({ children, params }: AProposLayoutProps) {
   const { locale } = await params;
   
   return (

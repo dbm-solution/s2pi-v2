@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "../text-field/button"
+import { Button } from "../../text-field/button"
 // import { Button } from "@/components/ui/button"
 
 interface SlideData {

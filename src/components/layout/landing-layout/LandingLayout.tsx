@@ -7,7 +7,7 @@ import Navigation from '../header/nav-bar/Nav';
 import MobileNavigation from '../mobile-nav/MobileNav';
 import Footer from '../footer/Footer';
 import TopBar from '../header/top-bar/TopBar';
-import { S2PIHeroSlider } from '@/components/ui/slider/s2pi-hero-slider';
+import { S2PIHeroSlider } from '@/components/ui/slider/hero-slider/s2pi-hero-slider';
 
 interface LandingLayoutProps {
   children: React.ReactNode;
@@ -30,7 +30,6 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    // S2PI Loading Animation
     const timer = setTimeout(() => {
       setIsLoading(false);
       const loadElement = document.getElementById('load');
@@ -66,7 +65,6 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({
           )}
         </div>
       )}
-            <S2PIHeroSlider />
 
 
       {/* Mobile Navigation */}

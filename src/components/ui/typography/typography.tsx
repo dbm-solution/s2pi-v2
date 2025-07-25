@@ -8,13 +8,21 @@ import { cn } from "@/lib/utils"
 const typographyVariants = cva("transition-colors duration-300", {
   variants: {
     variant: {
-      // Main body text - from your specification
+      // Main body text - exact match from original S2PI website
       body: [
         "text-[17px]",
         "leading-[31px]", 
         "font-[300]",
         "text-[#232323]",
         "text-justify",
+        "block",
+        "m-0",
+        "p-0",
+        "font-['Roboto',Helvetica,Arial,Verdana,sans-serif]",
+        "tracking-normal", // letter-spacing: normal
+        "transform-none",  // text-transform: none
+        "decoration-none", // text-decoration: none
+        "word-spacing-0",  // word-spacing: normal
       ],
       // Bold body text
       bodyBold: [
