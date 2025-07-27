@@ -1,16 +1,21 @@
-import LocaleProvider from "@/components/providers/LocaleProvider";
+import { notFound } from 'next/navigation';
 import type { Metadata } from "next";
 import { ReactNode } from "react";
+import { IntlProvider } from '@/components/providers/IntlProvider';
 
 interface LocaleLayoutProps {
   children: ReactNode;
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 // Supported locales
-const locales = ['fr', 'en', 'es', 'it', 'ar'];
+const locales = ['fr', 'en', 'ar', 'es', 'it'];
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
@@ -65,10 +70,6 @@ export async function generateMetadata({
     alternates: {
       languages: {
         'fr': '/fr',
-        'en': '/en',
-        'es': '/es',
-        'it': '/it',
-        'ar': '/ar',
       },
     },
     other: {
@@ -82,13 +83,28 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   
   // Validate locale
   if (!locales.includes(locale)) {
-    // Handle invalid locale - could redirect to default or show 404
-    console.warn(`Invalid locale: ${locale}`);
+    notFound();
+  }
+  
+  // Load messages for the current locale
+  let messages = {};
+  try {
+    messages = (await import(`../../locales/${locale}/index`)).default;
+  } catch (error) {
+    console.warn(`Failed to load ${locale} messages, falling back to French:`, error);
+    try {
+      messages = (await import(`../../locales/fr/index`)).default;
+    } catch (fallbackError) {
+      console.error('Failed to load French fallback messages:', fallbackError);
+      messages = {};
+    }
   }
   
   return (
-    <LocaleProvider locale={locale}>
-      {children}
-    </LocaleProvider>
+    <IntlProvider locale={locale} messages={messages}>
+      <div data-locale={locale}>
+        {children}
+      </div>
+    </IntlProvider>
   );
 }

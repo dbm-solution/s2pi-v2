@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { changeLanguage } from '@/lib/actions/locale';
 
 interface LanguageSwitcherProps {
   currentLocale?: string;
@@ -22,10 +22,12 @@ export default function LanguageSwitcher({ currentLocale = 'fr' }: LanguageSwitc
 
   const currentLanguage = languages.find(lang => lang.code === currentLocale) || languages[0];
 
-  const getLocalizedPath = (locale: string) => {
-    // Remove current locale from pathname and add new locale
-    const pathWithoutLocale = pathname?.replace(/^\/[a-z]{2}/, '') || '';
-    return `/${locale}${pathWithoutLocale}`;
+  const handleLanguageChange = async (locale: string) => {
+    try {
+      await changeLanguage(locale, pathname);
+    } catch (error) {
+      console.error('Failed to change language:', error);
+    }
   };
 
   return (
@@ -54,15 +56,17 @@ export default function LanguageSwitcher({ currentLocale = 'fr' }: LanguageSwitc
       {isOpen && (
         <div className="absolute top-full right-0 mt-2 bg-white border-2 border-s2pi-blue-300 rounded-s2pi shadow-s2pi-lg z-50 min-w-40 overflow-hidden">
           {languages.map((language) => (
-            <Link
+            <button
               key={language.code}
-              href={getLocalizedPath(language.code)}
-              className={`flex items-center space-x-3 px-4 py-3 hover:bg-s2pi-blue-50 transition-colors border-b border-s2pi-gray-200 last:border-b-0 ${
+              onClick={() => {
+                setIsOpen(false);
+                handleLanguageChange(language.code);
+              }}
+              className={`w-full flex items-center space-x-3 px-4 py-3 hover:bg-s2pi-blue-50 transition-colors border-b border-s2pi-gray-200 last:border-b-0 ${
                 language.code === currentLocale 
                   ? 'bg-s2pi-blue-100 text-s2pi-blue-700 font-bold' 
                   : 'text-s2pi-gray-700 hover:text-s2pi-blue-600'
               }`}
-              onClick={() => setIsOpen(false)}
             >
               <span className="text-lg">{language.flag}</span>
               <span className="text-sm font-medium">{language.name}</span>
@@ -71,7 +75,7 @@ export default function LanguageSwitcher({ currentLocale = 'fr' }: LanguageSwitc
                   <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                 </svg>
               )}
-            </Link>
+            </button>
           ))}
         </div>
       )}

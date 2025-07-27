@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Roboto, Oswald, Prata, Poppins, Open_Sans } from "next/font/google";
+import { headers } from 'next/headers';
+import { LANGUAGE_CONFIG } from "@/lib/i18n/config";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -52,13 +54,30 @@ export const viewport: Viewport = {
   themeColor: '#b52626',
 };
 
-export default function RootLayout({
+async function getLocaleFromHeaders(): Promise<{ locale: string; dir: string }> {
+  const headersList = await headers();
+  const pathname = headersList.get('x-pathname') || '/fr';
+  
+  // Extract locale from pathname
+  const locale = pathname.split('/')[1] || 'fr';
+  const isValidLocale = ['fr', 'en', 'ar', 'es', 'it'].includes(locale);
+  const finalLocale = isValidLocale ? locale : 'fr';
+  
+  const langConfig = LANGUAGE_CONFIG[finalLocale as keyof typeof LANGUAGE_CONFIG];
+  const dir = langConfig?.dir || 'ltr';
+  
+  return { locale: finalLocale, dir };
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { locale, dir } = await getLocaleFromHeaders();
+  
   return (
-    <html className="no-js" suppressHydrationWarning>
+    <html lang={locale} dir={dir} className="no-js" suppressHydrationWarning>
       <body
         id="the7-body"
         className={`${roboto.variable} ${oswald.variable} ${prata.variable} ${poppins.variable} ${openSans.variable} font-sans antialiased`}

@@ -126,6 +126,32 @@ const typographyVariants = cva("transition-colors duration-300", {
         "p-3",
         "font-[var(--font-oswald)]",
       ],
+      // List item text
+      listItem: [
+        "text-[17px]",
+        "leading-[31px]",
+        "font-[500]",
+        "text-[#232323]",
+        "text-left",
+        "list-item",
+        "m-0",
+        "p-0",
+        "font-['Roboto',Helvetica,Arial,Verdana,sans-serif]",
+        "list-disc",
+        "list-outside",
+        "break-words",
+        "overflow-wrap-anywhere",
+        "w-full",
+      ],
+      // Bold list item text
+      listItemBold: [
+        "text-[17px]",
+        "leading-[31px]",
+        "font-[700]",
+        "text-[#232323]",
+        "inline",
+        "font-['Roboto',Helvetica,Arial,Verdana,sans-serif]",
+      ],
     },
     size: {
       xs: "text-xs leading-tight",
@@ -212,6 +238,8 @@ export const Typography = React.forwardRef<HTMLElement, TypographyProps>(
        variant === "caption" ? "figcaption" :
        variant === "link" ? "a" :
        variant === "widgetTitle" ? "div" :
+       variant === "listItem" ? "li" :
+       variant === "listItemBold" ? "li" :
        variant?.includes("Bold") ? "strong" : "p")
 
     const combinedStyle = {

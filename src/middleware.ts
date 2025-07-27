@@ -1,61 +1,53 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import createMiddleware from 'next-intl/middleware';
+import { NextRequest, NextResponse } from 'next/server';
 
-// Define supported locales
-const locales = ['fr', 'en', 'ar', 'es', 'it']
-const defaultLocale = 'fr'
+const intlMiddleware = createMiddleware({
+  // A list of all locales that are supported
+  locales: ['fr', 'en', 'ar', 'es', 'it'],
 
-// Get the preferred locale from the request
-function getLocale(request: NextRequest): string {
-  // Check if there's a locale in the pathname
-  const pathname = request.nextUrl.pathname
-  const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
+  // Used when no locale matches
+  defaultLocale: 'fr',
 
-  if (pathnameIsMissingLocale) {
-    // Redirect to default locale if no locale is specified
-    return defaultLocale
+  // Always use locale prefix
+  localePrefix: 'always'
+});
+
+export default function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+  const supportedLocales = ['fr', 'en', 'ar', 'es', 'it'];
+  
+  // Check if the path already has a locale
+  const hasLocale = supportedLocales.some(locale => pathname.startsWith(`/${locale}`));
+  
+  // If no locale in path, check cookie and redirect
+  if (!hasLocale && pathname !== '/' && !pathname.startsWith('/_next') && !pathname.includes('.')) {
+    const localeCookie = request.cookies.get('NEXT_LOCALE');
+    const preferredLocale = (localeCookie?.value && supportedLocales.includes(localeCookie.value)) 
+      ? localeCookie.value 
+      : 'fr';
+    
+    // Redirect to the preferred locale
+    const url = request.nextUrl.clone();
+    url.pathname = `/${preferredLocale}${pathname}`;
+    return NextResponse.redirect(url);
   }
-
-  // Extract locale from pathname
-  const pathnameLocale = pathname.split('/')[1]
-  return locales.includes(pathnameLocale) ? pathnameLocale : defaultLocale
-}
-
-export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname
-
-  // Check if the request is for static files or API routes
-  if (
-    pathname.startsWith('/_next') ||
-    pathname.startsWith('/api') ||
-    pathname.startsWith('/static') ||
-    pathname.includes('.')
-  ) {
-    return NextResponse.next()
-  }
-
-  // Check if the pathname is missing a locale
-  const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
-
-  // Redirect if there is no locale
-  if (pathnameIsMissingLocale) {
-    const locale = getLocale(request)
-    const newUrl = new URL(`/${locale}${pathname}`, request.url)
-    return NextResponse.redirect(newUrl)
-  }
-
-  return NextResponse.next()
+  
+  // For root path or paths with locale, use the intl middleware
+  return intlMiddleware(request);
 }
 
 export const config = {
+  // Match only internationalized pathnames
   matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next|api|static|.*\\..*).*)',
-    // Optional: Add this if you want to run middleware on API routes
-    // '/api/:path*',
-  ],
-} 
+    // Enable a redirect to a matching locale at the root
+    '/',
+
+    // Set a cookie to remember the previous locale for
+    // all requests that have a locale prefix
+    '/(fr|en|ar|es|it)/:path*',
+
+    // Enable redirects that add missing locales
+    // (e.g. `/pathnames` -> `/fr/pathnames`)
+    '/((?!_next|_vercel|.*\\..*).*)' 
+  ]
+}; 

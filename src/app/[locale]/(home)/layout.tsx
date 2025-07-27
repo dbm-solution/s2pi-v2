@@ -1,5 +1,5 @@
-import LandingLayout from '@/components/layout/landing-layout/LandingLayout';
 import React from 'react';
+import LandingLayout from '@/components/layout/landing-layout/LandingLayout';
 
 interface HomeLayoutProps {
   children: React.ReactNode;
@@ -12,7 +12,13 @@ export default async function HomeLayout({ children, params }: HomeLayoutProps) 
   const { locale } = await params;
   
   return (
-    <LandingLayout>
+    <LandingLayout 
+      locale={locale}
+      showTopBar={true}
+      showHeader={true}
+      showNavigation={true}
+      showFooter={true}
+    >
       {children}
     </LandingLayout>
   );

@@ -1,0 +1,22 @@
+{
+  "title": "Contactez-nous",
+  "subtitle": "Notre équipe est à votre écoute",
+  "form": {
+    "name": "Nom",
+    "email": "Email",
+    "company": "Entreprise",
+    "phone": "Téléphone",
+    "subject": "Sujet",
+    "message": "Message",
+    "submit": "Envoyer",
+    "required": "Champ obligatoire"
+  },
+  "info": {
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "hours": "Horaires d'ouverture"
+  },
+  "success": "Votre message a été envoyé avec succès",
+  "error": "Une erreur s'est produite, veuillez réessayer"
+}

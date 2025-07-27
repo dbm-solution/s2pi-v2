@@ -4,7 +4,7 @@
   color: white;
   width: 100%;
   position: relative;
-  z-index: 85;
+  z-index: 1000;
   min-height: 54px;
   display: block;
 }
@@ -25,7 +25,7 @@
   flex: 1;
   gap: 15px;
 }
-Ò
+
 .contactInfo {
   color: white;
   font-family: 'Roboto', Helvetica, Arial, Verdana, sans-serif;
@@ -47,55 +47,109 @@
 .rightWidgets {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10000;
+}
+
+.languageSelectorDropdown {
+  background: transparent;
+  border: none;
+  color: white;
+  z-index: 9999;
+}
+
+.languageSelectorDropdown button {
+  background: transparent !important;
+  border: none !important;
+  color: white !important;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  z-index: 9999;
+}
+
+.languageSelectorDropdown button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure language dropdown appears above all other components */
+:global(.language-dropdown-above-all) {
+  z-index: 99999 !important;
+  position: absolute !important;
+}
+
+/* S2PI Language Dropdown Styling */
+:global(.s2pi-language-dropdown) {
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+:global(.s2pi-language-dropdown button) {
+  color: #333 !important;
+  background: white !important;
+  padding: 8px 12px !important;
+  border-radius: 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+:global(.s2pi-language-dropdown button:hover) {
+  background: #f5f5f5 !important;
+  color: #1D4572 !important;
+}
+
+:global(.s2pi-language-dropdown button[aria-selected="true"]) {
+  background: #1D4572 !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+/* Language abbreviations in dropdown */
+:global(.s2pi-language-dropdown .font-medium) {
+  color: #333 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
 }
 
 /* LinkedIn Button */
 .linkedinButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background-color: #0077b5;
+  background: #0077b5;
   color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
   text-decoration: none;
-  font-family: 'Roboto', Helvetica, Arial, Verdana, sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
-  border-radius: 3px;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .linkedinButton:hover {
-  background-color: #005885;
-  color: white;
+  background: #005885;
 }
 
 /* Enquête Button */
 .enqueteButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 16px;
-  background-color: #f97316;
+  background: #28a745;
   color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
   text-decoration: none;
-  font-family: 'Roboto', Helvetica, Arial, Verdana, sans-serif;
   font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-radius: 3px;
-  height: 32px;
-  line-height: 1;
-  border: none;
-  transition: all 0.2s ease;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
 }
 
 .enqueteButton:hover {
-  background-color: #ea580c;
-  color: white;
+  background: #218838;
 }
 
 /* Responsive Design */
@@ -233,5 +287,24 @@
   .contactInfo:hover,
   .linkedinButton:hover {
     border-color: white;
+  }
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .rightWidgets {
+    gap: 8px;
+  }
+  
+  .languageSelector {
+    order: 1;
+  }
+  
+  .linkedinButton {
+    order: 2;
+  }
+  
+  .enqueteButton {
+    order: 3;
   }
 }

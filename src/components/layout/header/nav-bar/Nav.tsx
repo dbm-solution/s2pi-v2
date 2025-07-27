@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from './Nav.module.css';
 
@@ -15,6 +16,7 @@ interface NavItem {
 
 interface NavProps {
   locale?: string;
+  isSticky?: boolean;
 }
 
 const navItems: NavItem[] = [
@@ -85,7 +87,7 @@ const navItems: NavItem[] = [
   }
 ];
 
-export default function Nav({ locale = 'fr' }: NavProps) {
+export default function Nav({ locale = 'fr', isSticky = false }: NavProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -119,56 +121,74 @@ export default function Nav({ locale = 'fr' }: NavProps) {
   }, []);
 
   return (
-    <div className={styles.navigationWrapper}>
+    <div className={`${styles.navigationWrapper} ${isSticky ? styles.stickyNav : ''}`}>
       <div className="container-s2pi">
         <nav className={styles.navigation}>
-          <ul className={styles.mainNav}>
-            {navItems.map((item, index) => {
-              const hasChildren = item.children && item.children.length > 0;
-              const isItemActive = isActive(item.href);
-              
-              return (
-                <li
-                  key={item.href}
-                  className={`${styles.menuItem} ${isItemActive ? styles.active : ''} ${hasChildren ? styles.hasDropdown : ''}`}
-                  onMouseEnter={() => hasChildren && handleMouseEnter(item.href)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Link 
-                    href={item.href} 
-                    className={`${styles.menuLink} ${isItemActive ? styles.activeLink : ''}`}
+          <div className={styles.navContent}>
+            {/* Logo in sticky mode */}
+            {isSticky && (
+              <div className={styles.stickyLogo}>
+                <Link href="/" className={styles.stickyLogoLink}>
+                  <Image
+                    src="/images/Logo-S2PI.png"
+                    width={156}
+                    height={50}
+                    alt="S2PI"
+                    className={styles.stickyLogoImage}
+                  />
+                </Link>
+              </div>
+            )}
+            
+            {/* Navigation Items */}
+            <ul className={`${styles.mainNav} ${isSticky ? styles.mainNavSticky : ''}`}>
+              {navItems.map((item, index) => {
+                const hasChildren = item.children && item.children.length > 0;
+                const isItemActive = isActive(item.href);
+                
+                return (
+                  <li
+                    key={item.href}
+                    className={`${styles.menuItem} ${isItemActive ? styles.active : ''} ${hasChildren ? styles.hasDropdown : ''}`}
+                    onMouseEnter={() => hasChildren && handleMouseEnter(item.href)}
+                    onMouseLeave={handleMouseLeave}
                   >
-                    <span className={`${styles.menuText} ${item.highlight === 'nouveaute' ? styles.nouveauteHighlight : ''}`}>
-                      {item.label}
-                    </span>
-                    {hasChildren && <span className={styles.dropdownArrow}>▼</span>}
-                  </Link>
-                  
-                  {hasChildren && (
-                    <ul 
-                      className={`${styles.dropdown} ${openDropdown === item.href ? styles.dropdownVisible : ''}`}
-                      onMouseEnter={() => handleMouseEnter(item.href)}
-                      onMouseLeave={handleMouseLeave}
+                    <Link 
+                      href={item.href} 
+                      className={`${styles.menuLink} ${isItemActive ? styles.activeLink : ''}`}
                     >
-                      {item.children!.map((subItem) => (
-                        <li 
-                          key={subItem.href} 
-                          className={styles.dropdownItem}
-                        >
-                          <Link 
-                            href={subItem.href} 
-                            className={styles.dropdownLink}
+                      <span className={`${styles.menuText} ${item.highlight === 'nouveaute' ? styles.nouveauteHighlight : ''}`}>
+                        {item.label}
+                      </span>
+                      {hasChildren && <span className={styles.dropdownArrow}>▼</span>}
+                    </Link>
+                    
+                    {hasChildren && (
+                      <ul 
+                        className={`${styles.dropdown} ${openDropdown === item.href ? styles.dropdownVisible : ''}`}
+                        onMouseEnter={() => handleMouseEnter(item.href)}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        {item.children!.map((subItem) => (
+                          <li 
+                            key={subItem.href} 
+                            className={styles.dropdownItem}
                           >
-                            {subItem.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+                            <Link 
+                              href={subItem.href} 
+                              className={styles.dropdownLink}
+                            >
+                              {subItem.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </nav>
       </div>
     </div>

@@ -840,7 +840,6 @@
     @apply bg-background text-foreground;
     }
 }
-
 /* S2PI specific utility classes */
 .s2pi-text {
   text-align: justify;
@@ -853,4 +852,45 @@
 
 .s2pi-heading {
   text-align: center;
+}
+
+/* =========================================================================
+   LANGUAGE SELECTOR DROPDOWN Z-INDEX FIX
+   ========================================================================= */
+
+/* Ensure language selector dropdowns appear above all other components */
+.language-dropdown-above-all,
+[class*="language-selector"] [role="listbox"],
+[class*="LanguageSelector"] [role="listbox"] {
+  z-index: 99999 !important;
+  position: absolute !important;
+}
+
+/* Additional fallback for any dropdown in language selectors */
+div[class*="language"] div[class*="absolute"],
+div[class*="Language"] div[class*="absolute"] {
+  z-index: 99999 !important;
+}
+
+/* Specific fix for language selector dropdowns */
+.relative > div[class*="absolute"] {
+  z-index: 99999 !important;
+}
+
+/* S2PI Language Dropdown - Black Text for Abbreviations */
+.s2pi-language-dropdown button span,
+.s2pi-language-dropdown [class*="font-medium"] {
+  color: #333 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+.s2pi-language-dropdown button:hover span,
+.s2pi-language-dropdown button:hover [class*="font-medium"] {
+  color: #1D4572 !important;
+}
+
+.s2pi-language-dropdown button[aria-selected="true"] span,
+.s2pi-language-dropdown button[aria-selected="true"] [class*="font-medium"] {
+  color: white !important;
 }

@@ -2,9 +2,9 @@ import { MainLayout } from "@/components/layout/main-layout/MainLayout";
 
 interface AProposLayoutProps {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 export default async function AProposLayout({ children, params }: AProposLayoutProps) {

@@ -1,8 +1,11 @@
-'use client';
+"use client";
 
 import { Typography } from "@/components/ui/typography/typography";
+import { useTranslations } from '@/components/providers/IntlProvider';
 
 export const QualityControl = () => {
+  const t = useTranslations('home.qualityControl');
+
   return (
     <div className="relative w-full">
       {/* Top Angled Shape */}
@@ -54,7 +57,7 @@ export const QualityControl = () => {
                 padding: '0 20px'
               }}
             >
-              Chaque produit est conforme aux besoins et aux normes du marché. Il est soumis à un contrôle de qualité extrêmement rigoureux par des laboratoires d'essais accrédités.
+              {t('title')}
             </Typography>
           </div>
         </div>

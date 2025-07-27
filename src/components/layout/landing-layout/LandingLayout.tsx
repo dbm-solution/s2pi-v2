@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import styles from './LandingLayout.module.css';
+import './LandingLayout.css';
 import Header from '../header/Header';
 import Navigation from '../header/nav-bar/Nav';
 import MobileNavigation from '../mobile-nav/MobileNav';
 import Footer from '../footer/Footer';
-import TopBar from '../header/top-bar/TopBar';
+// import TopBar from '../header/top-bar/TopBar';
 import { S2PIHeroSlider } from '@/components/ui/slider/hero-slider/s2pi-hero-slider';
 
 interface LandingLayoutProps {
@@ -48,14 +48,13 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({
   };
 
   return (
-    <div id="page" className={`${styles.layout}`}>
+    <div id="page" className="landing-layout">
       <a className="skip-link screen-reader-text" href="#content">
         Aller au contenu
       </a>
 
       {(showTopBar || showHeader || showNavigation) && (
         <div>
-
           {showHeader && (
             <Header
               locale={locale}
@@ -68,13 +67,13 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({
 
 
       {/* Mobile Navigation */}
-      {/* <MobileNavigation 
+      <MobileNavigation 
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
-      /> */}
+      />
 
       {/* Main Content Area */}
-      <main id="main" className={`${styles.main} sidebar-none sidebar-divider-vertical`}>
+      <main id="main" className="landing-main sidebar-none sidebar-divider-vertical">
         {children}
       </main>
 

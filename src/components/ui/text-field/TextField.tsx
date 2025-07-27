@@ -12,7 +12,7 @@
 
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { S2PITextField, S2PITextArea } from "./s2pi-form-fields" // Declare the variables before using them
+// import { S2PITextField, S2PITextArea } from "./s2pi-form-fields" // Declare the variables before using them - temporarily disabled
 
 export interface TextFieldProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
@@ -167,4 +167,4 @@ export const TextField = React.forwardRef<HTMLInputElement & HTMLTextAreaElement
 TextField.displayName = "TextField"
 
 // --- explicit re-exports ----------------------------------------------------
-export { S2PITextField, S2PITextArea } // Remove the default export as it's not used
+// export { S2PITextField, S2PITextArea } // Remove the default export as it's not used - temporarily disabled
