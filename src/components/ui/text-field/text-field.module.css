@@ -1,0 +1,420 @@
+/* Base TextField Styles */
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.containerFullWidth {
+  width: 100%;
+}
+
+.containerS2pi {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Input Container */
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Base Input Styles */
+.textField {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-family: "Open Sans", "Roboto", sans-serif;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  position: relative;
+}
+
+.textField:focus {
+  border-color: #1d4572;
+  box-shadow: 0 0 0 3px rgba(29, 69, 114, 0.15);
+}
+
+.textField:disabled {
+  background-color: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.textField::placeholder {
+  color: #9ca3af;
+}
+
+/* Variant Styles */
+.default {
+  border: 1px solid #d1d5db;
+  padding: 12px 16px;
+}
+
+.outlined {
+  border: 2px solid #e5e7eb;
+  padding: 11px 15px;
+  background-color: transparent;
+}
+
+.filled {
+  border: none;
+  background-color: #f3f4f6;
+  padding: 16px 16px 8px;
+  border-bottom: 2px solid #d1d5db;
+  border-radius: 4px 4px 0 0;
+}
+
+.underlined {
+  border: none;
+  border-bottom: 1px solid #d1d5db;
+  border-radius: 0;
+  padding: 8px 0;
+  background-color: transparent;
+}
+
+.s2pi {
+  border: 1px solid #1d4572;
+  padding: 12px 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #232323;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 31px;
+}
+
+.s2pi:focus {
+  border-color: #1d4572;
+  box-shadow: 0 0 0 3px rgba(29, 69, 114, 0.15);
+}
+
+/* Size Variants */
+.sm {
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.md {
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.lg {
+  padding: 16px 20px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.xl {
+  padding: 20px 24px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+/* State Variants */
+.stateDefault {
+  border-color: #d1d5db;
+}
+
+.error {
+  border-color: #ef4444;
+  color: #dc2626;
+}
+
+.error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.success {
+  border-color: #10b981;
+  color: #059669;
+}
+
+.success:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.warning {
+  border-color: #f59e0b;
+  color: #d97706;
+}
+
+.warning:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.disabled {
+  background-color: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+/* Label Styles */
+.label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.labelDefault {
+  color: #374151;
+  font-family: "Open Sans", sans-serif;
+}
+
+.labelFloating {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  background-color: #ffffff;
+  padding: 0 4px;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  color: #6b7280;
+}
+
+.labelInline {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 0;
+}
+
+.labelS2pi {
+  color: #565656;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.labelFloated {
+  top: -8px;
+  font-size: 12px;
+  color: #1d4572;
+  font-weight: 500;
+}
+
+.labelFocused {
+  color: #1d4572;
+}
+
+.labelRequired::after {
+  content: " *";
+  color: #ef4444;
+}
+
+.labelSm {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.labelMd {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.labelLg {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.labelXl {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.requiredIndicator {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+/* Adornments */
+.startAdornment {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  z-index: 1;
+}
+
+.endAdornment {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  z-index: 1;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+/* Input with adornments */
+.withStartIcon {
+  padding-left: 48px;
+}
+
+.withEndIcon {
+  padding-right: 48px;
+}
+
+/* Helper Text */
+.helperContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.helperText {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.helperError {
+  color: #dc2626;
+}
+
+.helperSuccess {
+  color: #059669;
+}
+
+.helperWarning {
+  color: #d97706;
+}
+
+.characterCount {
+  font-size: 12px;
+  line-height: 16px;
+  color: #9ca3af;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+/* Interactive Elements */
+.clearButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #6b7280;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearButton:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+
+.loadingSpinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e5e7eb;
+  border-top: 2px solid #1d4572;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* States */
+.fullWidth {
+  width: 100%;
+}
+
+.focused {
+  /* Applied when focused */
+}
+
+.hasValue {
+  /* Applied when has value */
+}
+
+.floatingLabel {
+  /* Applied when using floating labels */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .textField {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .sm {
+    padding: 10px 12px;
+  }
+
+  .md {
+    padding: 12px 14px;
+  }
+
+  .lg {
+    padding: 14px 16px;
+  }
+
+  .xl {
+    padding: 16px 18px;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .textField {
+    border-width: 2px;
+  }
+
+  .textField:focus {
+    border-width: 3px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .textField,
+  .labelFloating,
+  .clearButton {
+    transition: none;
+  }
+
+  .spinner {
+    animation: none;
+  }
+}

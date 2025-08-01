@@ -1,0 +1,241 @@
+/* Base Enquête Button Styles */
+.enquetteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto', Helvetica, Arial, Verdana, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.enquetteButton:focus {
+  outline: 2px solid rgba(216, 114, 45, 0.5);
+  outline-offset: 2px;
+}
+
+/* Icon and text layout */
+.enquetteButton .defaultIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.enquetteButton .text {
+  display: flex;
+  align-items: center;
+}
+
+/* Variants */
+.topbar {
+  background-color: #d8722d;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.topbar:hover {
+  background-color: #c5651f;
+  transform: translateY(-1px);
+}
+
+.topbar .defaultIcon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.standard {
+  background-color: #d8722d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.standard:hover {
+  background-color: #c5651f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(216, 114, 45, 0.3);
+}
+
+.standard .defaultIcon {
+  font-size: 16px;
+}
+
+.large {
+  background-color: #d8722d;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.large:hover {
+  background-color: #c5651f;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(216, 114, 45, 0.3);
+}
+
+.large .defaultIcon {
+  font-size: 18px;
+}
+
+.outline {
+  background-color: transparent;
+  color: #d8722d;
+  border: 2px solid #d8722d;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.outline:hover {
+  background-color: #d8722d;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.outline .defaultIcon {
+  font-size: 16px;
+}
+
+/* Sizes */
+.small {
+  padding: 5px 10px;
+  font-size: 11px;
+  gap: 4px;
+}
+
+.small .defaultIcon {
+  font-size: 12px;
+}
+
+.medium {
+  padding: 8px 16px;
+  font-size: 13px;
+  gap: 6px;
+}
+
+.medium .defaultIcon {
+  font-size: 14px;
+}
+
+.largeSized {
+  padding: 12px 24px;
+  font-size: 15px;
+  gap: 8px;
+}
+
+.largeSized .defaultIcon {
+  font-size: 16px;
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 778px) {
+  .topbar {
+    padding: 5px 8px;
+    font-size: 10px;
+    gap: 4px;
+  }
+  
+  .topbar .defaultIcon {
+    font-size: 12px;
+  }
+  
+  .standard {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .large {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 4px 6px;
+    font-size: 9px;
+    gap: 3px;
+  }
+  
+  .topbar .defaultIcon {
+    font-size: 10px;
+  }
+}
+
+/* Loading state */
+.loading {
+  position: relative;
+  color: transparent;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* S2PI Brand specific styling */
+.enquetteButton {
+  /* Ensure it follows S2PI design system */
+  font-family: 'Roboto', Helvetica, Arial, Verdana, sans-serif;
+}
+
+/* Accessibility improvements */
+.enquetteButton:focus-visible {
+  outline: 2px solid #d8722d;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enquetteButton {
+    transition: none;
+  }
+  
+  .enquetteButton:hover {
+    transform: none;
+  }
+  
+  .loading::after {
+    animation: none;
+  }
+}

@@ -1,0 +1,259 @@
+.menuContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.menuButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  outline: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  background: transparent;
+  color: #4a5568;
+}
+
+.menuButton:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
+}
+
+.menuButton:hover:not(.disabled) {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #2d3748;
+}
+
+.menuButton:disabled,
+.menuButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Size variants */
+.sm {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.md {
+  height: 48px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.lg {
+  height: 56px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+/* Color variants - matching the navigation styles from images */
+.default {
+  background: transparent;
+  color: #4a5568;
+}
+
+.default:hover:not(.disabled) {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #2d3748;
+}
+
+/* Active state - red/coral like "À PROPOS" */
+.active {
+  background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+  color: white;
+}
+
+.active:hover:not(.disabled) {
+  background: linear-gradient(135deg, #c53030 0%, #9c2626 100%);
+}
+
+/* Highlight state - orange like "NOUVEAUTÉ" */
+.highlight {
+  background: transparent;
+  color: #dd6b20;
+  font-weight: 700;
+}
+
+.highlight:hover:not(.disabled) {
+  background-color: rgba(221, 107, 32, 0.1);
+  color: #c05621;
+}
+
+/* Secondary state - gray like dropdown buttons */
+.secondary {
+  background: linear-gradient(135deg, #a0aec0 0%, #718096 100%);
+  color: white;
+}
+
+.secondary:hover:not(.disabled) {
+  background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+}
+
+/* Custom variant */
+.custom {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: white;
+}
+
+.custom:hover:not(.disabled) {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+}
+
+/* Full width */
+.fullWidth {
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Dropdown states */
+.hasDropdown {
+  padding-right: 12px;
+}
+
+.open {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.open.active {
+  background: linear-gradient(135deg, #c53030 0%, #9c2626 100%);
+}
+
+.open.secondary {
+  background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+}
+
+/* Text and elements */
+.text {
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  background: #e53e3e;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 9px;
+  line-height: 1;
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  margin-left: 4px;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 200px;
+  max-width: 300px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 8px 0;
+  margin-top: 4px;
+  animation: dropdownSlide 0.2s ease-out;
+}
+
+.megaMenu {
+  min-width: 600px;
+  max-width: 800px;
+  padding: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dropdown {
+    left: -50px;
+    right: -50px;
+    min-width: auto;
+    max-width: none;
+  }
+
+  .megaMenu {
+    left: -100px;
+    right: -100px;
+    min-width: auto;
+    max-width: none;
+    transform: none;
+    padding: 16px;
+  }
+
+  .md {
+    height: 44px;
+    font-size: 13px;
+    padding: 0 14px;
+  }
+
+  .lg {
+    height: 48px;
+    font-size: 14px;
+    padding: 0 16px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .menuButton {
+    border: 1px solid currentColor;
+  }
+
+  .dropdown {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .menuButton,
+  .chevron,
+  .dropdown {
+    transition: none;
+    animation: none;
+  }
+}

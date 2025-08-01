@@ -1,0 +1,171 @@
+/* SocialShare Component Styles */
+.socialShare {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  gap: 8px;
+}
+
+/* Position variants */
+.center {
+  justify-content: center;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+/* Shape variants */
+.rect .shareItem a {
+  border-radius: 4px;
+}
+
+.circle .shareItem a {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.square .shareItem a {
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+/* Share item */
+.shareItem {
+  display: inline-flex;
+}
+
+.shareItem a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background-color: rgb(243, 244, 246);
+  color: rgb(55, 65, 81);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  border: 1px solid transparent;
+}
+
+.shareItem a:hover {
+  background-color: rgb(229, 231, 235);
+  color: rgb(17, 24, 39);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Platform specific hover colors */
+.facebook:hover {
+  background-color: #1877f2 ;
+  color: white ;
+  border-color: #1877f2 ;
+}
+
+.linkedin:hover {
+  background-color: #0077b5 ;
+  color: white ;
+  border-color: #0077b5 ;
+}
+
+.twitter:hover {
+  background-color: #1da1f2 ;
+  color: white ;
+  border-color: #1da1f2 ;
+}
+
+.email:hover {
+  background-color: rgb(75, 85, 99) ;
+  color: white ;
+  border-color: rgb(75, 85, 99) ;
+}
+
+.instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) ;
+  color: white ;
+  border-color: #bc1888 ;
+}
+
+/* Icon styling */
+.shareItem svg {
+  width: 16px;
+  height: 16px;
+}
+
+.circle .shareItem svg,
+.square .shareItem svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .socialShare {
+    gap: 6px;
+    margin: 12px 0;
+  }
+  
+  .shareItem a {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .circle .shareItem a,
+  .square .shareItem a {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .circle .shareItem svg,
+  .square .shareItem svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Animation for entrance */
+.socialShare.animate {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for items */
+.socialShare.animate .shareItem {
+  animation: fadeInScale 0.3s ease-out both;
+}
+
+.socialShare.animate .shareItem:nth-child(1) { animation-delay: 0.1s; }
+.socialShare.animate .shareItem:nth-child(2) { animation-delay: 0.2s; }
+.socialShare.animate .shareItem:nth-child(3) { animation-delay: 0.3s; }
+.socialShare.animate .shareItem:nth-child(4) { animation-delay: 0.4s; }
+.socialShare.animate .shareItem:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+} 

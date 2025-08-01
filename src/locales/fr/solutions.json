@@ -1,0 +1,23 @@
+{
+  "title": "Nos Solutions",
+  "subtitle": "Solutions techniques adaptées à vos besoins",
+  "types": {
+    "acoustic": {
+      "title": "Solutions Acoustiques",
+      "description": "Isolation phonique performante"
+    },
+    "fire": {
+      "title": "Protection Incendie",
+      "description": "Sécurité et protection contre le feu"
+    },
+    "thermal": {
+      "title": "Isolation Thermique",
+      "description": "Isolation thermique par l'extérieur"
+    }
+  },
+  "benefits": {
+    "performance": "Haute performance",
+    "durability": "Durabilité garantie",
+    "expertise": "Expertise technique"
+  }
+}

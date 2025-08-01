@@ -1,0 +1,22 @@
+{
+  "company": {
+    "name": "S2PI",
+    "fullName": "Fire Protection Insulation Products Manufacturing",
+    "tagline": "A company close to its customers and attentive to their needs"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "share": "Share",
+    "contact": "Contact"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "products": "Our products", 
+    "solutions": "Technical solutions",
+    "contact": "Contact"
+  }
+}

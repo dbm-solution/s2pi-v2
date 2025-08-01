@@ -1,0 +1,17 @@
+{
+  "title": "Nos Produits",
+  "subtitle": "Découvrez notre gamme complète",
+  "categories": {
+    "fibrous": "Produits fibreux de projection",
+    "paste": "Produits pâteux de projection",
+    "paints": "Peintures intumescentes",
+    "primers": "Primaires d'accrochage",
+    "finishes": "Enduits de finition",
+    "materials": "Matériels et accessoires"
+  },
+  "actions": {
+    "view": "Voir le produit",
+    "download": "Télécharger la fiche",
+    "contact": "Nous contacter"
+  }
+}

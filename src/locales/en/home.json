@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "title": "S2PI - Insulation Specialist",
+    "subtitle": "Thermal, acoustic insulation and fire protection solutions",
+    "cta": "Discover our solutions"
+  },
+  "newYear": {
+    "title": "Happy New Year 2025",
+    "description": "We wish you an excellent year 2025 full of successful projects",
+    "footer": "S2PI Team"
+  },
+  "companyInfo": {
+    "title": "OUR EXPERTISE",
+    "history": "an industrial project initiated by Jean-Luc BELLI, dedicated to the production of thermal insulation and fire protection materials.",
+    "description": "specialized in the production of high-quality insulation materials.",
+    "philosophy": {
+      "title": "Our Philosophy",
+      "points": [
+        "Quality and constant innovation",
+        "Environmental respect", 
+        "Impeccable customer service",
+        "Recognized technical expertise"
+      ]
+    },
+    "images": {
+      "facility": "S2PI Factory",
+      "certification": "Bureau Veritas Certification"
+    }
+  },
+  "qualityControl": {
+    "title": "Quality Control & Continuous Innovation"
+  },
+  "protection": {
+    "title": "PROTECTION & ISOLATION SOLUTIONS",
+    "parallaxTitle": "S2PI is committed to continuously improving its production processes.",
+    "content": {
+      "part1": "If building fire safety must combine all actions such as facilitating the evacuation of people, implementing alert systems, smoke extraction equipment... passive protection remains the most effective and is decided from the beginning of the project by providing constructive systems using non-combustible materials that neither feed the fire nor help it spread.",
+      "part2": "To meet environmental challenges, those of protecting people and property, one must be convinced and act with determination. This is the ambition I set when creating S2PI company to manufacture technical, economic, innovative and reliable solutions resulting from sharing the expertise and experience of its members.",
+      "quote": "« In the world of ideas everything depends on enthusiasm. In the real world everything depends on perseverance. »",
+      "quoteAuthor": "Johann Wolfgang von Goethe",
+      "signature": "Jean-Luc Belli",
+      "title": "Chief Executive Officer"
+    },
+    "images": {
+      "ceo": "Jean-Luc Belli"
+    }
+  }
+}

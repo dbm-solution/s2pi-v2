@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "home": "Accueil",
+    "about": "À propos",
+    "products": "Produits",
+    "solutions": "Solutions",
+    "quality": "Qualité",
+    "contact": "Contact",
+    "depots": "Nos dépôts"
+  },
+  "submenu": {
+    "acoustic": "Solutions acoustiques",
+    "fire": "Protection incendie",
+    "thermal": "Isolation thermique",
+    "certification": "Certification ISO",
+    "survey": "Enquête satisfaction",
+    "service": "Service client"
+  }
+}

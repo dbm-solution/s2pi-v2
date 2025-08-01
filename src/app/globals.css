@@ -1,26 +1,896 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+   /* =============================================================================
+   S2PI GLOBAL CSS VARIABLES - COMPLETE SYSTEM
+   ============================================================================= */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+   :root {
+    /* Next.js Variables */
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    /* S2PI Primary  Colors Palette  */
+    --s2pi-cocao-brown: #DA712C;   
+    --s2pi-keppel: #4EC8AE; 
+    --s2pi-turkey-red: #AC0209;
+    --s2pi-licorice-black: #261C1B;
+    --s2pi-gray: #7A7979;
+    --s2pi-silver: #BCBCBD;   
+    --s2pi-lapis-blue: #075387;    
+    --s2pi-blue-dark-card: #1D4572;
+    --s2pi-white-seasalt: #F7F7F7;  
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+     /* S2PI Secondary  Colors Palette  */
+     --s2pi-white: #eaebeb;
+     --s2pi-cello-blue: #244963;
+     --s2pi-copper-red: #974f4f;
+     --s2pi-oslo-gray: #959798;
+     --s2pi-domino-brown: #998167;
+
+    /* S2PI Tertiary  Colors Palette  */
+    --s2pi-chestnut-rose: #d25b58;
+    --s2pi-americano-brown: #7b706d;
+    --s2pi-venice-blue: #095081;
+    --s2pi-cocoa-brown: #231a1a;
+    --s2pi-polo-blue: #92b6d3; 
+
+    /* S2PI Primary Brand Colors - AUTHENTIC from main.min.css */
+    --s2pi-red: #AC0209;        /* Main brand red from Pinterest hover */
+    --s2pi-cocao: #DA712C;   
+    --s2pi-keppel: #4EC8AE;       /* Main brand blue from Pinterest hover */
+    --s2pi-red-hover: #d73b37;  /* Background red from main.min.css */
+    --s2pi-red-dark: #cf2834;   /* Dark red variant */
+    --s2pi-blue: #1c4572;       /* Blue from main.min.css */
+    --s2pi-blue-dark: #1c4572;  /* Dark blue variant */
+    --s2pi-turquoise: #1ebac8;  /* Turquoise accent from main.min.css */
+
+    /* S2PI Secondary Colors - AUTHENTIC */
+    --s2pi-light-blue: #27cff3;   /* Light blue from main.min.css */
+    --s2pi-green: #36b74d;        /* Green from main.min.css */
+    --s2pi-green-light: #3ab459;  /* Light green variant */
+    --s2pi-green-accent: #8cc63a; /* Green accent */
+    --s2pi-orange: #f36c0a;       /* Orange from main.min.css */
+    --s2pi-orange-light: #f2a809; /* Light orange */
+    --s2pi-pink: #e32a5a;         /* Pink accent */
+    --s2pi-pink-light: #fd8fb6;   /* Light pink */
+    --s2pi-purple: #6946b8;       /* Purple from main.min.css */
+
+    /* S2PI Text Colors - AUTHENTIC */
+    --s2pi-text-primary: #222;     /* Main text color from main.min.css */
+    --s2pi-text-dark: #2e2e2f;     /* Dark text from main.min.css */
+    --s2pi-text-light: #eaebeb;    /* Light text */
+    --s2pi-text-gray: #CCC;        /* Gray text from main.min.css */
+    --s2pi-text-muted: #BBB;       /* Muted text from main.min.css */
+    --s2pi-text-white: #fff;       /* White text */
+    --s2pi-text-black: #000;       /* Black text */
+
+    /* S2PI Background Colors - AUTHENTIC */
+    --s2pi-background-body: #ffffff;  /* White background */
+    --s2pi-background-white: #fff;    /* Pure white */
+    --s2pi-background-dark: #3e3f3f;  /* Dark background from main.min.css */
+    --s2pi-background-gray: #a5a6a7;  /* Gray background */
+    --s2pi-background-light: #f1f1f1; /* Light background */
+
+    /* S2PI Border & Accent Colors - AUTHENTIC */
+    --s2pi-border-light: #DDD;       /* Light border from main.min.css */
+    --s2pi-border-gray: #CCC;        /* Gray border */
+    --s2pi-accent-red: #e64235;      /* Red accent from main.min.css */
+    --s2pi-accent-dark: #000;        /* Dark accent */
+
+    /* S2PI Neutral Colors */
+    --s2pi-gray-100: #dedfe0;
+    --s2pi-gray-200: #b2b2b3;
+    --s2pi-gray-300: #292929;
+    --s2pi-gray-400: #444444;
+    --s2pi-black: #000000;
+    --s2pi-white: #ffffff;
+
+    /* S2PI Responsive Breakpoints */
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 640px;     /* S2PI uses 640px from offline site */
+    --breakpoint-md: 778px;     /* S2PI uses 778px from offline site */
+    --breakpoint-lg: 1050px;    /* S2PI uses 1050px from offline site */
+    --breakpoint-xl: 1340px;    /* S2PI container max width */
+    --breakpoint-xxl: 1600px;
+
+    /* Container Max Widths */
+    --container-sm: 540px;
+    --container-md: 720px;
+    --container-lg: 960px;
+    --container-xl: 1140px;
+    --container-xxl: 1320px;
+    --radius: 0.625rem;
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+
+    /* S2PI Typography System - From offline website analysis */
+    --s2pi-text-body-size: 17px;
+    --s2pi-text-body-leading: 31px;
+    --s2pi-text-body-weight: 300;
+    --s2pi-text-body-color: #232323;
+    
+    --s2pi-heading-h1-size: 48px;
+    --s2pi-heading-h1-leading: 52px;
+    --s2pi-heading-h1-color: #565656;
+    
+    --s2pi-heading-h2-size: 36px;
+    --s2pi-heading-h2-leading: 46px;
+    
+    --s2pi-heading-h4-size: 20px;
+    --s2pi-heading-h4-leading: 30px;
+    --s2pi-heading-h4-color: #2d2d2d;
+    
+    --s2pi-brand-color: #b52626;
   }
+
+  /* Dark Mode Support */
+
+  /* =============================================================================
+     GLOBAL BODY & PAGE STRUCTURE
+     ============================================================================= */
+  body {
+    background-color: var(--s2pi-background-body);
+    color: var(--s2pi-text-primary);
+    font-family: 'Roboto', Helvetica, Arial, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  #page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* =============================================================================
+     GLOBAL TYPOGRAPHY (S2PI EXACT PATTERNS)
+     ============================================================================= */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+  }
+
+  .heading-primary {
+    font-size: 48px;
+    line-height: 52px;
+    color: var(--s2pi-text-secondary);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .heading-secondary {
+    font-size: 26px;
+    line-height: 36px;
+    color: var(--s2pi-text-secondary);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  .fancy-header h1 {
+    font-size: 2.6em;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.2em;
+    font-weight: 500;
+    color: var(--s2pi-white);
+  }
+
+  .fancy-title {
+    font-family: 'Prata', serif;
+    padding-top: 25px;
+    border-bottom: 3px dotted var(--s2pi-accent-pink);
+    padding-bottom: 10px;
+  }
+
+  .widget-title {
+    background-color: var(--s2pi-blue-dark);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: var(--s2pi-white);
+    line-height: 1.3;
+    padding: 3%;
+  }
+
+  /* =============================================================================
+     GLOBAL LAYOUT UTILITIES
+     ============================================================================= */
+  .content-width-line {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .container-responsive {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* S2PI Standard Content Container - 1300px max width */
+  .container-s2pi {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* S2PI Content Container Variants */
+  .container-s2pi-wide {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .container-s2pi-narrow {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* =============================================================================
+     MASTHEAD & HEADER STRUCTURE (S2PI EXACT)
+     ============================================================================= */
+
+  /* Main Masthead Container */
+  .masthead {
+    position: relative;
+    z-index: 100;
+    background: var(--s2pi-background-white);
+    width: 100%;
+    display: block;
+  }
+
+  /* Classic Header Layout */
+  .masthead.classic-header {
+    position: relative;
+    background: var(--s2pi-background-white);
+  }
+
+  /* Shadow Decoration */
+  .masthead.shadow-decoration:not(.side-header-menu-icon):not(#phantom):not(.masthead-mobile-header) {
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Content Width Line */
+  .masthead.content-width-line {
+    max-width: none;
+    width: 100%;
+  }
+
+  .top-bar.line-content {
+    background-color: var(--s2pi-blue-dark) ;
+  }
+
+  /* Header bar visibility */
+  .header-bar {
+    background: var(--s2pi-background-white) ;
+    padding: 20px 0;
+    position: relative;
+    z-index: 90;
+    display: block ;
+    width: 100%;
+  }
+
+  /* Mobile specific */
+  @media (max-width: 778px) {
+    .masthead.shadow-mobile-header-decoration {
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .section-padding {
+    padding: 80px 0;
+  }
+
+  .section-padding-small {
+    padding: 40px 0;
+  }
+
+  /* =============================================================================
+     GLOBAL SEPARATORS & DECORATORS (S2PI EXACT STYLES)
+     ============================================================================= */
+  .s2pi-separator {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .s2pi-separator::before,
+  .s2pi-separator::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--s2pi-red);
+    margin: 0 15px;
+  }
+
+  .dotted-separator {
+    border-bottom: 3px dotted var(--s2pi-accent-pink);
+    margin: 30px 0;
+  }
+
+  .blockquote {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.6em;
+    line-height: 1.3;
+    border-left: 3px solid var(--s2pi-green-light);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+  }
+
+  /* =============================================================================
+     ACCESSIBILITY
+     ============================================================================= */
+  .screen-reader-text,
+  .assistive-text {
+    position: absolute ;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px ;
+    height: 1px ;
+    overflow: hidden;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .skip-link:focus {
+    position: absolute;
+    left: 6px;
+    top: 7px;
+    z-index: 999999;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* =============================================================================
+     RESPONSIVE DISPLAY UTILITIES (S2PI EXACT BREAKPOINTS)
+     ============================================================================= */
+  .show-on-desktop {
+    display: block;
+  }
+
+  .hide-on-desktop {
+    display: none;
+  }
+
+  .show-on-first-switch {
+    display: none;
+  }
+
+  .hide-on-first-switch {
+    display: block;
+  }
+
+  .show-on-second-switch {
+    display: none;
+  }
+
+  .hide-on-second-switch {
+    display: block;
+  }
+
+  .display-none {
+    display: none ;
+  }
+
+  /* S2PI Specific Breakpoints (from offline website) */
+  @media (max-width: 640px) {
+    .hide-mobile-640 { display: none ; }
+    .show-mobile-640 { display: block ; }
+
+    .fancy-header h1 {
+      font-size: 2.6em;
+      font-family: 'Oswald', sans-serif;
+      line-height: 1.2em;
+    }
+  }
+
+  @media (max-width: 680px) {
+    h3.titles_pages {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    h2 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+
+  @media (max-width: 778px) {
+    .show-on-desktop { display: none ; }
+    .hide-on-desktop { display: block ; }
+    .show-on-first-switch { display: block ; }
+    .hide-on-first-switch { display: none ; }
+
+    #main {
+      padding-top: 0px;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    .show-on-second-switch { display: block ; }
+    .hide-on-second-switch { display: none ; }
+  }
+
+  /* =============================================================================
+     RESPONSIVE CONTAINERS
+     ============================================================================= */
+  @media (min-width: 576px) {
+    .container-responsive { max-width: var(--container-sm); }
+  }
+
+  @media (min-width: 768px) {
+    .container-responsive { max-width: var(--container-md); }
+  }
+
+  @media (min-width: 1024px) {
+    .container-responsive { max-width: var(--container-lg); }
+  }
+
+  @media (min-width: 1200px) {
+    .container-responsive { max-width: var(--container-xl); }
+  }
+
+  @media (min-width: 1340px) {
+    .container-responsive { max-width: var(--container-xxl); }
+
+    /* S2PI Container Responsive Adjustments */
+    .container-s2pi {
+      padding: 0 30px;
+    }
+
+    .container-s2pi-wide {
+      padding: 0 30px;
+    }
+
+    .container-s2pi-narrow {
+      padding: 0 30px;
+    }
+  }
+
+  /* Responsive adjustments for S2PI containers */
+  @media (max-width: 1340px) {
+    .container-s2pi,
+    .container-s2pi-wide,
+    .container-s2pi-narrow {
+      padding: 0 25px;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    .container-s2pi,
+    .container-s2pi-wide,
+    .container-s2pi-narrow {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 778px) {
+    .container-s2pi,
+    .container-s2pi-wide,
+    .container-s2pi-narrow {
+      padding: 0 15px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container-s2pi,
+    .container-s2pi-wide,
+    .container-s2pi-narrow {
+      padding: 0 15px;
+    }
+  }
+
+  /* =============================================================================
+     RESPONSIVE TYPOGRAPHY
+     ============================================================================= */
+  @media (max-width: 778px) {
+    .heading-primary {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+    }
+
+    .content-width-line {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .heading-primary {
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+    .heading-secondary {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .section-padding {
+      padding: 40px 0;
+    }
+
+    .section-padding-small {
+      padding: 20px 0;
+    }
+
+    .content-width-line {
+      padding: 0 15px;
+    }
+  }
+
+  /* =============================================================================
+     RESPONSIVE GRID & FLEX UTILITIES
+     ============================================================================= */
+  .grid-responsive-1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-responsive-2 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-responsive-3 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-responsive-4 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 1024px) {
+    .grid-responsive {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+
+  @media (max-width: 778px) {
+    .grid-responsive {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  .flex-responsive {
+    display: flex;
+    gap: 30px;
+  }
+
+  @media (max-width: 778px) {
+    .flex-responsive {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  /* =============================================================================
+     GLOBAL COLOR UTILITIES
+     ============================================================================= */
+  .text-s2pi-primary { color: var(--s2pi-text-primary); }
+  .text-s2pi-secondary { color: var(--s2pi-text-secondary); }
+  .text-s2pi-tertiary { color: var(--s2pi-text-tertiary); }
+  .text-s2pi-orange { color: var(--s2pi-orange); }
+  .text-s2pi-muted { color: var(--s2pi-text-muted); }
+  .text-s2pi-gray { color: var(--s2pi-text-gray); }
+  .text-s2pi-dark { color: var(--s2pi-text-dark); }
+  .text-s2pi-light { color: var(--s2pi-text-light); }
+
+  .bg-s2pi-blue { background-color: var(--s2pi-blue); }
+  .bg-s2pi-blue-dark { background-color: var(--s2pi-blue-dark); }
+  .bg-s2pi-red { background-color: var(--s2pi-red); }
+  .bg-s2pi-red-hover { background-color: var(--s2pi-red-hover); }
+  .bg-s2pi-orange { background-color: var(--s2pi-orange); }
+  .bg-s2pi-green { background-color: var(--s2pi-green); }
+  .bg-s2pi-green-hover { background-color: var(--s2pi-green-hover); }
+  .bg-s2pi-light-blue { background-color: var(--s2pi-light-blue); }
+  .bg-s2pi-fire-red { background-color: var(--s2pi-fire-red); }
+  .bg-s2pi-acoustic-brown { background-color: var(--s2pi-acoustic-brown); }
+  .bg-s2pi-white { background-color: var(--s2pi-white); }
+
+  .border-s2pi-red { border-color: var(--s2pi-red); }
+  .border-s2pi-blue { border-color: var(--s2pi-blue); }
+  .border-s2pi-light { border-color: var(--s2pi-border-light); }
+  .border-s2pi-gray { border-color: var(--s2pi-border-gray); }
+  .border-s2pi-medium { border-color: var(--s2pi-border-medium); }
+  .border-s2pi-accent-pink { border-color: var(--s2pi-accent-pink); }
+  .border-s2pi-green-light { border-color: var(--s2pi-green-light); }
+
+  /* =============================================================================
+     GLOBAL INTERACTIVE STATES
+     ============================================================================= */
+  .hover-s2pi-red:hover { background-color: var(--s2pi-red-hover); }
+  .hover-s2pi-green:hover { background-color: var(--s2pi-green-hover); }
+  .transition-all { transition: all 0.3s ease; }
+  .transition-color { transition: color 0.3s ease; }
+  .transition-bg { transition: background-color 0.3s ease; }
+
+  /* =============================================================================
+     GLOBAL BUTTON COMPONENTS
+     ============================================================================= */
+  .btn-s2pi-primary {
+    background-color: var(--s2pi-blue-dark);
+    color: var(--s2pi-white);
+    border-radius: 5px;
+    padding: 8px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-s2pi-primary:hover {
+    background-color: var(--s2pi-blue);
+  }
+
+  .btn-s2pi-secondary {
+    background-color: var(--s2pi-light-blue);
+    color: var(--s2pi-white);
+    border-radius: 5px;
+    padding: 8px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-s2pi-fire {
+    background-color: var(--s2pi-fire-red);
+    color: var(--s2pi-white);
+    border-radius: 5px;
+    padding: 8px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-s2pi-acoustic {
+    background-color: var(--s2pi-acoustic-brown);
+    color: var(--s2pi-white);
+    border-radius: 5px;
+    padding: 8px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* =============================================================================
+     GLOBAL SPACING UTILITIES
+     ============================================================================= */
+  .mb-xs { margin-bottom: 8px; }
+  .mb-sm { margin-bottom: 16px; }
+  .mb-md { margin-bottom: 24px; }
+  .mb-lg { margin-bottom: 32px; }
+  .mb-xl { margin-bottom: 48px; }
+
+  .mt-xs { margin-top: 8px; }
+  .mt-sm { margin-top: 16px; }
+  .mt-md { margin-top: 24px; }
+  .mt-lg { margin-top: 32px; }
+  .mt-xl { margin-top: 48px; }
+
+  .p-xs { padding: 8px; }
+  .p-sm { padding: 16px; }
+  .p-md { padding: 24px; }
+  .p-lg { padding: 32px; }
+  .p-xl { padding: 48px; }
+
+  /* =============================================================================
+     GLOBAL TEXT UTILITIES
+     ============================================================================= */
+  .text-center { text-align: center; }
+  .text-left { text-align: left; }
+  .text-right { text-align: right; }
+
+  @theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+  @layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+}
+/* S2PI specific utility classes */
+.s2pi-text {
+  text-align: justify;
+}
+
+.s2pi-text strong {
+  font-weight: var(--s2pi-text-weight-bold);
+  display: inline;
+}
+
+.s2pi-heading {
+  text-align: center;
+}
+
+/* =========================================================================
+   LANGUAGE SELECTOR DROPDOWN Z-INDEX FIX
+   ========================================================================= */
+
+/* Ensure language selector dropdowns appear above all other components */
+.language-dropdown-above-all,
+[class*="language-selector"] [role="listbox"],
+[class*="LanguageSelector"] [role="listbox"] {
+  z-index: 99999 !important;
+  position: absolute !important;
+}
+
+/* Additional fallback for any dropdown in language selectors */
+div[class*="language"] div[class*="absolute"],
+div[class*="Language"] div[class*="absolute"] {
+  z-index: 99999 !important;
+}
+
+/* Specific fix for language selector dropdowns */
+.relative > div[class*="absolute"] {
+  z-index: 99999 !important;
+}
+
+/* S2PI Language Dropdown - Black Text for Abbreviations */
+.s2pi-language-dropdown button span,
+.s2pi-language-dropdown [class*="font-medium"] {
+  color: #333 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+.s2pi-language-dropdown button:hover span,
+.s2pi-language-dropdown button:hover [class*="font-medium"] {
+  color: #1D4572 !important;
+}
+
+.s2pi-language-dropdown button[aria-selected="true"] span,
+.s2pi-language-dropdown button[aria-selected="true"] [class*="font-medium"] {
+  color: white !important;
 }

@@ -1,0 +1,160 @@
+/* MicroWidgetButton Component Styles */
+.microWidgetButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: inherit;
+  outline: none;
+}
+
+.microWidgetButton:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Variants */
+.primary {
+  background-color: #d8722d;
+  color: white;
+  border-color: #d8722d;
+}
+
+.primary:hover {
+  background-color: #d35400;
+  border-color: #d35400;
+}
+
+.secondary {
+  background-color: #06528a;
+  color: white;
+  border-color: #06528a;
+}
+
+.secondary:hover {
+  background-color: #044a7a;
+  border-color: #044a7a;
+}
+
+.outline {
+  background-color: transparent;
+  color: rgb(55, 65, 81);
+  border-color: rgb(209, 213, 219);
+}
+
+.outline:hover {
+  background-color: rgb(249, 250, 251);
+  border-color: rgb(156, 163, 175);
+}
+
+.ghost {
+  background-color: transparent;
+  color: rgb(55, 65, 81);
+  border-color: transparent;
+}
+
+.ghost:hover {
+  background-color: rgb(243, 244, 246);
+}
+
+/* Sizes */
+.small {
+  padding: 4px 12px;
+  font-size: 12px;
+  gap: 4px;
+}
+
+.medium {
+  padding: 6px 16px;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.large {
+  padding: 8px 24px;
+  font-size: 16px;
+  gap: 8px;
+}
+
+/* Icon alignment */
+.iconLeft {
+  flex-direction: row;
+}
+
+.iconRight {
+  flex-direction: row-reverse;
+}
+
+.iconCenter {
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Icon wrapper */
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconWrapper svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Text wrapper */
+.textWrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* S2PI specific classes */
+.s2piButton {
+  /* Additional S2PI specific styling */
+  font-family: inherit;
+  letter-spacing: 0.025em;
+}
+
+.borderOn {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.hoverBorderOn:hover {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.disableAnimation {
+  transition: none;
+}
+
+/* Enquête button specific styling */
+.enqueteButton {
+  background-color: #d8722d;
+  color: white;
+  border-color: #d8722d;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.enqueteButton:hover {
+  background-color: #d35400;
+  border-color: #d35400;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+} 
