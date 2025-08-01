@@ -3,12 +3,12 @@
 import { useState } from "react"
 import { PDFImage, type ImageSize } from "../../pdf-image/pdfImage"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../cn-card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../forms/select"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../forms/Select"
 import { Badge } from "../../badge/badge"
 import { Switch } from "../../ switch/switch"
 import { Label } from "../../forms/label"
-import { Input } from "../../forms/input"
 import { Separator } from "../../separator/separator"
+import { Input } from "../../forms/Input"
 
 export function S2PIPDFSectionShowcase() {
   const [imagePosition, setImagePosition] = useState<"left" | "right">("left")
