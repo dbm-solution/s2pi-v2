@@ -159,7 +159,6 @@ dist
 # GATSBY FILES
 # ========================================
 .cache/
-public
 
 # ========================================
 # STORYBOOK BUILD OUTPUTS
@@ -261,11 +260,7 @@ temp/
 # PROJECT SPECIFIC
 # ========================================
 # Uploaded files
-uploads/
-public/uploads/
 
-# Generated PDFs
-public/pdf/generated/
 
 # Backup files
 *.backup
@@ -319,17 +314,3 @@ public/pdf/generated/
 !.env.example
 !.env.sample
 !.env.template
-
-
-# video files
-*.mp4
-*.mkv
-*.avi
-*.mov
-*.wmv
-*.flv
-*.webm
-*.mpeg
-*.mpg
-*.m4v
-*.3gp
