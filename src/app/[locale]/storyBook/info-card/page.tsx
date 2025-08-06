@@ -74,7 +74,7 @@ export default function Home() {
             layout="banner"
             textAlign="center"
             icon={<CelebrationIcon />}
-            title="Bonne année 2025 à tous nos clients et partenaires !"
+            title="Bonne année 2025 à tous nos  et partenaires !"
             description="Nous savons que nous sommes un peu en retard, mais mieux vaut tard que jamais ! Nous vous souhaitons une année remplie de bonheur, de santé et de succès. Que cette nouvelle année soit synonyme de nouvelles opportunités, de moments inoubliables et de réalisations personnelles et professionnelles."
             footer={
               <p className="text-sm opacity-90 font-medium">
