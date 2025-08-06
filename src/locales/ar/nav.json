@@ -1,19 +1,44 @@
 {
   "menu": {
-    "home": "Accueil",
-    "about": "À propos",
-    "products": "Produits",
-    "solutions": "Solutions",
-    "quality": "Qualité",
-    "contact": "Contact",
-    "depots": "Nos dépôts"
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "novelty": "جديد",
+    "products": "منتجاتنا",
+    "solutions": "الحلول التقنية",
+    "implementation": "قواعد التنفيذ",
+    "information": "معلومات مفيدة",
+    "quality": "ميثاق الجودة",
+    "depots": "مستودعاتنا"
   },
   "submenu": {
-    "acoustic": "Solutions acoustiques",
-    "fire": "Protection incendie",
-    "thermal": "Isolation thermique",
-    "certification": "Certification ISO",
-    "survey": "Enquête satisfaction",
-    "service": "Service client"
+    "thermal": {
+      "ite": "ITRAN - العزل الحراري الخارجي"
+    },
+    "products": {
+      "fibrous": "المنتجات الليفية للرش والألواح الصلبة",
+      "paste": "منتجات العجينة للرش",
+      "paints": "الدهانات المتضخمة PROMAPAINT®-SC4 و PROMAPAINT®-SC3",
+      "primers": "المواد الأولية للالتصاق",
+      "finishes": "طلاءات التشطيب",
+      "materials": "المعدات والملحقات"
+    },
+    "solutions": {
+      "acoustic": "التصحيح الصوتي - العزل الصوتي والحراري",
+      "thermal": "حلول العزل الحراري",
+      "fire": "حلول حماية السلامة من الحريق"
+    },
+    "implementation": {
+      "fibrous": "رش المنتجات الليفية",
+      "paste": "رش منتجات العجينة",
+      "paints": "طلاءات الدهانات المتضخمة"
+    },
+    "quality": {
+      "service": "خدمة العملاء S2PI",
+      "zerocasse": "صفر كسر آلة",
+      "policy": "سياسة الجودة",
+      "certification": "شهادة ISO 9001:2015",
+      "survey": "استطلاع الرضا"
+    },
+    "contact": "اتصل بنا"
   }
 }

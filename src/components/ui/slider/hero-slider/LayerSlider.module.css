@@ -1,0 +1,191 @@
+/* src/components/ui/slider/hero-slider/LayerSlider.module.css */
+
+.lsWpContainer {
+  position: relative;
+  width: 1920px;
+  height: 620px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.lsSlide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: all 1500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lsBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Ken Burns scale effect - exactly like LayerSlider */
+  animation: kenBurnsScale 6000ms ease-out forwards;
+}
+
+@keyframes kenBurnsScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.lsLayer {
+  position: absolute;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* Slide transition effects - exact LayerSlider timing */
+.slideTransition42 {
+  /* Transition 42 from LayerSlider */
+  transition: all 1500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideIn {
+  animation: slideInFromRight 1500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.slideOut {
+  animation: slideOutToLeft 1500ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+.imageClipIn {
+  animation: clipInFromRight 1500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes clipInFromRight {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(100vw);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
+    transform: translateX(0);
+  }
+}
+
+.scaleIn {
+  animation: scaleInFromCenter 1500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes scaleInFromCenter {
+  0% {
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: 100% 50% 0;
+  }
+  100% {
+    transform: translateX(-50%) scaleX(1);
+    transform-origin: 100% 50% 0;
+  }
+}
+
+.accentBarSlide {
+  animation: accentBarSlideIn 1500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes accentBarSlideIn {
+  0% {
+    transform: translateX(1280px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Hover effects for CTA button - exact S2PI styling */
+.ctaButton {
+  display: inline-block;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 46px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: #4f4f4f !important;
+}
+
+/* Responsive breakpoints - exact S2PI responsive behavior */
+@media screen and (max-width: 1920px) {
+  .lsWpContainer {
+    width: 100% !important;
+    max-width: 1920px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .lsWpContainer {
+    height: 500px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lsWpContainer {
+    height: 400px !important;
+  }
+  
+  /* Mobile-specific hiding - LayerSlider hideOnMobile: true */
+  .lsWpContainer {
+    display: none;
+  }
+}
+
+/* Typography - exact Poppins and Helvetica usage */
+.titleText {
+  font-family: 'Helvetica', sans-serif;
+  color: #000000;
+  font-weight: normal;
+}
+
+.descriptionText {
+  font-family: 'Poppins', sans-serif;
+  color: #4f4f4f;
+  font-weight: 400;
+}
+
+.ctaButtonText {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+}

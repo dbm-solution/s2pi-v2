@@ -1,3 +1,5 @@
+"use client"
+
 import { S2PIPDFSectionShowcase } from "@/components/ui/cards/pdf-cards/pdfCard"
 import { S2PIProductGridShowcase } from "@/components/ui/product-grid/product-grid-schowcase"
 

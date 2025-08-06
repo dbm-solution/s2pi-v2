@@ -4,6 +4,8 @@ import type React from "react"
 import { cn } from "@/lib/utils"
 import styles from "./slider-card.module.css"
 
+type AnimationPhase = 'idle' | 'exit' | 'sliceRolling' | 'cardExpanding' | 'logoIn' | 'textIn' | 'buttonIn' | 'complete';
+
 export interface SliderCardProps {
   title: string
   description: string
@@ -19,6 +21,7 @@ export interface SliderCardProps {
   accentColorHover?: string
   className?: string
   style?: React.CSSProperties
+  animationPhase?: AnimationPhase
 }
 
 export const SliderCard: React.FC<SliderCardProps> = ({
@@ -36,6 +39,7 @@ export const SliderCard: React.FC<SliderCardProps> = ({
   accentColorHover,
   className,
   style,
+  animationPhase = 'idle',
 }) => {
   const cardStyle = {
     ...style,
@@ -50,29 +54,139 @@ export const SliderCard: React.FC<SliderCardProps> = ({
     }
   }
 
+  // Helper function to get card container classes with expansion animation
+  const getCardClasses = () => {
+    const classes = [
+      styles.sliderCard,
+      styles[variant],
+      styles[size],
+      animation !== "none" && styles[animation],
+      className,
+    ].filter(Boolean);
+
+    // Add expansion animation classes
+    switch (animationPhase) {
+      case 'exit':
+      case 'sliceRolling':
+        classes.push(styles.cardExpandInitial);
+        break;
+      case 'cardExpanding':
+        classes.push(styles.cardExpandAnimating);
+        break;
+      case 'logoIn':
+      case 'textIn':
+      case 'buttonIn':
+      case 'complete':
+      case 'idle':
+      default:
+        classes.push(styles.cardExpandComplete);
+    }
+
+    return classes;
+  };
+
+  // Helper function to get content animation classes
+  const getContentClasses = () => {
+    const classes = [styles.content];
+    
+    switch (animationPhase) {
+      case 'exit':
+      case 'sliceRolling':
+      case 'cardExpanding':
+        classes.push(styles.cardContentHidden);
+        break;
+      case 'logoIn':
+      case 'textIn':
+      case 'buttonIn':
+      case 'complete':
+      case 'idle':
+      default:
+        classes.push(styles.cardContentVisible);
+    }
+    
+    return classes.join(' ');
+  };
+
+  const getLogoClasses = () => {
+    const classes = [styles.imageContainer];
+    
+    switch (animationPhase) {
+      case 'exit':
+      case 'sliceRolling':
+      case 'cardExpanding':
+        classes.push(styles.logoHidden);
+        break;
+      case 'logoIn':
+      case 'textIn':
+      case 'buttonIn':
+      case 'complete':
+      case 'idle':
+      default:
+        classes.push(styles.logoVisible);
+    }
+    
+    return classes.join(' ');
+  };
+
+  const getTextClasses = () => {
+    const classes = [styles.textContent];
+    
+    switch (animationPhase) {
+      case 'exit':
+      case 'sliceRolling':
+      case 'cardExpanding':
+      case 'logoIn':
+        classes.push(styles.textHidden);
+        break;
+      case 'textIn':
+      case 'buttonIn':
+      case 'complete':
+      case 'idle':
+      default:
+        classes.push(styles.textVisible);
+    }
+    
+    return classes.join(' ');
+  };
+
+  const getButtonClasses = () => {
+    const classes = [styles.button];
+    
+    switch (animationPhase) {
+      case 'exit':
+      case 'sliceRolling':
+      case 'cardExpanding':
+      case 'logoIn':
+      case 'textIn':
+        classes.push(styles.buttonHidden);
+        break;
+      case 'buttonIn':
+      case 'complete':
+      case 'idle':
+      default:
+        classes.push(styles.buttonVisible);
+    }
+    
+    return classes.join(' ');
+  };
+
   const ButtonComponent = buttonHref ? "a" : "button"
 
   return (
     <div
-      className={cn(
-        styles.sliderCard,
-        styles[variant],
-        styles[size],
-        animation !== "none" && styles[animation],
-        className,
-      )}
+      className={cn(...getCardClasses())}
       style={cardStyle}
     >
       <div className={styles.accentBar} />
 
-      <div className={styles.content}>
+      <div className={getContentClasses()}>
         <div className={styles.header}>
-          <div className={styles.textContent}>
+          <div className={getTextClasses()}>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.description}>{description}</p>
           </div>
 
-          <div className={styles.imageContainer}>
+          <div className={getLogoClasses()}>
             {imageSrc ? (
               <img src={imageSrc || "/placeholder.svg"} alt={imageAlt} className={styles.image} />
             ) : (
@@ -94,7 +208,7 @@ export const SliderCard: React.FC<SliderCardProps> = ({
         </div>
 
         <ButtonComponent
-          className={styles.button}
+          className={getButtonClasses()}
           href={buttonHref}
           onClick={handleButtonClick}
           {...(buttonHref && { target: "_blank", rel: "noopener noreferrer" })}

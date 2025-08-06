@@ -1,25 +1,31 @@
-"use client"
+
 import { S2PIProductGrid, type ProductGridItem } from "@/components/ui/product-grid/ui-grid/s2pi-product-grid"
+
+// Create a data URL for placeholder images to avoid 404 errors
+const createPlaceholderImage = (text: string) => {
+  const encodedText = encodeURIComponent(text);
+  return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'%3E%3Crect width='300' height='400' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='%236b7280'%3E${encodedText}%3C/text%3E%3C/svg%3E`;
+};
 
 const acousticSolutionsData: ProductGridItem[] = [
   {
     id: "farbocustic",
     title: "FARBOCUSTIC - Revêtement décoratif d'absorption acoustique",
-    image: "/placeholder.svg?height=400&width=300&text=FARBOCUSTIC",
+    image: createPlaceholderImage("FARBOCUSTIC"),
     link: "/pdf/farbocustic.pdf",
     buttonText: "En savoir +",
   },
   {
     id: "innospray-fth",
     title: "INNOSPRAY-FTH - Enduit d'isolation acoustique et thermique",
-    image: "/placeholder.svg?height=400&width=300&text=INNOSPRAY-FTH",
+    image: createPlaceholderImage("INNOSPRAY-FTH"),
     link: "/pdf/innospray-fth.pdf",
     buttonText: "En savoir +",
   },
   {
     id: "panneaux-rigides",
     title: "PANNEAUX RIGIDES - Isolation thermique protection incendie",
-    image: "/placeholder.svg?height=400&width=300&text=PANNEAUX+RIGIDES",
+    image: createPlaceholderImage("PANNEAUX RIGIDES"),
     link: "/pdf/panneaux-rigides.pdf",
     buttonText: "En savoir +",
   },
@@ -29,28 +35,28 @@ const thermalSolutionsData: ProductGridItem[] = [
   {
     id: "innospray-ffm",
     title: "INNOSPRAY-FFM - Mélange projeté léger",
-    image: "/placeholder.svg?height=400&width=300&text=INNOSPRAY-FFM",
+    image: createPlaceholderImage("INNOSPRAY-FFM"),
     link: "/pdf/innospray-ffm.pdf",
     buttonText: "Télécharger PDF",
   },
   {
     id: "innospray-sc3",
     title: "INNOSPRAY-SC3 - Protection passive contre l'incendie",
-    image: "/placeholder.svg?height=400&width=300&text=INNOSPRAY-SC3",
+    image: createPlaceholderImage("INNOSPRAY-SC3"),
     link: "/pdf/innospray-sc3.pdf",
     buttonText: "Voir détails",
   },
   {
     id: "promapaint-sc4",
     title: "PROMAPAINT-SC4 - Peinture intumescente",
-    image: "/placeholder.svg?height=400&width=300&text=PROMAPAINT-SC4",
+    image: createPlaceholderImage("PROMAPAINT-SC4"),
     link: "/pdf/promapaint-sc4.pdf",
     buttonText: "En savoir +",
   },
   {
     id: "rockwool-panels",
     title: "ROCKWOOL - Panneaux isolants haute performance",
-    image: "/placeholder.svg?height=400&width=300&text=ROCKWOOL",
+    image: createPlaceholderImage("ROCKWOOL"),
     link: "/pdf/rockwool.pdf",
     buttonText: "Documentation",
   },

@@ -1,19 +1,44 @@
 {
   "menu": {
-    "home": "Accueil",
-    "about": "À propos",
-    "products": "Produits",
-    "solutions": "Solutions",
-    "quality": "Qualité",
-    "contact": "Contact",
-    "depots": "Nos dépôts"
+    "home": "HOME",
+    "about": "CHI SIAMO",
+    "novelty": "NOVITÀ",
+    "products": "I NOSTRI PRODOTTI",
+    "solutions": "SOLUZIONI TECNICHE",
+    "implementation": "REGOLE DI IMPLEMENTAZIONE",
+    "information": "INFORMAZIONI UTILI",
+    "quality": "CARTA DELLA QUALITÀ",
+    "depots": "I NOSTRI DEPOSITI"
   },
   "submenu": {
-    "acoustic": "Solutions acoustiques",
-    "fire": "Protection incendie",
-    "thermal": "Isolation thermique",
-    "certification": "Certification ISO",
-    "survey": "Enquête satisfaction",
-    "service": "Service client"
+    "thermal": {
+      "ite": "ITRAN - Isolamento Termico Esterno"
+    },
+    "products": {
+      "fibrous": "Prodotti Fibrosi di Proiezione e Pannelli Rigidi",
+      "paste": "Prodotti Pasta di Proiezione",
+      "paints": "Vernici Intumescenti PROMAPAINT®-SC4 E PROMAPAINT®-SC3",
+      "primers": "Primari di Ancoraggio",
+      "finishes": "Rivestimenti di Finitura",
+      "materials": "Materiali e Accessori"
+    },
+    "solutions": {
+      "acoustic": "Correzione Acustica – Isolamento Acustico e Termico",
+      "thermal": "Soluzioni di Isolamento Termico",
+      "fire": "Soluzioni di Protezione Sicurezza Antincendio"
+    },
+    "implementation": {
+      "fibrous": "Proiezione Prodotti Fibrosi",
+      "paste": "Proiezione Prodotti Pasta",
+      "paints": "Rivestimenti Vernici Intumescenti"
+    },
+    "quality": {
+      "service": "Servizio Clienti S2PI",
+      "zerocasse": "Zero Rottura Macchina",
+      "policy": "Politica della Qualità",
+      "certification": "Certificazione ISO 9001:2015",
+      "survey": "Sondaggio di Soddisfazione"
+    },
+    "contact": "Contatto"
   }
 }

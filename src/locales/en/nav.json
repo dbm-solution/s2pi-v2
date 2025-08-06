@@ -1,19 +1,44 @@
 {
   "menu": {
-    "home": "Accueil",
-    "about": "À propos",
-    "products": "Produits",
-    "solutions": "Solutions",
-    "quality": "Qualité",
-    "contact": "Contact",
-    "depots": "Nos dépôts"
+    "home": "HOME",
+    "about": "ABOUT",
+    "novelty": "NEW",
+    "products": "OUR PRODUCTS",
+    "solutions": "TECHNICAL SOLUTIONS",
+    "implementation": "IMPLEMENTATION RULES",
+    "information": "USEFUL INFORMATION",
+    "quality": "QUALITY CHARTER",
+    "depots": "OUR DEPOTS"
   },
   "submenu": {
-    "acoustic": "Solutions acoustiques",
-    "fire": "Protection incendie",
-    "thermal": "Isolation thermique",
-    "certification": "Certification ISO",
-    "survey": "Enquête satisfaction",
-    "service": "Service client"
+    "thermal": {
+      "ite": "ITRAN - External Thermal Insulation"
+    },
+    "products": {
+      "fibrous": "Fibrous Projection Products & Rigid Panels",
+      "paste": "Paste Projection Products",
+      "paints": "Intumescent Paints PROMAPAINT®-SC4 AND PROMAPAINT®-SC3",
+      "primers": "Priming Products",
+      "finishes": "Finishing Coatings",
+      "materials": "Equipment and Accessories"
+    },
+    "solutions": {
+      "acoustic": "Acoustic Correction – Acoustic & Thermal Insulation",
+      "thermal": "Thermal Insulation Solutions",
+      "fire": "Fire Safety Protection Solutions"
+    },
+    "implementation": {
+      "fibrous": "Fibrous Products Projection",
+      "paste": "Paste Products Projection",
+      "paints": "Intumescent Paint Coatings"
+    },
+    "quality": {
+      "service": "S2PI Customer Service",
+      "zerocasse": "Zero Machine Breakage",
+      "policy": "Quality Policy",
+      "certification": "ISO 9001:2015 Certification",
+      "survey": "Satisfaction Survey"
+    },
+    "contact": "Contact"
   }
 }

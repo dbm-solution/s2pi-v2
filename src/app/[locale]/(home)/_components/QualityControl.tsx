@@ -1,10 +1,10 @@
 "use client";
 
 import { Typography } from "@/components/ui/typography/typography";
-import { useTranslations } from '@/components/providers/IntlProvider';
+import { useClientTranslations } from '@/components/providers/ClientTranslationProvider';
 
-export const QualityControl = () => {
-  const t = useTranslations('home.qualityControl');
+export default function QualityControl() {
+  const t = useClientTranslations('home.qualityControl');
 
   return (
     <div className="relative w-full">

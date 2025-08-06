@@ -1,0 +1,494 @@
+/* src/components/ui/slider/hero-slider/S2PILayerSlider.module.css */
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+/* Background Layer Styles */
+.backgroundLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Additional background layer for continuous sliding */
+.backgroundLayerNext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transform: translateX(100%);
+  overflow: hidden;
+}
+
+/* Vertical Slice Animation Container */
+.sliceContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.slice {
+  width: 12.5%; /* 8 slices = 100% / 8 */
+  height: 100%;
+  background-size: 800% 100%; /* 8 slices, so 800% width to show correct portion */
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 200ms ease-out;
+}
+
+.slice:nth-child(1) { background-position-x: 0%; }
+.slice:nth-child(2) { background-position-x: 14.28%; }
+.slice:nth-child(3) { background-position-x: 28.56%; }
+.slice:nth-child(4) { background-position-x: 42.84%; }
+.slice:nth-child(5) { background-position-x: 57.12%; }
+.slice:nth-child(6) { background-position-x: 71.4%; }
+.slice:nth-child(7) { background-position-x: 85.68%; }
+.slice:nth-child(8) { background-position-x: 100%; }
+
+/* Slice Animation States */
+.sliceRollingOut {
+  animation: rollOutLeft 800ms ease-in-out forwards;
+}
+
+.sliceRollingIn {
+  animation: rollInRight 800ms ease-in-out forwards;
+}
+
+@keyframes rollOutLeft {
+  0% { transform: translateX(0) rotateY(0deg); }
+  50% { transform: translateX(-50%) rotateY(-90deg); }
+  100% { transform: translateX(-100%) rotateY(-180deg); }
+}
+
+@keyframes rollInRight {
+  0% { transform: translateX(100%) rotateY(180deg); }
+  50% { transform: translateX(50%) rotateY(90deg); }
+  100% { transform: translateX(0) rotateY(0deg); }
+}
+
+/* Background images for each slide */
+.bg1 {
+  background-image: url('/images/home-page/slider-cards/1/10005.jpg');
+}
+
+.bg2 {
+  background-image: url('/images/home-page/slider-cards/2/10006.jpg');
+}
+
+.bg3 {
+  background-image: url('/images/home-page/slider-cards/3/10007.jpg');
+}
+
+.bg4 {
+  background-image: url('/images/home-page/slider-cards/4/10008.jpg');
+}
+
+/* Enhanced Background Animation States for Continuous Sliding */
+.backgroundIdle {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.backgroundOut {
+  transform: translateX(-100%);
+  opacity: 1;
+  z-index: 1;
+  transition: transform 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.backgroundIn {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+  transition: transform 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.backgroundInitial {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 0;
+}
+
+/* Next background states for continuous effect */
+.backgroundNextHidden {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 0;
+}
+
+.backgroundNextSliding {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 0;
+  transition: transform 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.backgroundNextActive {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Overlay - Reduced for clearer images */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  z-index: 1;
+}
+
+/* Slider Content */
+.sliderContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.sliderCardContainer {
+  position: relative;
+  z-index: 2;
+  max-width: 1190px;
+  width: 100%;
+}
+
+/* Enhanced Card Animation States */
+.slideIdle {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slideOut {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              opacity 300ms ease-out;
+}
+
+.slideIn {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 700ms cubic-bezier(0.23, 1, 0.32, 1) 300ms, 
+              opacity 500ms ease-out 300ms;
+}
+
+.slideInitial {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Card Content Sequential Animation States */
+.cardContentHidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.cardContentVisible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.logoHidden {
+  opacity: 0;
+  transform: translateX(50px) scale(0.8);
+}
+
+.logoVisible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+.textHidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.textVisible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.buttonHidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.buttonVisible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+/* Navigation */
+.navigation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 300ms ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dot:hover:not(.disabled) {
+  border-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.activeDot {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 1);
+  transform: scale(1.2);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Accent colors for active dots */
+.accentitarn.activeDot {
+  background-color: #13abd1;
+  box-shadow: 0 0 0 3px rgba(19, 171, 209, 0.2);
+}
+
+.accentthermal.activeDot {
+  background-color: #1d4572;
+  box-shadow: 0 0 0 3px rgba(29, 69, 114, 0.2);
+}
+
+.accentfire.activeDot {
+  background-color: #ad0309;
+  box-shadow: 0 0 0 3px rgba(173, 3, 9, 0.2);
+}
+
+.accentacoustic.activeDot {
+  background-color: #7b6a58;
+  box-shadow: 0 0 0 3px rgba(123, 106, 88, 0.2);
+}
+
+.counter {
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: transform 200ms ease;
+}
+
+.counter:hover {
+  transform: scale(1.05);
+}
+
+/* Spinner Timer */
+.spinnerContainer {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.spinnerPaused {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255,255,255,0.3);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  transition: width 400ms ease-out;
+  background: linear-gradient(90deg, transparent 0%, currentColor 50%, currentColor 100%);
+}
+
+/* Progress colors for each slide */
+.progressitarn {
+  width: 25%;
+  background: linear-gradient(90deg, #13abd1, #0f96b8);
+}
+
+.progressthermal {
+  width: 50%;
+  background: linear-gradient(90deg, #1d4572, #163659);
+}
+
+.progressfire {
+  width: 75%;
+  background: linear-gradient(90deg, #ad0309, #8a0207);
+}
+
+.progressacoustic {
+  width: 100%;
+  background: linear-gradient(90deg, #7b6a58, #635546);
+}
+
+/* Auto-play pause indicator */
+.pauseIndicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
+.pauseIndicator.visible {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1920px) {
+  .container {
+    width: 100%;
+    max-width: 1920px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 400px;
+    display: none; /* Hide on mobile */
+  }
+  
+  .sliderContent {
+    padding: 20px;
+  }
+  
+  .counter {
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .dots {
+    bottom: 15px;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Performance optimizations */
+.container *,
+.container *::before,
+.container *::after {
+  will-change: transform, opacity;
+  box-sizing: border-box;
+}
+
+/* Preload optimization for smoother animations */
+.backgroundLayer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  opacity: 0;
+  z-index: -1;
+}

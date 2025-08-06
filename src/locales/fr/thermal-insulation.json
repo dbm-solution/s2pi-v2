@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "title": "Isolation Thermique par l'Extérieur - S2PI",
+    "description": "Solutions d'isolation thermique par l'extérieur avec nos produits innovants iTarn et systèmes de projection.",
+    "keywords": "isolation thermique extérieur, iTarn, projection thermique, économies énergie"
+  },
+  "hero": {
+    "title": "Isolation Thermique par l'Extérieur",
+    "subtitle": "Solutions innovantes de projection thermique pour optimiser les performances énergétiques de vos bâtiments",
+    "buttons": {
+      "discover": "Découvrir nos solutions",
+      "quote": "Demander un devis"
+    }
+  },
+  "introduction": {
+    "title": "L'isolation thermique par l'extérieur",
+    "subtitle": "Une solution performante pour l'efficacité énergétique",
+    "paragraph1": "L'isolation thermique par l'extérieur (ITE) représente une solution technique de premier plan pour améliorer les performances énergétiques des bâtiments. Nos produits de projection permettent une mise en œuvre rapide et efficace, garantissant une continuité d'isolation optimale.",
+    "paragraph2": "Grâce à nos technologies innovantes comme l'iTarn et les systèmes INNOSPRAY, nous proposons des solutions adaptées à tous types de supports et de configurations architecturales."
+  },
+  "advantages": {
+    "title": "Les avantages de nos solutions",
+    "subtitle": "Performance, rapidité et durabilité",
+    "items": {
+      "energy": {
+        "title": "Performance Énergétique",
+        "description": "Réduction significative des déperditions thermiques et des coûts de chauffage.",
+        "icon": "🔥"
+      },
+      "speed": {
+        "title": "Application Rapide",
+        "description": "Mise en œuvre par projection permettant un gain de temps considérable.",
+        "icon": "⚡"
+      },
+      "continuity": {
+        "title": "Continuité d'Isolation",
+        "description": "Suppression des ponts thermiques grâce à l'application continue.",
+        "icon": "🔗"
+      },
+      "durability": {
+        "title": "Durabilité",
+        "description": "Solutions pérennes avec une excellente tenue dans le temps.",
+        "icon": "🛡️"
+      }
+    }
+  },
+  "products": {
+    "title": "Nos produits d'isolation thermique extérieure",
+    "subtitle": "Solutions techniques haute performance",
+    "items": {
+      "itarn": {
+        "name": "iTarn",
+        "category": "Isolation Thermique",
+        "description": "Solution innovante d'isolation thermique par projection pour l'extérieur des bâtiments.",
+        "features": [
+          "Conductivité thermique λ = 0,034 W/m.K",
+          "Résistance au feu Euroclasse E",
+          "Application par projection",
+          "Épaisseur modulable selon besoins"
+        ],
+        "applications": [
+          "Façades extérieures",
+          "Murs de refend",
+          "Isolation continue",
+          "Rénovation énergétique"
+        ],
+        "technicalSpecs": {
+          "density": "65 kg/m³",
+          "thermalConductivity": "0,034 W/m.K",
+          "fireResistance": "Euroclasse E",
+          "thickness": "20 à 200 mm"
+        }
+      },
+      "innosprayFTH": {
+        "name": "INNOSPRAY FTH",
+        "category": "Isolation Thermique",
+        "description": "Produit fibreux de projection pour isolation thermique haute performance.",
+        "features": [
+          "Excellente performance thermique",
+          "Application rapide par projection",
+          "Adhérence optimale",
+          "Résistance mécanique élevée"
+        ],
+        "applications": [
+          "Planchers béton",
+          "Structures métalliques",
+          "Isolation acoustique",
+          "Protection thermique"
+        ],
+        "technicalSpecs": {
+          "density": "70 kg/m³",
+          "thermalConductivity": "0,035 W/m.K",
+          "fireResistance": "A2-s1,d0",
+          "thickness": "10 à 150 mm"
+        }
+      }
+    }
+  },
+  "technical": {
+    "title": "Informations techniques",
+    "subtitle": "Spécifications et performances",
+    "sections": {
+      "performance": {
+        "title": "Performances thermiques",
+        "description": "Nos solutions d'isolation thermique par l'extérieur offrent des performances exceptionnelles",
+        "specs": {
+          "thermalConductivity": "Conductivité thermique λ:",
+          "thermalResistance": "Résistance thermique R:",
+          "thickness": "Épaisseur d'application:",
+          "density": "Densité:"
+        },
+        "values": {
+          "thermalConductivity": "0,034 - 0,035 W/m.K",
+          "thermalResistance": "Jusqu'à 5,7 m².K/W",
+          "thickness": "10 à 200 mm",
+          "density": "65 - 70 kg/m³"
+        }
+      },
+      "implementation": {
+        "title": "Mise en œuvre",
+        "description": "Application par projection pour une mise en œuvre rapide et efficace",
+        "points": [
+          "Application par machine de projection",
+          "Adhérence directe sur support",
+          "Finition lisse ou texturée",
+          "Temps de séchage optimisé"
+        ]
+      },
+      "applications": {
+        "title": "Domaines d'application",
+        "description": "Solutions adaptées à tous types de bâtiments et de supports",
+        "categories": {
+          "buildings": {
+            "title": "Bâtiments",
+            "items": [
+              "Logements collectifs",
+              "Maisons individuelles",
+              "Bâtiments tertiaires",
+              "Constructions industrielles"
+            ]
+          },
+          "supports": {
+            "title": "Supports",
+            "items": [
+              "Béton",
+              "Maçonnerie",
+              "Structures métalliques",
+              "Panneaux préfabriqués"
+            ]
+          }
+        }
+      },
+      "certifications": {
+        "title": "Certifications et normes",
+        "description": "Conformité aux réglementations en vigueur",
+        "items": {
+          "ce": "Marquage CE",
+          "acermi": "Certification ACERMI",
+          "cstb": "Avis Technique CSTB"
+        }
+      }
+    }
+  },
+  "documentation": {
+    "title": "Documentation technique",
+    "subtitle": "Téléchargez nos fiches produits et certifications",
+    "items": {
+      "itarnSheet": {
+        "title": "Fiche technique iTarn",
+        "description": "Spécifications complètes du produit iTarn",
+        "size": "2.1 MB"
+      },
+      "innosprayFTHFloor": {
+        "title": "INNOSPRAY FTH - Plancher",
+        "description": "Application sur planchers béton",
+        "size": "1.8 MB"
+      },
+      "acousticPerformance": {
+        "title": "Performances acoustiques",
+        "description": "Données acoustiques INNOSPRAY FTH",
+        "size": "1.5 MB"
+      },
+      "acermiCert": {
+        "title": "Certificat ACERMI",
+        "description": "Certification ACERMI INNOSPRAY FTH",
+        "size": "0.9 MB"
+      },
+      "cstbOpinion": {
+        "title": "Avis Technique CSTB",
+        "description": "Avis Technique 2015-344_V1",
+        "size": "3.2 MB"
+      },
+      "atexCert": {
+        "title": "Certification ATEX",
+        "description": "Certification ATEX iTarn",
+        "size": "1.2 MB"
+      }
+    }
+  },
+  "cta": {
+    "title": "Besoin d'une solution d'isolation thermique ?",
+    "description": "Nos experts sont à votre disposition pour vous conseiller et vous accompagner dans vos projets d'isolation thermique par l'extérieur.",
+    "buttons": {
+      "quote": "Demander un devis",
+      "contact": "Nous contacter"
+    }
+  },
+  "common": {
+    "technicalSheet": "Fiche technique",
+    "moreInfo": "Plus d'infos",
+    "mainFeatures": "Caractéristiques principales",
+    "technicalSpecs": "Spécifications techniques",
+    "applications": "Applications"
+  }
+} 

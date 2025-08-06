@@ -2,12 +2,13 @@
 .sliderCard {
   position: relative;
   display: flex;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   color: #232323;
   font-size: 12.0859px;
   border-radius: 0;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
@@ -194,6 +195,81 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* Card Content Sequential Animation States */
+.cardContentHidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.cardContentVisible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+}
+
+/* Card Expand Animation */
+.cardExpandInitial {
+  width: 4px;
+  overflow: hidden;
+  transform-origin: left center;
+}
+
+.cardExpandAnimating {
+  animation: expandToFullWidth 600ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.cardExpandComplete {
+  width: 100%;
+}
+
+@keyframes expandToFullWidth {
+  0% {
+    width: 4px;
+    transform: scaleX(0.003);
+  }
+  50% {
+    width: 50%;
+    transform: scaleX(0.5);
+  }
+  100% {
+    width: 100%;
+    transform: scaleX(1);
+  }
+}
+
+.logoHidden {
+  opacity: 0;
+  transform: translateX(30px) scale(0.9);
+}
+
+.logoVisible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+}
+
+.textHidden {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.textVisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 450ms ease-out, transform 450ms ease-out;
+}
+
+.buttonHidden {
+  opacity: 0;
+  transform: translateX(80px);
+}
+
+.buttonVisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 350ms ease-out, transform 350ms ease-out;
 }
 
 /* Responsive adjustments */

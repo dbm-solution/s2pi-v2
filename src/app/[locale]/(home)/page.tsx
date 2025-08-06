@@ -1,6 +1,5 @@
-import { S2PIHeroSlider } from '@/components/ui/slider/hero-slider/s2pi-hero-slider';
-import { NewYearMessage, CompanyInfo, QualityControl } from './_components';
-import { ProtectionSection } from './_components/ProtectionSection';
+
+import HomeContent from './_components';
 
 interface HomeProps {
   params: Promise<{
@@ -10,13 +9,8 @@ interface HomeProps {
 
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
+  
   return (
-    <div>
-      <S2PIHeroSlider />
-      <NewYearMessage />
-      <CompanyInfo />
-      <QualityControl />
-      <ProtectionSection />
-    </div>
+    <HomeContent locale={locale} />
   );
 }

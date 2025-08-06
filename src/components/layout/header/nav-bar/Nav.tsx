@@ -1,108 +1,44 @@
-"use client";
+;
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useNavContent } from '@/content/navigation/navContent';
 import styles from './Nav.module.css';
-
-interface NavItem {
-  href: string;
-  label: string;
-  isExternal?: boolean;
-  highlight?: 'nouveaute';
-  children?: NavItem[];
-}
 
 interface NavProps {
   locale?: string;
   isSticky?: boolean;
 }
 
-const navItems: NavItem[] = [
-  {
-    href: "/",
-    label: "ACCUEIL"
-  },
-  {
-    href: "/a-propos",
-    label: "A PROPOS"
-  },
-  {
-    href: "/nouveaute",
-    label: "NOUVEAUTÉ",
-    highlight: 'nouveaute'
-  },
-  {
-    href: "/nos-produits",
-    label: "NOS PRODUITS",
-    children: [
-      { href: "/nos-produits/produits-fibreux", label: "Produits Fibreux de Projection & Panneaux Rigides" },
-      { href: "/nos-produits/produits-pateux", label: "Produits Pâteux de Projection" },
-      { href: "/nos-produits/peintures-intumescentes", label: "Peintures Intumescentes PROMAPAINT®-SC4 ET PROMAPAINT®-SC3" },
-      { href: "/nos-produits/primaires-accrochage", label: "Primaires d'Accrochage" },
-      { href: "/nos-produits/enduits-finition", label: "Enduits de Finition" },
-      { href: "/nos-produits/materiels-accessoires", label: "Matériels et Accessoires" }
-    ]
-  },
-  {
-    href: "/solutions-techniques",
-    label: "SOLUTIONS TECHNIQUES",
-    children: [
-      { href: "/solutions-techniques/acoustique", label: "Correction Acoustique – Isolation Acoustique & Thermique" },
-      { href: "/solutions-techniques/isolation-thermique", label: "Solutions Isolation Thermique" },
-      { href: "/solutions-techniques/protection-incendie", label: "Solutions Protection Sécurité Incendie" }
-    ]
-  },
-  {
-    href: "/regles-mises-oeuvre",
-    label: "RÈGLES DE MISES EN ŒUVRE",
-    children: [
-      { href: "/regles-mises-oeuvre/projection-fibreux", label: "Projection Produits Fibreux" },
-      { href: "/regles-mises-oeuvre/projection-pateux", label: "Projection Produits Pâteux" },
-      { href: "/regles-mises-oeuvre/revetements-peintures", label: "Revêtements Peintures Intumescentes" }
-    ]
-  },
-  {
-    href: "/informations-utiles",
-    label: "INFORMATIONS UTILES"
-  },
-  {
-    href: "/charte-qualite",
-    label: "CHARTE QUALITÉ",
-    children: [
-      { href: "/charte-qualite/service-client", label: "Service Client S2PI" },
-      { href: "/charte-qualite/zero-casse", label: "Zéro Casse Machine" },
-      { href: "/charte-qualite/politique-qualite", label: "Politique Qualité" },
-      { href: "/charte-qualite/certification-iso", label: "Certification ISO 9001:2015" },
-      { href: "/charte-qualite/enquete-satisfaction", label: "Enquête de Satisfaction" }
-    ]
-  },
-  {
-    href: "/nos-depots",
-    label: "NOS DEPÔTS",
-    children: [
-      { href: "/contact", label: "Contact" }
-    ]
-  }
-];
-
 export default function Nav({ locale = 'fr', isSticky = false }: NavProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  
+  // Get internationalized navigation content
+  const navItems = useNavContent();
 
-  const handleMouseEnter = (href: string) => {
+  const handleMouseEnter = (uniqueId: string) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-    setOpenDropdown(href);
+    setOpenDropdown(uniqueId);
   };
 
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
     }, 150);
+  };
+
+  const handleParentClick = (e: React.MouseEvent, item: any, hasChildren: boolean) => {
+    // Only prevent navigation if it's a placeholder href (# or /#) and has children
+    if (hasChildren && (item.href === "#" || item.href === "/#")) {
+      e.preventDefault();
+    }
+    // If it's a real path like "/nos-depots", allow normal navigation even with children
   };
 
   const isActive = (href: string) => {
@@ -145,17 +81,19 @@ export default function Nav({ locale = 'fr', isSticky = false }: NavProps) {
               {navItems.map((item, index) => {
                 const hasChildren = item.children && item.children.length > 0;
                 const isItemActive = isActive(item.href);
+                const uniqueId = `${item.label}-${index}`; // Use label + index as unique identifier
                 
                 return (
                   <li
-                    key={item.href}
+                    key={uniqueId} // Changed from item.href to uniqueId
                     className={`${styles.menuItem} ${isItemActive ? styles.active : ''} ${hasChildren ? styles.hasDropdown : ''}`}
-                    onMouseEnter={() => hasChildren && handleMouseEnter(item.href)}
+                    onMouseEnter={() => hasChildren && handleMouseEnter(uniqueId)}
                     onMouseLeave={handleMouseLeave}
                   >
                     <Link 
-                      href={item.href} 
+                      href={item.href}
                       className={`${styles.menuLink} ${isItemActive ? styles.activeLink : ''}`}
+                      onClick={(e) => handleParentClick(e, item, hasChildren || false)}
                     >
                       <span className={`${styles.menuText} ${item.highlight === 'nouveaute' ? styles.nouveauteHighlight : ''}`}>
                         {item.label}
@@ -165,13 +103,13 @@ export default function Nav({ locale = 'fr', isSticky = false }: NavProps) {
                     
                     {hasChildren && (
                       <ul 
-                        className={`${styles.dropdown} ${openDropdown === item.href ? styles.dropdownVisible : ''}`}
-                        onMouseEnter={() => handleMouseEnter(item.href)}
+                        className={`${styles.dropdown} ${openDropdown === uniqueId ? styles.dropdownVisible : ''}`}
+                        onMouseEnter={() => handleMouseEnter(uniqueId)}
                         onMouseLeave={handleMouseLeave}
                       >
-                        {item.children!.map((subItem) => (
+                        {item.children!.map((subItem, subIndex) => (
                           <li 
-                            key={subItem.href} 
+                            key={`${uniqueId}-sub-${subIndex}`} // Added unique key for sub-items
                             className={styles.dropdownItem}
                           >
                             <Link 

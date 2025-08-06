@@ -1,9 +1,9 @@
 "use client";
 
-import { useTranslations } from '@/components/providers/IntlProvider';
+import { useClientTranslations } from '@/components/providers/ClientTranslationProvider';
 
-export const ProtectionSection = () => {
-  const t = useTranslations('home.protection');
+export default function ProtectionSection() {
+  const t = useClientTranslations('home.protection');
   
   return (
     <div className="bg-white py-16 px-4">

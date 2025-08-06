@@ -8,6 +8,7 @@ import solutions from './solutions.json';
 import contact from './contact.json';
 import footer from './footer.json';
 import errors from './errors.json';
+import thermalInsulation from './thermal-insulation.json';
 
 // Export as a single object
 export default {
@@ -20,4 +21,5 @@ export default {
   contact,
   footer,
   errors,
+  thermalInsulation,
 } as const; 

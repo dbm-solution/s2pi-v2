@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "title": "External Thermal Insulation - S2PI",
+    "description": "External thermal insulation solutions with our innovative iTarn products and projection systems.",
+    "keywords": "external thermal insulation, iTarn, thermal projection, energy savings"
+  },
+  "hero": {
+    "title": "External Thermal Insulation",
+    "subtitle": "Innovative thermal projection solutions to optimize the energy performance of your buildings",
+    "buttons": {
+      "discover": "Discover our solutions",
+      "quote": "Request a quote"
+    }
+  },
+  "introduction": {
+    "title": "External thermal insulation",
+    "subtitle": "A high-performance solution for energy efficiency",
+    "paragraph1": "External thermal insulation (ETI) represents a leading technical solution for improving building energy performance. Our projection products enable rapid and effective implementation, ensuring optimal insulation continuity.",
+    "paragraph2": "Thanks to our innovative technologies like iTarn and INNOSPRAY systems, we offer solutions adapted to all types of supports and architectural configurations."
+  },
+  "advantages": {
+    "title": "The advantages of our solutions",
+    "subtitle": "Performance, speed and durability",
+    "items": {
+      "energy": {
+        "title": "Energy Performance",
+        "description": "Significant reduction in thermal losses and heating costs.",
+        "icon": "🔥"
+      },
+      "speed": {
+        "title": "Rapid Application",
+        "description": "Projection implementation allowing considerable time savings.",
+        "icon": "⚡"
+      },
+      "continuity": {
+        "title": "Insulation Continuity",
+        "description": "Elimination of thermal bridges through continuous application.",
+        "icon": "🔗"
+      },
+      "durability": {
+        "title": "Durability",
+        "description": "Sustainable solutions with excellent long-term performance.",
+        "icon": "🛡️"
+      }
+    }
+  },
+  "products": {
+    "title": "Our external thermal insulation products",
+    "subtitle": "High-performance technical solutions",
+    "items": {
+      "itarn": {
+        "name": "iTarn",
+        "category": "Thermal Insulation",
+        "description": "Innovative thermal insulation solution by projection for building exteriors.",
+        "features": [
+          "Thermal conductivity λ = 0.034 W/m.K",
+          "Fire resistance Euroclass E",
+          "Projection application",
+          "Adjustable thickness according to needs"
+        ],
+        "applications": [
+          "External facades",
+          "Partition walls",
+          "Continuous insulation",
+          "Energy renovation"
+        ],
+        "technicalSpecs": {
+          "density": "65 kg/m³",
+          "thermalConductivity": "0.034 W/m.K",
+          "fireResistance": "Euroclass E",
+          "thickness": "20 to 200 mm"
+        }
+      },
+      "innosprayFTH": {
+        "name": "INNOSPRAY FTH",
+        "category": "Thermal Insulation",
+        "description": "Fibrous projection product for high-performance thermal insulation.",
+        "features": [
+          "Excellent thermal performance",
+          "Rapid projection application",
+          "Optimal adhesion",
+          "High mechanical resistance"
+        ],
+        "applications": [
+          "Concrete floors",
+          "Metal structures",
+          "Acoustic insulation",
+          "Thermal protection"
+        ],
+        "technicalSpecs": {
+          "density": "70 kg/m³",
+          "thermalConductivity": "0.035 W/m.K",
+          "fireResistance": "A2-s1,d0",
+          "thickness": "10 to 150 mm"
+        }
+      }
+    }
+  },
+  "technical": {
+    "title": "Technical information",
+    "subtitle": "Specifications and performance",
+    "sections": {
+      "performance": {
+        "title": "Thermal performance",
+        "description": "Our external thermal insulation solutions offer exceptional performance",
+        "specs": {
+          "thermalConductivity": "Thermal conductivity λ:",
+          "thermalResistance": "Thermal resistance R:",
+          "thickness": "Application thickness:",
+          "density": "Density:"
+        },
+        "values": {
+          "thermalConductivity": "0.034 - 0.035 W/m.K",
+          "thermalResistance": "Up to 5.7 m².K/W",
+          "thickness": "10 to 200 mm",
+          "density": "65 - 70 kg/m³"
+        }
+      },
+      "implementation": {
+        "title": "Implementation",
+        "description": "Projection application for rapid and effective implementation",
+        "points": [
+          "Application by projection machine",
+          "Direct adhesion on support",
+          "Smooth or textured finish",
+          "Optimized drying time"
+        ]
+      },
+      "applications": {
+        "title": "Application areas",
+        "description": "Solutions adapted to all types of buildings and supports",
+        "categories": {
+          "buildings": {
+            "title": "Buildings",
+            "items": [
+              "Collective housing",
+              "Individual houses",
+              "Tertiary buildings",
+              "Industrial constructions"
+            ]
+          },
+          "supports": {
+            "title": "Supports",
+            "items": [
+              "Concrete",
+              "Masonry",
+              "Metal structures",
+              "Prefabricated panels"
+            ]
+          }
+        }
+      },
+      "certifications": {
+        "title": "Certifications and standards",
+        "description": "Compliance with current regulations",
+        "items": {
+          "ce": "CE marking",
+          "acermi": "ACERMI certification",
+          "cstb": "CSTB technical opinion"
+        }
+      }
+    }
+  },
+  "documentation": {
+    "title": "Technical documentation",
+    "subtitle": "Download our product sheets and certifications",
+    "items": {
+      "itarnSheet": {
+        "title": "iTarn technical sheet",
+        "description": "Complete specifications of the iTarn product",
+        "size": "2.1 MB"
+      },
+      "innosprayFTHFloor": {
+        "title": "INNOSPRAY FTH - Floor",
+        "description": "Application on concrete floors",
+        "size": "1.8 MB"
+      },
+      "acousticPerformance": {
+        "title": "Acoustic performance",
+        "description": "INNOSPRAY FTH acoustic data",
+        "size": "1.5 MB"
+      },
+      "acermiCert": {
+        "title": "ACERMI certificate",
+        "description": "ACERMI certification INNOSPRAY FTH",
+        "size": "0.9 MB"
+      },
+      "cstbOpinion": {
+        "title": "CSTB technical opinion",
+        "description": "Technical opinion 2015-344_V1",
+        "size": "3.2 MB"
+      },
+      "atexCert": {
+        "title": "ATEX certification",
+        "description": "ATEX certification iTarn",
+        "size": "1.2 MB"
+      }
+    }
+  },
+  "cta": {
+    "title": "Need a thermal insulation solution?",
+    "description": "Our experts are at your disposal to advise and support you in your external thermal insulation projects.",
+    "buttons": {
+      "quote": "Request a quote",
+      "contact": "Contact us"
+    }
+  },
+  "common": {
+    "technicalSheet": "Technical sheet",
+    "moreInfo": "More info",
+    "mainFeatures": "Main features",
+    "technicalSpecs": "Technical specifications",
+    "applications": "Applications"
+  }
+} 

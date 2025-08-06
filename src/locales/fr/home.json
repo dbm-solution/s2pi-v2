@@ -44,5 +44,50 @@
     "images": {
       "ceo": "Jean-Luc Belli"
     }
+  },
+  "slider": {
+    "slides": {
+      "itarn": {
+        "title": "ITARN - ISOLATION THERMIQUE",
+        "subtitle": "PAR L'EXTÉRIEUR",
+        "description": [
+          "• Un produit à base de laine minérale de laitier associé à un liant hydraulique.",
+          "• Destiné à l'isolation thermique des parois verticales par l'extérieur sous bardage ventilé des bâtiments résidentiels individuels, collectifs ou tertiaires.",
+          "• Ses performances acoustiques et de sécurité incendie complètent la performance thermique pour une isolation optimale.",
+          "• Projeté via un système pneumatique par des entreprises qualifiées pour les travaux de façades, de maçonnerie et d'isolation par l'extérieur."
+        ],
+        "cta": "En savoir +"
+      },
+      "thermal": {
+        "title": "SOLUTIONS ISOLATION",
+        "subtitle": "THERMIQUE",
+        "description": [
+          "L'isolation par projection de laine de laitier, la solution pour l'efficacité énergétique, la protection incendie et acoustique des bâtiments.",
+          "",
+          "INNOSPRAY-FTH est destiné à l'isolation thermique par projection des dalles en béton, des planchers à poutrelles et hourdis béton, des planchers béton à bac collaborant en acier. Il limite les ponts thermiques et évite tout percement dans la dalle. Il est particulièrement adapté dans les configurations de dalles avec passage des réseaux ou de dalles précontraintes."
+        ],
+        "cta": "En savoir +"
+      },
+      "fire": {
+        "title": "SOLUTIONS PROTECTION",
+        "subtitle": "SÉCURITÉ INCENDIE",
+        "description": [
+          "Les enduits de protection incendie sont des revêtements projetés sur support de type métal déployé, à base de laine minérale et liants spéciaux destiné à la protection au feu des planchers non exposés aux intempéries.",
+          "",
+          "INNOSPRAY-FFM est un revêtement projeté, à base de laine minérale de laitier et de liants spéciaux, destiné à la protection au feu des structures acier non exposées aux intempéries."
+        ],
+        "cta": "En savoir +"
+      },
+      "acoustic": {
+        "title": "SOLUTIONS ACOUSTIQUES",
+        "subtitle": "",
+        "description": [
+          "La solution idéale pour les isolements horizontaux entre logement et locaux d'activités ou logement et garages collectifs ou individuels.",
+          "",
+          "Les solutions S2PI sont adaptées tant aux ouvrages neufs qu'existants en secteur résidentiel et non résidentiel."
+        ],
+        "cta": "En savoir +"
+      }
+    }
   }
 }
