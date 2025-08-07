@@ -1,22 +1,22 @@
 {
-  "title": "Contactez-nous",
-  "subtitle": "Notre équipe est à votre écoute",
+  "title": "Contact Us",
+  "subtitle": "Our team is here to listen to you",
   "form": {
-    "name": "Nom",
+    "name": "Name",
     "email": "Email",
-    "company": "Entreprise",
-    "phone": "Téléphone",
-    "subject": "Sujet",
+    "company": "Company",
+    "phone": "Phone",
+    "subject": "Subject",
     "message": "Message",
-    "submit": "Envoyer",
-    "required": "Champ obligatoire"
+    "submit": "Send",
+    "required": "Required field"
   },
   "info": {
-    "address": "Adresse",
-    "phone": "Téléphone",
+    "address": "Address",
+    "phone": "Phone",
     "email": "Email",
-    "hours": "Horaires d'ouverture"
+    "hours": "Opening hours"
   },
-  "success": "Votre message a été envoyé avec succès",
-  "error": "Une erreur s'est produite, veuillez réessayer"
+  "success": "Your message has been sent successfully",
+  "error": "An error occurred, please try again"
 }

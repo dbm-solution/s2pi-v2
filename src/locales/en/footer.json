@@ -1,22 +1,22 @@
 {
   "company": "S2PI",
   "coordinates": {
-    "title": "NOS COORDONNÉES",
-    "address": "Adresse de l'entreprise",
-    "phone": "Téléphone",
+    "title": "OUR CONTACT DETAILS",
+    "address": "Company Address",
+    "phone": "Phone",
     "email": "Email"
   },
   "legal": {
-    "copyright": "S2PI ©2022 I Tous droits réservés I",
-    "terms": "Mentions légales",
-    "privacy": "Politique de confidentialité",
-    "cookies": "Politique des cookies",
-    "creator": "Création par WEBECCO"
+    "copyright": "S2PI ©2022 | All rights reserved |",
+    "terms": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "creator": "Created by WEBECCO"
   },
   "links": {
-    "about": "À propos",
+    "about": "About",
     "contact": "Contact",
-    "products": "Produits",
+    "products": "Products",
     "solutions": "Solutions"
   }
 }

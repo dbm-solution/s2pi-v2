@@ -234,6 +234,17 @@ export function S2PILayerSlider() {
     }, 2900);
   }, [isTransitioning, currentSlide, slideConfigs.length, animateSlices]);
 
+  // Navigation functions
+  const goToPreviousSlide = useCallback(() => {
+    const prevIndex = currentSlide === 0 ? slideConfigs.length - 1 : currentSlide - 1;
+    goToSlide(prevIndex);
+  }, [currentSlide, slideConfigs.length, goToSlide]);
+
+  const goToNextSlide = useCallback(() => {
+    const nextIndex = (currentSlide + 1) % slideConfigs.length;
+    goToSlide(nextIndex);
+  }, [currentSlide, slideConfigs.length, goToSlide]);
+
   // Pause/Resume functionality
   const togglePause = useCallback(() => {
     setIsPaused(prev => !prev);
@@ -336,6 +347,29 @@ export function S2PILayerSlider() {
 
       {/* Overlay */}
       <div className={styles.overlay} />
+
+      {/* Navigation Arrows */}
+      <button
+        className={`${styles.arrowButton} ${styles.prevArrow} ${isTransitioning ? styles.disabled : ''}`}
+        onClick={goToPreviousSlide}
+        disabled={isTransitioning}
+        aria-label="Previous slide"
+      >
+        <svg className={styles.arrowIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        className={`${styles.arrowButton} ${styles.nextArrow} ${isTransitioning ? styles.disabled : ''}`}
+        onClick={goToNextSlide}
+        disabled={isTransitioning}
+        aria-label="Next slide"
+      >
+        <svg className={styles.arrowIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
 
       {/* Slider Content */}
       <div className={styles.sliderContent}>

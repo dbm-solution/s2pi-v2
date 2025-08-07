@@ -1,15 +1,15 @@
 {
-  "title": "UNE ENTREPRISE À VOTRE ÉCOUTE",
+  "title": "A COMPANY THAT LISTENS TO YOU",
   "introduction": {
-    "paragraph1": "La société S2PI a été créée en 2014...",
-    "paragraph2": "S2PI est le second acteur..."
+    "paragraph1": "S2PI was founded in 2014...",
+    "paragraph2": "S2PI is the second leading player..."
   },
   "commitments": {
-    "title": "Les engagements majeurs de S2PI vis-à-vis de ses clients :",
+    "title": "S2PI's key commitments to its clients:",
     "items": [
-      "Une entreprise certifiée ISO 9001...",
-      "Des produits de qualité...",
-      "Un engagement du respect des délais..."
+      "An ISO 9001 certified company...",
+      "High-quality products...",
+      "A commitment to meeting deadlines..."
     ]
   }
 }

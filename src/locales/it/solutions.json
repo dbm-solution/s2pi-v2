@@ -1,23 +1,23 @@
 {
-  "title": "Nos Solutions",
-  "subtitle": "Solutions techniques adaptées à vos besoins",
+  "title": "Le Nostre Soluzioni",
+  "subtitle": "Soluzioni tecniche adattate alle tue esigenze",
   "types": {
     "acoustic": {
-      "title": "Solutions Acoustiques",
-      "description": "Isolation phonique performante"
+      "title": "Soluzioni Acustiche",
+      "description": "Isolamento acustico performante"
     },
     "fire": {
-      "title": "Protection Incendie",
-      "description": "Sécurité et protection contre le feu"
+      "title": "Protezione Antincendio",
+      "description": "Sicurezza e protezione contro il fuoco"
     },
     "thermal": {
-      "title": "Isolation Thermique",
-      "description": "Isolation thermique par l'extérieur"
+      "title": "Isolamento Termico",
+      "description": "Isolamento termico dall’esterno"
     }
   },
   "benefits": {
-    "performance": "Haute performance",
-    "durability": "Durabilité garantie",
-    "expertise": "Expertise technique"
+    "performance": "Alta performance",
+    "durability": "Durata garantita",
+    "expertise": "Competenza tecnica"
   }
 }

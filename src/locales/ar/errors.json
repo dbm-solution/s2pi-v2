@@ -1,17 +1,17 @@
 {
   "404": {
-    "title": "Page non trouvée",
-    "message": "La page que vous recherchez n'existe pas.",
-    "back": "Retour à l'accueil"
+    "title": "الصفحة غير موجودة",
+    "message": "الصفحة التي تبحث عنها غير موجودة.",
+    "back": "العودة إلى الصفحة الرئيسية"
   },
   "500": {
-    "title": "Erreur serveur",
-    "message": "Une erreur interne s'est produite.",
-    "retry": "Réessayer"
+    "title": "خطأ في الخادم",
+    "message": "حدث خطأ داخلي.",
+    "retry": "أعد المحاولة"
   },
   "network": {
-    "title": "Erreur réseau",
-    "message": "Problème de connexion réseau.",
-    "check": "Vérifiez votre connexion"
+    "title": "خطأ في الشبكة",
+    "message": "حدثت مشكلة في الاتصال بالشبكة.",
+    "check": "تحقق من اتصالك"
   }
 }

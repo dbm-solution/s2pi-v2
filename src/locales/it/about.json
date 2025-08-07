@@ -1,15 +1,23 @@
 {
-  "title": "UNE ENTREPRISE À VOTRE ÉCOUTE",
+  "title": "UN'AZIENDA AL TUO SERVIZIO",
   "introduction": {
-    "paragraph1": "La société S2PI a été créée en 2014...",
-    "paragraph2": "S2PI est le second acteur..."
+    "paragraph1": "La società S2PI è stata fondata nel 2014...",
+    "paragraph2": "S2PI è il secondo attore..."
   },
   "commitments": {
-    "title": "Les engagements majeurs de S2PI vis-à-vis de ses clients :",
+    "title": "I principali impegni di S2PI verso i suoi clienti:",
     "items": [
-      "Une entreprise certifiée ISO 9001...",
-      "Des produits de qualité...",
-      "Un engagement du respect des délais..."
+      "Un'azienda certificata ISO 9001...",
+      "Prodotti di qualità...",
+      "Un impegno nel rispetto delle scadenze..."
+    ]
+  },
+  "philosophy": {
+    "points": [
+      "Offrire ai nostri clienti un impegno di qualità e prestazioni per i nostri prodotti",
+      "I nostri prodotti sul mercato sono certificati",
+      "Rispettare i tempi di consegna",
+      "Produzione dei nostri prodotti in Italia e garanzia della stabilità della qualità, la società è certificata ISO 9001"
     ]
   }
 }

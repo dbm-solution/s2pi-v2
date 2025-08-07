@@ -11,5 +11,13 @@
       "Des produits de qualité...",
       "Un engagement du respect des délais..."
     ]
+  },
+  "philosophy": {
+    "points": [
+      "Fournir un engagement de qualité et de performance pour nos clients",
+      "Nos produits certifiés sur le marché",
+      "Respect des délais de livraison",
+      "Production de nos produits en France et garantie de la stabilité de la qualité, la société est certifiée ISO 9001"
+    ]
   }
 }

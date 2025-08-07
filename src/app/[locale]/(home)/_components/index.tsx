@@ -8,12 +8,16 @@ import CompanyInfo from './CompanyInfo';
 import QualityControl  from './QualityControl';           
 import  ProtectionSection   from './ProtectionSection';     
 import { S2PILayerSlider } from '@/components/ui/slider/hero-slider/S2PILayerSlider';
+import { useAutoScrollAnimation } from '@/hooks/use-scroll-animation';
 
 interface HomeContentProps {
   locale: string;
 }
 
 export default function HomeContent({ locale }: HomeContentProps) {
+  // Initialize scroll animations for all scroll animation classes
+  useAutoScrollAnimation();
+
   return (
     <ClientTranslationProvider initialLocale={locale}>
       <S2PILayerSlider />

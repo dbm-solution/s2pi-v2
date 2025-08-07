@@ -1,22 +1,22 @@
 {
   "company": {
     "name": "S2PI",
-    "fullName": "Production Produits Isolants Incendie Protection Phonique",
-    "tagline": "Une société de proximité et à l'écoute de ses clients"
+    "fullName": "شركة إنتاج منتجات العزل ضد الحريق والعزل الصوتي",
+    "tagline": "شركة قريبة من عملائها وتستمع إليهم"
   },
   "actions": {
-    "save": "Enregistrer",
-    "cancel": "Annuler",
-    "edit": "Modifier",
-    "delete": "Supprimer",
-    "share": "Partager",
-    "contact": "Contact"
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "share": "مشاركة",
+    "contact": "اتصل"
   },
   "navigation": {
-    "home": "Accueil",
-    "about": "À propos",
-    "products": "Nos produits", 
-    "solutions": "Solutions techniques",
-    "contact": "Contact"
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "products": "منتجاتنا",
+    "solutions": "الحلول التقنية",
+    "contact": "اتصل بنا"
   }
 }

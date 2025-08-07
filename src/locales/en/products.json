@@ -1,17 +1,17 @@
 {
-  "title": "Nos Produits",
-  "subtitle": "Découvrez notre gamme complète",
+  "title": "Our Products",
+  "subtitle": "Discover our complete range",
   "categories": {
-    "fibrous": "Produits fibreux de projection",
-    "paste": "Produits pâteux de projection",
-    "paints": "Peintures intumescentes",
-    "primers": "Primaires d'accrochage",
-    "finishes": "Enduits de finition",
-    "materials": "Matériels et accessoires"
+    "fibrous": "Fibrous spray products",
+    "paste": "Pasty spray products",
+    "paints": "Intumescent paints",
+    "primers": "Primers",
+    "finishes": "Finishing coats",
+    "materials": "Equipment and accessories"
   },
   "actions": {
-    "view": "Voir le produit",
-    "download": "Télécharger la fiche",
-    "contact": "Nous contacter"
+    "view": "View product",
+    "download": "Download datasheet",
+    "contact": "Contact us"
   }
 }

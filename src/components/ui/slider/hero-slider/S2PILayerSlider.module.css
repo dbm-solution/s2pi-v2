@@ -261,6 +261,55 @@
   z-index: 3;
 }
 
+/* Navigation Arrows - Just arrow icons */
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+  z-index: 4;
+  padding: 0;
+}
+
+.arrowButton:hover:not(.disabled) {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.arrowButton.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.prevArrow {
+  left: 20px;
+}
+
+.nextArrow {
+  right: 20px;
+}
+
+.arrowIcon {
+  width: 100px;
+  height: 100px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.arrowButton:hover .arrowIcon {
+  color: rgba(255, 255, 255, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
 .dots {
   position: absolute;
   bottom: 30px;
@@ -321,7 +370,7 @@
 .counter {
   position: absolute;
   top: 30px;
-  right: 80px;
+  right: 90px;
   background-color: rgba(0,0,0,0.7);
   color: white;
   padding: 8px 16px;
@@ -331,33 +380,36 @@
   font-weight: 500;
   backdrop-filter: blur(10px);
   transition: transform 200ms ease;
+  z-index: 10;
 }
 
 .counter:hover {
   transform: scale(1.05);
 }
 
-/* Spinner Timer */
+/* Spinner Timer - Fixed positioning */
 .spinnerContainer {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 40px;
-  height: 40px;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  z-index: 10;
 }
 
 .spinner {
-  width: 32px;
-  height: 32px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-top: 3px solid rgba(255, 255, 255, 0.9);
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top: 3px solid rgba(255, 255, 255, 1);
   border-radius: 50%;
   animation: spin 6s linear infinite;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
 }
 
 .spinnerPaused {
@@ -466,6 +518,22 @@
   .dot {
     width: 12px;
     height: 12px;
+  }
+
+  .arrowButton {
+    display: none; /* Hide arrows on mobile */
+  }
+
+  .spinnerContainer {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .spinner {
+    width: 30px;
+    height: 30px;
   }
 }
 

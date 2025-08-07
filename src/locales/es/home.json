@@ -1,48 +1,94 @@
 {
   "hero": {
-    "title": "S2PI - Spécialiste Isolation",
-    "subtitle": "Solutions d'isolation thermique, acoustique et protection incendie",
-    "cta": "Découvrir nos solutions"
+    "title": "S2PI - Especialista en Aislamiento",
+    "subtitle": "Soluciones de aislamiento térmico, acústico y protección contra incendios",
+    "cta": "Descubre nuestras soluciones"
   },
   "newYear": {
-    "title": "Bonne année 2025 à tous nos clients et partenaires !",
-    "description": "Nous savons que nous sommes un peu en retard, mais mieux vaut tard que jamais ! Nous vous souhaitons une année remplie de bonheur, de santé et de succès. Que cette nouvelle année soit synonyme de nouvelles opportunités, de moments inoubliables et de réalisations personnelles et professionnelles.",
-    "footer": "Merci à tous pour votre soutien et votre confiance. Ensemble, faisons de 2025 une année exceptionnelle !"
+    "title": "¡Feliz año 2025 para todos nuestros clientes y socios!",
+    "description": "Sabemos que llegamos un poco tarde, ¡pero más vale tarde que nunca! Les deseamos un año lleno de felicidad, salud y éxito. Que este nuevo año sea sinónimo de nuevas oportunidades, momentos inolvidables y logros personales y profesionales.",
+    "footer": "Gracias a todos por su apoyo y confianza. ¡Juntos hagamos de 2025 un año excepcional!"
   },
   "companyInfo": {
-    "title": "S2PI - VOTRE PARTENAIRE EN ISOLATION",
-    "history": "S2PI, c'est un projet industriel initié par Jean-Luc BELLI, fort de plus de deux décennies d'expérience dans le secteur de la production d'isolants. S2PI, c'est aussi une équipe de collaborateurs unis par la volonté de donner le meilleur d'eux-même pour que les clients profitent de la qualité des produits de l'entreprise. S2PI améliore constamment ses produits et ses process internes pour s'adapter aux évolutions de la demande, du marché et des normes.",
-    "description": "Installée dans le département du Rhône, S2PI est une entreprise humaine innovante à taille humaine qui fabrique et distribue des isolants thermiques, acoustiques et de protection incendie à base de laine de laitier. S2PI s'inscrit dans une recherche permanente d'amélioration de ses process de production. S2PI met le client au cœur de ses préoccupations. Chaque produit est conforme aux besoins et aux normes du marché, il est soumis à un contrôle de qualité extrêmement rigoureux par des laboratoires d'essais accrédités (EFECTIS, LNE). Nos produits sont certifiés ACERMI et font l'objet d'Avis Techniques délivrés par le CCFAT en l'absence de DTU.",
+    "title": "S2PI - SU SOCIO EN AISLAMIENTO",
+    "history": "S2PI es un proyecto industrial iniciado por Jean‑Luc BELLI, con más de dos décadas de experiencia en el sector de producción de aislantes. S2PI también es un equipo de colaboradores unidos por la voluntad de dar lo mejor de sí mismos para que los clientes disfruten de la calidad de los productos de la empresa. S2PI mejora constantemente sus productos y procesos internos para adaptarse a la evolución de la demanda, del mercado y de las normativas.",
+    "description": "Ubicada en el departamento del Ródano, S2PI es una empresa innovadora a escala humana que fabrica y distribuye aislantes térmicos, acústicos y de protección contra incendios a base de lana de escoria. S2PI mantiene una mejora continua en sus procesos productivos. El cliente está en el centro de sus preocupaciones. Cada producto cumple con las necesidades y normas del mercado, y se somete a un control de calidad extremadamente riguroso por laboratorios acreditados (EFECTIS, LNE). Nuestros productos están certificados por ACERMI y cuentan con Avisos Técnicos emitidos por el CCFAT en ausencia de DTU.",
     "philosophy": {
-      "title": "Notre philosophie",
+      
+      "title": "Nuestra filosofía",
       "points": [
-        "Offrir à nos clients la garantie de la qualité et la performance de nos produits",
-        "Nos produits mis sur le marché sont certifiés",
-        "Respecter nos engagements sur les délais de livraison",
-        "Fabriquer nos produits en France et garantir la constance de leur qualité, entreprise certifiée ISO 9001"
+        "Garantizar a nuestros clientes la calidad y el rendimiento de nuestros productos",
+        "Todos nuestros productos comercializados están certificados",
+        "Cumplir nuestros compromisos de tiempos de entrega",
+        "Fabricar nuestros productos en Francia y garantizar la constancia de su calidad, empresa con certificación ISO 9001"
       ]
     },
     "images": {
-      "facility": "Installation industrielle S2PI",
-      "certification": "Bureau Veritas ISO 9001:2015 Certification"
+      "facility": "Instalación industrial de S2PI",
+      "certification": "Certificación Bureau Veritas ISO 9001:2015"
     }
   },
   "qualityControl": {
-    "title": "Chaque produit est conforme aux besoins et aux normes du marché. Il est soumis à un contrôle de qualité extrêmement rigoureux par des laboratoires d'essais accrédités."
+    "title": "Cada producto cumple con las necesidades y normas del mercado. Se somete a un control de calidad extremadamente riguroso realizado por laboratorios acreditados."
   },
   "protection": {
-    "title": "PROTECTION DES PERSONNES & DÉFIS ENVIRONNEMENTAUX",
-    "parallaxTitle": "S2PI s'inscrit dans une recherche permanente d'amélioration de ses process de production.",
+    "title": "PROTECCIÓN DE PERSONAS Y DESAFÍOS AMBIENTALES",
+    "parallaxTitle": "S2PI mantiene una mejora continua en sus procesos productivos.",
     "content": {
-      "part1": "Si la sécurité incendie des bâtiments doit conjuguer l'ensemble des actions comme faciliter l'évacuation des personnes, mettre en place des dispositifs d'alerte, des équipements de désenfumage,… la protection passive reste la plus efficace et se décide dès le début du projet en prévoyant des systèmes constructifs ayant recours à des matériaux non combustibles ne participant ni à alimenter l'incendie ni à le propager. La protection passive en sécurité incendie s'allie aussi avec l'efficacité énergétique pour répondre aux objectifs nationaux de lutte contre le changement climatique. Cette conviction profonde m'anime depuis plusieurs années et guide mon action.",
-      "part2": "Pour répondre aux défis environnementaux, ceux de protection des personnes et des biens, il faut être convaincu et agir avec détermination. C'est l'ambition que j'ai fixée en créant la société S2PI de fabriquer des solutions techniques, économiques, innovantes et fiables issues du partage de l'expertise et de l'expérience de ses membres.",
-      "quote": "« Dans le monde des idées tout dépend de l'enthousiasme. Dans le monde du réel tout dépend de la persévérance. »",
+      "part1": "Si la seguridad contra incendios en los edificios requiere combinar acciones como facilitar la evacuación, implementar sistemas de alerta, equipos de extracción de humos… la protección pasiva sigue siendo la más eficaz. Se planifica desde el inicio del proyecto mediante sistemas constructivos con materiales no combustibles que no alimentan ni propagan el fuego. La protección pasiva también complementa la eficiencia energética para alcanzar los objetivos nacionales de lucha contra el cambio climático. Esta convicción profunda me ha guiado durante años y dirige mi acción.",
+      "part2": "Para responder a los desafíos ambientales, y proteger a las personas y bienes, se necesita convicción y determinación. Esa es la ambición que establecí al fundar S2PI: fabricar soluciones técnicas, económicas, innovadoras y fiables, basadas en la compartición de experiencia y pericia entre sus miembros.",
+      "quote": "« En el mundo de las ideas todo depende del entusiasmo. En el mundo real, todo depende de la perseverancia. »",
       "quoteAuthor": "Johann Wolfgang von Goethe",
-      "signature": "Jean-Luc Belli",
-      "title": "Président Directeur Général"
+      "signature": "Jean‑Luc Belli",
+      "title": "Presidente y Director General"
     },
     "images": {
-      "ceo": "Jean-Luc Belli"
+      "ceo": "Jean‑Luc Belli"
+    }
+  },
+  "slider": {
+    "slides": {
+      "itarn": {
+        "title": "ITARN – AISLAMIENTO TÉRMICO",
+        "subtitle": "POR EL EXTERIOR",
+        "description": [
+          "• Producto de lana mineral de escoria combinado con un aglutinante hidráulico.",
+          "• Diseñado para el aislamiento térmico de muros verticales exteriores bajo revestimiento ventilado en edificios residenciales, colectivos o terciarios.",
+          "• Su rendimiento acústico y de seguridad contra incendios completa el aislamiento térmico para una protección óptima.",
+          "• Aplicado mediante sistema neumático por empresas cualificadas en fachadas, mampostería y aislamiento exterior."
+        ],
+        "cta": "Más información"
+      },
+      "thermal": {
+        "title": "SOLUCIONES DE AISLAMIENTO",
+        "subtitle": "TÉRMICO",
+        "description": [
+          "El aislamiento por proyección de lana de escoria, la solución para la eficiencia energética, protección contra incendios y aislamiento acústico de edificios.",
+          "",
+          "INNOSPRAY-FTH está diseñado para aislamiento térmico mediante proyección sobre losas de concreto, forjados unidireccionales y forjados colaborantes de acero. Reduce los puentes térmicos y evita perforaciones en la losa. Es especialmente adecuado para configuraciones con canalizaciones integradas o losas pretensadas."
+        ],
+        "cta": "Más información"
+      },
+      "fire": {
+        "title": "SOLUCIONES DE PROTECCIÓN",
+        "subtitle": "SEGURIDAD CONTRA INCENDIOS",
+        "description": [
+          "Recoatings de protección contra incendios son revestimientos proyectados sobre soporte de metal expandido, elaborados con lana mineral y aglutinantes especiales, diseñados para proteger suelos del fuego en estructuras no expuestas a intemperie.",
+          "",
+          "INNOSPRAY-FFM es un revestimiento proyectado, a base de lana mineral de escoria y aglutinantes especiales, destinado a proteger estructuras de acero no expuestas a la intemperie."
+        ],
+        "cta": "Más información"
+      },
+      "acoustic": {
+        "title": "SOLUCIONES ACÚSTICAS",
+        "subtitle": "",
+        "description": [
+          "La solución ideal para aislamiento horizontal entre viviendas y áreas de actividades, o entre viviendas y garajes colectivos o individuales.",
+          "",
+          "Las soluciones S2PI son adecuadas tanto para proyectos nuevos como existentes en sectores residenciales y no residenciales."
+        ],
+        "cta": "Más información"
+      }
     }
   }
 }

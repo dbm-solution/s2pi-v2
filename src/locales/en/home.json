@@ -1,49 +1,93 @@
 {
   "hero": {
     "title": "S2PI - Insulation Specialist",
-    "subtitle": "Thermal, acoustic insulation and fire protection solutions",
+    "subtitle": "Thermal insulation, acoustic solutions, and fire protection systems",
     "cta": "Discover our solutions"
   },
   "newYear": {
-    "title": "Happy New Year 2025",
-    "message": "We wish you an excellent year 2025 full of successful projects and prosperity!",
-    "description": "We wish you an excellent year 2025 full of successful projects",
-    "footer": "S2PI Team"
+    "title": "Happy New Year 2025 to all our clients and partners!",
+    "description": "We know we're a little late, but better late than never! We wish you a year filled with happiness, health, and success. May this new year bring new opportunities, unforgettable moments, and both personal and professional achievements.",
+    "footer": "Thank you all for your support and trust. Together, let's make 2025 an exceptional year!"
   },
   "companyInfo": {
-    "title": "OUR EXPERTISE",
-    "history": "an industrial project initiated by Jean-Luc BELLI, dedicated to the production of thermal insulation and fire protection materials.",
-    "description": "specialized in the production of high-quality insulation materials.",
+    "title": "S2PI - YOUR INSULATION PARTNER",
+    "history": "S2PI is an industrial project initiated by Jean-Luc BELLI, who has over two decades of experience in the insulation manufacturing sector. S2PI is also a team of committed employees determined to deliver the best so clients can benefit from the quality of our products. S2PI continuously improves its products and internal processes to adapt to evolving demand, market trends, and regulations.",
+    "description": "Located in the Rhône department, S2PI is an innovative, human-scale company that manufactures and distributes thermal, acoustic, and fire protection insulation made from slag wool. S2PI is committed to constantly improving its production processes. The client is at the heart of our focus. Every product is tailored to meet market needs and standards, undergoing rigorous quality control by accredited testing laboratories (EFECTIS, LNE). Our products are ACERMI certified and have Technical Assessments from CCFAT in the absence of DTU.",
     "philosophy": {
       "title": "Our Philosophy",
       "points": [
-        "Quality and constant innovation",
-        "Environmental respect", 
-        "Impeccable customer service",
-        "Recognized technical expertise"
+        "Guarantee our clients the quality and performance of our products",
+        "All our marketed products are certified",
+        "Fulfill our delivery time commitments",
+        "Manufacture our products in France and ensure consistent quality – ISO 9001 certified company"
       ]
     },
     "images": {
-      "facility": "S2PI Factory",
-      "certification": "Bureau Veritas Certification"
+      "facility": "S2PI Industrial Facility",
+      "certification": "Bureau Veritas ISO 9001:2015 Certification"
     }
   },
   "qualityControl": {
-    "title": "Quality Control & Continuous Innovation"
+    "title": "Each product complies with market needs and standards. It undergoes extremely rigorous quality control by accredited testing laboratories."
   },
   "protection": {
-    "title": "PROTECTION & ISOLATION SOLUTIONS",
-    "parallaxTitle": "S2PI is committed to continuously improving its production processes.",
+    "title": "PEOPLE PROTECTION & ENVIRONMENTAL CHALLENGES",
+    "parallaxTitle": "S2PI is continuously improving its production processes.",
     "content": {
-      "part1": "If building fire safety must combine all actions such as facilitating the evacuation of people, implementing alert systems, smoke extraction equipment... passive protection remains the most effective and is decided from the beginning of the project by providing constructive systems using non-combustible materials that neither feed the fire nor help it spread.",
-      "part2": "To meet environmental challenges, those of protecting people and property, one must be convinced and act with determination. This is the ambition I set when creating S2PI company to manufacture technical, economic, innovative and reliable solutions resulting from sharing the expertise and experience of its members.",
-      "quote": "« In the world of ideas everything depends on enthusiasm. In the real world everything depends on perseverance. »",
+      "part1": "While fire safety in buildings requires a combination of actions like facilitating evacuation, installing alert systems, and smoke extraction equipment… passive protection remains the most effective. It is considered from the project's outset by integrating construction systems using non-combustible materials that do not contribute to starting or spreading fires. Passive fire protection also complements energy efficiency goals to help fight climate change. This strong belief has driven me for years and continues to guide my actions.",
+      "part2": "To meet environmental challenges and protect people and property, one must be truly committed and act with determination. This is the ambition I set when founding S2PI: to manufacture technical, economical, innovative, and reliable solutions based on shared expertise and experience.",
+      "quote": "“In the world of ideas everything depends on enthusiasm. In the real world all rests on perseverance.”",
       "quoteAuthor": "Johann Wolfgang von Goethe",
       "signature": "Jean-Luc Belli",
-      "title": "Chief Executive Officer"
+      "title": "Chairman & CEO"
     },
     "images": {
       "ceo": "Jean-Luc Belli"
+    }
+  },
+  "slider": {
+    "slides": {
+      "itarn": {
+        "title": "ITARN - THERMAL INSULATION",
+        "subtitle": "EXTERNAL APPLICATION",
+        "description": [
+          "• A product made from slag mineral wool combined with a hydraulic binder.",
+          "• Designed for the thermal insulation of vertical external walls under ventilated cladding in residential, collective, or commercial buildings.",
+          "• Its acoustic and fire safety performance complements its thermal performance for optimal insulation.",
+          "• Sprayed pneumatically by qualified companies specializing in facades, masonry, and external insulation."
+        ],
+        "cta": "Learn more"
+      },
+      "thermal": {
+        "title": "INSULATION SOLUTIONS",
+        "subtitle": "THERMAL",
+        "description": [
+          "Sprayed slag wool insulation, the solution for energy efficiency, fire safety, and building acoustics.",
+          "",
+          "INNOSPRAY-FTH is designed for thermal insulation by spraying onto concrete slabs, beam-and-block floors, and composite steel-concrete floors. It reduces thermal bridging and avoids drilling into the slab. It is especially suitable for floor designs with embedded networks or pre-stressed slabs."
+        ],
+        "cta": "Learn more"
+      },
+      "fire": {
+        "title": "FIRE PROTECTION SOLUTIONS",
+        "subtitle": "FIRE SAFETY",
+        "description": [
+          "Fire protection coatings are sprayed coverings applied to expanded metal substrates, made from mineral wool and special binders, designed to protect floors from fire (not exposed to weather).",
+          "",
+          "INNOSPRAY-FFM is a sprayed coating made from slag mineral wool and special binders, intended for the fire protection of steel structures not exposed to weather."
+        ],
+        "cta": "Learn more"
+      },
+      "acoustic": {
+        "title": "ACOUSTIC SOLUTIONS",
+        "subtitle": "",
+        "description": [
+          "The ideal solution for horizontal insulation between dwellings and activity areas, or between homes and garages (private or collective).",
+          "",
+          "S2PI solutions are suitable for both new and existing buildings in residential and non-residential sectors."
+        ],
+        "cta": "Learn more"
+      }
     }
   }
 }

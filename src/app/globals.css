@@ -894,3 +894,218 @@ div[class*="Language"] div[class*="absolute"] {
 .s2pi-language-dropdown button[aria-selected="true"] [class*="font-medium"] {
   color: white !important;
 }
+
+/* =============================================================================
+   SCROLL ANIMATIONS
+   ============================================================================= */
+
+/* Base scroll animation class - slide from top */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variants with different slide distances */
+.scroll-fade-in-small {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 0.6s ease-out;
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-small.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-fade-in-large {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-large.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animations for multiple elements */
+.scroll-fade-in-stagger {
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-stagger.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay variants for staggered effects */
+.scroll-fade-in-stagger:nth-child(1) { transition-delay: 0ms; }
+.scroll-fade-in-stagger:nth-child(2) { transition-delay: 100ms; }
+.scroll-fade-in-stagger:nth-child(3) { transition-delay: 200ms; }
+.scroll-fade-in-stagger:nth-child(4) { transition-delay: 300ms; }
+.scroll-fade-in-stagger:nth-child(5) { transition-delay: 400ms; }
+.scroll-fade-in-stagger:nth-child(6) { transition-delay: 500ms; }
+
+/* Different easing variants */
+.scroll-fade-in-bounce {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-bounce.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-fade-in-smooth {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-smooth.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Special effects */
+.scroll-slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+  will-change: transform, opacity;
+}
+
+.scroll-slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-scale-in {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.scroll-scale-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Direction variants */
+.scroll-fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px) translateY(-10px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.scroll-fade-in-right {
+  opacity: 0;
+  transform: translateX(30px) translateY(-10px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* Speed variants */
+.scroll-fade-in-fast {
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: all 0.4s ease-out;
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-fast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-fade-in-slow {
+  opacity: 0;
+  transform: translateY(-35px);
+  transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in-slow.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibility - respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-fade-in,
+  .scroll-fade-in-small,
+  .scroll-fade-in-large,
+  .scroll-fade-in-stagger,
+  .scroll-fade-in-bounce,
+  .scroll-fade-in-smooth,
+  .scroll-slide-up,
+  .scroll-scale-in,
+  .scroll-fade-in-left,
+  .scroll-fade-in-right,
+  .scroll-fade-in-fast,
+  .scroll-fade-in-slow {
+    transition: none;
+    transform: none;
+  }
+  
+  .scroll-fade-in.visible,
+  .scroll-fade-in-small.visible,
+  .scroll-fade-in-large.visible,
+  .scroll-fade-in-stagger.visible,
+  .scroll-fade-in-bounce.visible,
+  .scroll-fade-in-smooth.visible,
+  .scroll-slide-up.visible,
+  .scroll-scale-in.visible,
+  .scroll-fade-in-left.visible,
+  .scroll-fade-in-right.visible,
+  .scroll-fade-in-fast.visible,
+  .scroll-fade-in-slow.visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Performance optimizations */
+.scroll-fade-in,
+.scroll-fade-in-small,
+.scroll-fade-in-large,
+.scroll-fade-in-stagger,
+.scroll-fade-in-bounce,
+.scroll-fade-in-smooth,
+.scroll-slide-up,
+.scroll-scale-in,
+.scroll-fade-in-left,
+.scroll-fade-in-right,
+.scroll-fade-in-fast,
+.scroll-fade-in-slow {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

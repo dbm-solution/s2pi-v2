@@ -1,17 +1,17 @@
 {
-  "title": "Nos Produits",
-  "subtitle": "Découvrez notre gamme complète",
+  "title": "منتجاتنا",
+  "subtitle": "اكتشف مجموعتنا الكاملة",
   "categories": {
-    "fibrous": "Produits fibreux de projection",
-    "paste": "Produits pâteux de projection",
-    "paints": "Peintures intumescentes",
-    "primers": "Primaires d'accrochage",
-    "finishes": "Enduits de finition",
-    "materials": "Matériels et accessoires"
+    "fibrous": "منتجات ليفية للرش",
+    "paste": "منتجات عجينية للرش",
+    "paints": "دهانات منتفخة",
+    "primers": "دهانات تمهيدية",
+    "finishes": "طبقات نهائية",
+    "materials": "معدات وملحقات"
   },
   "actions": {
-    "view": "Voir le produit",
-    "download": "Télécharger la fiche",
-    "contact": "Nous contacter"
+    "view": "عرض المنتج",
+    "download": "تحميل النشرة",
+    "contact": "اتصل بنا"
   }
 }

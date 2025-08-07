@@ -1,17 +1,17 @@
 {
-  "title": "Nos Produits",
-  "subtitle": "Découvrez notre gamme complète",
+  "title": "Nuestros Productos",
+  "subtitle": "Descubra nuestra gama completa",
   "categories": {
-    "fibrous": "Produits fibreux de projection",
-    "paste": "Produits pâteux de projection",
-    "paints": "Peintures intumescentes",
-    "primers": "Primaires d'accrochage",
-    "finishes": "Enduits de finition",
-    "materials": "Matériels et accessoires"
+    "fibrous": "Productos fibrosos para proyección",
+    "paste": "Productos en pasta para proyección",
+    "paints": "Pinturas intumescentes",
+    "primers": "Primarios de adherencia",
+    "finishes": "Revestimientos de acabado",
+    "materials": "Materiales y accesorios"
   },
   "actions": {
-    "view": "Voir le produit",
-    "download": "Télécharger la fiche",
-    "contact": "Nous contacter"
+    "view": "Ver producto",
+    "download": "Descargar ficha",
+    "contact": "Contáctenos"
   }
 }

@@ -1,23 +1,23 @@
 {
-  "title": "Nos Solutions",
-  "subtitle": "Solutions techniques adaptées à vos besoins",
+  "title": "حلولنا",
+  "subtitle": "حلول تقنية تناسب احتياجاتكم",
   "types": {
     "acoustic": {
-      "title": "Solutions Acoustiques",
-      "description": "Isolation phonique performante"
+      "title": "حلول صوتية",
+      "description": "عزل صوتي عالي الأداء"
     },
     "fire": {
-      "title": "Protection Incendie",
-      "description": "Sécurité et protection contre le feu"
+      "title": "الحماية من الحريق",
+      "description": "السلامة والحماية من النار"
     },
     "thermal": {
-      "title": "Isolation Thermique",
-      "description": "Isolation thermique par l'extérieur"
+      "title": "العزل الحراري",
+      "description": "عزل حراري من الخارج"
     }
   },
   "benefits": {
-    "performance": "Haute performance",
-    "durability": "Durabilité garantie",
-    "expertise": "Expertise technique"
+    "performance": "أداء عالي",
+    "durability": "ضمان المتانة",
+    "expertise": "خبرة تقنية"
   }
 }

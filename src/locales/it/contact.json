@@ -1,22 +1,22 @@
 {
-  "title": "Contactez-nous",
-  "subtitle": "Notre équipe est à votre écoute",
+  "title": "Contattaci",
+  "subtitle": "Il nostro team è a tua disposizione",
   "form": {
-    "name": "Nom",
+    "name": "Nome",
     "email": "Email",
-    "company": "Entreprise",
-    "phone": "Téléphone",
-    "subject": "Sujet",
-    "message": "Message",
-    "submit": "Envoyer",
-    "required": "Champ obligatoire"
+    "company": "Azienda",
+    "phone": "Telefono",
+    "subject": "Oggetto",
+    "message": "Messaggio",
+    "submit": "Invia",
+    "required": "Campo obbligatorio"
   },
   "info": {
-    "address": "Adresse",
-    "phone": "Téléphone",
+    "address": "Indirizzo",
+    "phone": "Telefono",
     "email": "Email",
-    "hours": "Horaires d'ouverture"
+    "hours": "Orari di apertura"
   },
-  "success": "Votre message a été envoyé avec succès",
-  "error": "Une erreur s'est produite, veuillez réessayer"
+  "success": "Il tuo messaggio è stato inviato con successo",
+  "error": "Si è verificato un errore, riprova per favore"
 }

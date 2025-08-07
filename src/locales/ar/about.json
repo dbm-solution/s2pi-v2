@@ -1,15 +1,23 @@
 {
-  "title": "UNE ENTREPRISE À VOTRE ÉCOUTE",
+  "title": "شركة تستمع إليكم",
   "introduction": {
-    "paragraph1": "La société S2PI a été créée en 2014...",
-    "paragraph2": "S2PI est le second acteur..."
+    "paragraph1": "تأسست شركة S2PI في عام 2014...",
+    "paragraph2": "تُعد S2PI ثاني أكبر فاعل..."
   },
   "commitments": {
-    "title": "Les engagements majeurs de S2PI vis-à-vis de ses clients :",
+    "title": "الالتزامات الرئيسية لشركة S2PI تجاه عملائها:",
     "items": [
-      "Une entreprise certifiée ISO 9001...",
-      "Des produits de qualité...",
-      "Un engagement du respect des délais..."
+      "شركة حاصلة على شهادة ISO 9001...",
+      "منتجات عالية الجودة...",
+      "الالتزام باحترام مواعيد التسليم..."
+    ]
+  },
+  "philosophy": {
+    "points": [
+      "توفير ضمان الجودة والأداء لعملائنا",
+      "منتجاتنا المطروحة في السوق معتمدة",
+      "الالتزام بمواعيد التسليم",
+      "تصنيع منتجاتنا في فرنسا وضمان ثبات جودتها، الشركة حاصلة على شهادة ISO 9001"
     ]
   }
 }

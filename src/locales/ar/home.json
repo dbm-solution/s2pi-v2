@@ -1,48 +1,93 @@
 {
   "hero": {
-    "title": "S2PI - Spécialiste Isolation",
-    "subtitle": "Solutions d'isolation thermique, acoustique et protection incendie",
-    "cta": "Découvrir nos solutions"
+    "title": "S2PI - متخصص في العزل",
+    "subtitle": "حلول العزل الحراري، الصوتي، والحماية من الحريق",
+    "cta": "اكتشف حلولنا"
   },
   "newYear": {
-    "title": "Bonne année 2025 à tous nos clients et partenaires !",
-    "description": "Nous savons que nous sommes un peu en retard, mais mieux vaut tard que jamais ! Nous vous souhaitons une année remplie de bonheur, de santé et de succès. Que cette nouvelle année soit synonyme de nouvelles opportunités, de moments inoubliables et de réalisations personnelles et professionnelles.",
-    "footer": "Merci à tous pour votre soutien et votre confiance. Ensemble, faisons de 2025 une année exceptionnelle !"
+    "title": "سنة جديدة سعيدة 2025 لجميع عملائنا وشركائنا!",
+    "description": "نحن نعلم أننا تأخرنا قليلاً، ولكن أن تأتي متأخرًا خير من ألا تأتي أبدًا! نتمنى لكم سنة مليئة بالسعادة، والصحة، والنجاح. نتمنى أن تكون هذه السنة الجديدة مليئة بالفرص الجديدة، واللحظات التي لا تُنسى، والإنجازات الشخصية والمهنية.",
+    "footer": "شكرًا لكم جميعًا على دعمكم وثقتكم. معًا، لنجعل من عام 2025 عامًا استثنائيًا!"
   },
   "companyInfo": {
-    "title": "S2PI - VOTRE PARTENAIRE EN ISOLATION",
-    "history": "S2PI, c'est un projet industriel initié par Jean-Luc BELLI, fort de plus de deux décennies d'expérience dans le secteur de la production d'isolants. S2PI, c'est aussi une équipe de collaborateurs unis par la volonté de donner le meilleur d'eux-même pour que les clients profitent de la qualité des produits de l'entreprise. S2PI améliore constamment ses produits et ses process internes pour s'adapter aux évolutions de la demande, du marché et des normes.",
-    "description": "Installée dans le département du Rhône, S2PI est une entreprise humaine innovante à taille humaine qui fabrique et distribue des isolants thermiques, acoustiques et de protection incendie à base de laine de laitier. S2PI s'inscrit dans une recherche permanente d'amélioration de ses process de production. S2PI met le client au cœur de ses préoccupations. Chaque produit est conforme aux besoins et aux normes du marché, il est soumis à un contrôle de qualité extrêmement rigoureux par des laboratoires d'essais accrédités (EFECTIS, LNE). Nos produits sont certifiés ACERMI et font l'objet d'Avis Techniques délivrés par le CCFAT en l'absence de DTU.",
+    "title": "S2PI - شريككم في العزل",
+    "history": "S2PI هو مشروع صناعي أطلقه جان-لوك بيلي، مستفيدًا من أكثر من عشرين عامًا من الخبرة في مجال إنتاج مواد العزل. S2PI هي أيضًا فريق من المتعاونين متحدين بهدف تقديم الأفضل للعملاء ليستفيدوا من جودة منتجات الشركة. تعمل S2PI باستمرار على تحسين منتجاتها وعملياتها الداخلية للتكيف مع تطور الطلب والسوق والمعايير.",
+    "description": "تقع S2PI في إقليم الرون، وهي شركة فرنسية إنسانية ومبتكرة بحجم مناسب، تقوم بتصنيع وتوزيع مواد العزل الحراري، الصوتي، والحماية من الحريق المصنوعة من صوف الخبث. تكرس S2PI نفسها للتحسين المستمر لعملياتها الإنتاجية، مع التركيز على العميل. كل منتج يلبي احتياجات ومعايير السوق ويخضع لمراقبة جودة صارمة من قبل مختبرات اختبار معتمدة (EFECTIS، LNE). منتجاتنا حاصلة على شهادة ACERMI وتحظى بآراء تقنية صادرة عن CCFAT في حال غياب DTU.",
     "philosophy": {
-      "title": "Notre philosophie",
+      "title": "فلسفتنا",
       "points": [
-        "Offrir à nos clients la garantie de la qualité et la performance de nos produits",
-        "Nos produits mis sur le marché sont certifiés",
-        "Respecter nos engagements sur les délais de livraison",
-        "Fabriquer nos produits en France et garantir la constance de leur qualité, entreprise certifiée ISO 9001"
+        "تقديم ضمان الجودة والأداء لعملائنا",
+        "منتجاتنا المطروحة في السوق معتمدة",
+        "الالتزام بمواعيد التسليم",
+        "تصنيع منتجاتنا في فرنسا وضمان ثبات جودتها، شركة حاصلة على شهادة ISO 9001"
       ]
     },
     "images": {
-      "facility": "Installation industrielle S2PI",
-      "certification": "Bureau Veritas ISO 9001:2015 Certification"
+      "facility": "المنشأة الصناعية لـ S2PI",
+      "certification": "شهادة Bureau Veritas ISO 9001:2015"
     }
   },
   "qualityControl": {
-    "title": "Chaque produit est conforme aux besoins et aux normes du marché. Il est soumis à un contrôle de qualité extrêmement rigoureux par des laboratoires d'essais accrédités."
+    "title": "كل منتج يطابق احتياجات السوق والمعايير ويخضع لمراقبة جودة صارمة من قبل مختبرات اختبار معتمدة."
   },
   "protection": {
-    "title": "PROTECTION DES PERSONNES & DÉFIS ENVIRONNEMENTAUX",
-    "parallaxTitle": "S2PI s'inscrit dans une recherche permanente d'amélioration de ses process de production.",
+    "title": "حماية الأشخاص والتحديات البيئية",
+    "parallaxTitle": "تكرس S2PI نفسها لتحسين مستمر لعملياتها الإنتاجية.",
     "content": {
-      "part1": "Si la sécurité incendie des bâtiments doit conjuguer l'ensemble des actions comme faciliter l'évacuation des personnes, mettre en place des dispositifs d'alerte, des équipements de désenfumage,… la protection passive reste la plus efficace et se décide dès le début du projet en prévoyant des systèmes constructifs ayant recours à des matériaux non combustibles ne participant ni à alimenter l'incendie ni à le propager. La protection passive en sécurité incendie s'allie aussi avec l'efficacité énergétique pour répondre aux objectifs nationaux de lutte contre le changement climatique. Cette conviction profonde m'anime depuis plusieurs années et guide mon action.",
-      "part2": "Pour répondre aux défis environnementaux, ceux de protection des personnes et des biens, il faut être convaincu et agir avec détermination. C'est l'ambition que j'ai fixée en créant la société S2PI de fabriquer des solutions techniques, économiques, innovantes et fiables issues du partage de l'expertise et de l'expérience de ses membres.",
-      "quote": "« Dans le monde des idées tout dépend de l'enthousiasme. Dans le monde du réel tout dépend de la persévérance. »",
-      "quoteAuthor": "Johann Wolfgang von Goethe",
-      "signature": "Jean-Luc Belli",
-      "title": "Président Directeur Général"
+      "part1": "إذا كانت السلامة من الحريق في المباني تتطلب مجموعة من الإجراءات مثل تسهيل إخلاء الأشخاص، إنشاء أنظمة إنذار، تجهيزات لاستخراج الدخان... فإن الحماية السلبية تبقى الأكثر فاعلية ويجب اتخاذها منذ بداية المشروع من خلال اعتماد أنظمة بناء تستخدم مواد غير قابلة للاشتعال لا تغذي الحريق ولا تساعد في انتشاره. تتكامل الحماية السلبية من الحريق مع الكفاءة الطاقية لتحقيق الأهداف الوطنية في مكافحة التغير المناخي. هذا الاقتناع العميق يرافقني منذ سنوات ويقود عملي.",
+      "part2": "من أجل مواجهة التحديات البيئية، وتوفير الحماية للأشخاص والممتلكات، يجب أن نتحلى بالإيمان والعزيمة. هذا هو الطموح الذي وضعته عند تأسيس شركة S2PI: تصنيع حلول تقنية، اقتصادية، مبتكرة وموثوقة نابعة من تبادل الخبرات والمعرفة بين أعضائها.",
+      "quote": "« في عالم الأفكار، كل شيء يعتمد على الحماس. في العالم الواقعي، كل شيء يعتمد على المثابرة. »",
+      "quoteAuthor": "يوهان فولفغانغ فون غوته",
+      "signature": "جان-لوك بيلي",
+      "title": "الرئيس المدير العام"
     },
     "images": {
-      "ceo": "Jean-Luc Belli"
+      "ceo": "جان-لوك بيلي"
+    }
+  },
+  "slider": {
+    "slides": {
+      "itarn": {
+        "title": "ITARN - العزل الحراري",
+        "subtitle": "من الخارج",
+        "description": [
+          "• منتج قائم على الصوف المعدني من الخبث مدمج مع رابط هيدروليكي.",
+          "• مخصص للعزل الحراري للجدران الرأسية من الخارج تحت تغطية مهواة للمباني السكنية الفردية، الجماعية أو الخدمية.",
+          "• يكمل أداؤه الصوتي والحماية من الحريق الأداء الحراري لعزل مثالي.",
+          "• يتم تطبيقه عبر نظام هوائي بواسطة شركات متخصصة في أعمال الواجهات، البناء والعزل الخارجي."
+        ],
+        "cta": "اعرف المزيد"
+      },
+      "thermal": {
+        "title": "حلول العزل",
+        "subtitle": "الحراري",
+        "description": [
+          "العزل عبر الرش بصوف الخبث هو الحل للكفاءة الطاقية، والحماية من الحريق والعزل الصوتي للمباني.",
+          "",
+          "INNOSPRAY-FTH مخصص للعزل الحراري عبر الرش لألواح الخرسانة، الأرضيات المدعمة، والأرضيات الخرسانية مع صفائح فولاذية. يحد من الجسور الحرارية ويمنع الحاجة إلى ثقوب في الألواح. مناسب بشكل خاص في الحالات التي تحتوي على ممرات شبكية أو ألواح مشدودة."
+        ],
+        "cta": "اعرف المزيد"
+      },
+      "fire": {
+        "title": "حلول الحماية",
+        "subtitle": "السلامة من الحريق",
+        "description": [
+          "طلاءات الحماية من الحريق هي طبقات يتم رشها على دعم من نوع المعدن الموسع، مصنوعة من صوف معدني وروابط خاصة، مخصصة لحماية الأرضيات من الحريق والتي لا تتعرض للعوامل الجوية.",
+          "",
+          "INNOSPRAY-FFM هو طلاء يتم رشه، مصنوع من صوف الخبث المعدني وروابط خاصة، مخصص لحماية الهياكل الفولاذية من الحريق والتي لا تتعرض للعوامل الجوية."
+        ],
+        "cta": "اعرف المزيد"
+      },
+      "acoustic": {
+        "title": "حلول العزل الصوتي",
+        "subtitle": "",
+        "description": [
+          "الحل المثالي للعزل الأفقي بين المساكن والمناطق التجارية أو بين المساكن والكراجات الجماعية أو الفردية.",
+          "",
+          "حلول S2PI مناسبة لكل من المشاريع الجديدة والقائمة في القطاع السكني وغير السكني."
+        ],
+        "cta": "اعرف المزيد"
+      }
     }
   }
 }

@@ -8,17 +8,18 @@ export default function NewYearMessage() {
   const t = useClientTranslations('home');
 
   return (
-    <div className="text-white py-6">
+    <div className="text-white py-8">
       <InfoCard
-        className="mt-10"
+        className="mt-10 scroll-fade-in-large"
         variant="primary"
         size="xl"
         layout="banner"
         shape="rectangle"
         textAlign="center"
-        animation="none"
         title={t('newYear.title')}
         description={t('newYear.description')}
+        transition="slideInTop"
+        animation="none"
         footer={
           <p className="text-sm opacity-90 font-medium">
             {t('newYear.footer')}

@@ -1,22 +1,22 @@
 {
-  "title": "Contactez-nous",
-  "subtitle": "Notre équipe est à votre écoute",
+  "title": "اتصل بنا",
+  "subtitle": "فريقنا في خدمتك",
   "form": {
-    "name": "Nom",
-    "email": "Email",
-    "company": "Entreprise",
-    "phone": "Téléphone",
-    "subject": "Sujet",
-    "message": "Message",
-    "submit": "Envoyer",
-    "required": "Champ obligatoire"
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "company": "الشركة",
+    "phone": "الهاتف",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "submit": "إرسال",
+    "required": "حقل إلزامي"
   },
   "info": {
-    "address": "Adresse",
-    "phone": "Téléphone",
-    "email": "Email",
-    "hours": "Horaires d'ouverture"
+    "address": "العنوان",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "hours": "ساعات العمل"
   },
-  "success": "Votre message a été envoyé avec succès",
-  "error": "Une erreur s'est produite, veuillez réessayer"
+  "success": "تم إرسال رسالتك بنجاح",
+  "error": "حدث خطأ، يرجى المحاولة مرة أخرى"
 }

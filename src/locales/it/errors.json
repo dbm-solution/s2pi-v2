@@ -1,17 +1,17 @@
 {
   "404": {
-    "title": "Page non trouvée",
-    "message": "La page que vous recherchez n'existe pas.",
-    "back": "Retour à l'accueil"
+    "title": "Pagina non trovata",
+    "message": "La pagina che stai cercando non esiste.",
+    "back": "Torna alla homepage"
   },
   "500": {
-    "title": "Erreur serveur",
-    "message": "Une erreur interne s'est produite.",
-    "retry": "Réessayer"
+    "title": "Errore del server",
+    "message": "Si è verificato un errore interno.",
+    "retry": "Riprova"
   },
   "network": {
-    "title": "Erreur réseau",
-    "message": "Problème de connexion réseau.",
-    "check": "Vérifiez votre connexion"
+    "title": "Errore di rete",
+    "message": "Problema di connessione di rete.",
+    "check": "Controlla la tua connessione"
   }
 }
