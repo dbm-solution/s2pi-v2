@@ -15,6 +15,7 @@ export default function Footer({ locale = 'fr' }: FooterProps) {
       {/* Main Footer Content */}
       <div className={styles.mainFooter}>
         <div className={styles.footerContainer}>
+          <div className={styles.footerContent}>
             {/* Logo and Company Info */}
             <div className={styles.logoSection}>
               <Image
@@ -49,6 +50,7 @@ export default function Footer({ locale = 'fr' }: FooterProps) {
             </div>
           </div>
         </div>
+      </div>
 
       {/* Bottom Bar */}
       <div id="bottom-bar" className={`${styles.bottomBar} logo-center`} role="contentinfo">
@@ -64,28 +66,7 @@ export default function Footer({ locale = 'fr' }: FooterProps) {
               </a>
             </div>
             
-            <div className={styles.wfFloatRight}>
-              {/* Scroll to Top Button */}
-              <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className={styles.scrollButton}
-                aria-label="Aller en haut"
-                title="Aller en haut"
-              >
-                <svg
-                  className={styles.scrollIcon}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 10l7-7m0 0l7 7m-7-7v18"
-                  />
-                </svg>
-              </button>
-            </div>
+
           </div>
         </div>
       </div>
