@@ -65,7 +65,7 @@ export default function CompanyInfo() {
                 textAlign: 'justify'
               }}
             >
-              <strong style={{ fontWeight: 700 }}>S2PI, c'est un projet industriel initié par Jean-Luc BELLI</strong>, {t('companyInfo.history') || 'notre histoire continue...'}
+              <strong style={{ fontWeight: 700 }}>{t('companyInfo.history.bold')}</strong> {t('companyInfo.history.text')}
             </Typography>
 
             {/* Industrial facility image */}
@@ -91,7 +91,7 @@ export default function CompanyInfo() {
                 textAlign: 'justify'
               }}
             >
-              Installée dans le département du Rhône, <strong style={{ fontWeight: 700 }}>S2PI est une entreprise humaine innovante</strong> {t('companyInfo.description') || 'qui se développe constamment.'}
+              {t('companyInfo.description.prefix')} <strong style={{ fontWeight: 700 }}>{t('companyInfo.description.bold')}</strong> {t('companyInfo.description.text')}
             </Typography>
           </div>
 
@@ -143,7 +143,7 @@ export default function CompanyInfo() {
                         textAlign: 'justify'
                       }}
                     >
-                      Qualité et performance de nos produits
+                      {t('companyInfo.philosophy.fallback.point1')}
                     </Typography>
                   </li>
                   <li className="flex items-start">
@@ -160,7 +160,7 @@ export default function CompanyInfo() {
                         textAlign: 'justify'
                       }}
                     >
-                      Service client réactif et personnalisé
+                      {t('companyInfo.philosophy.fallback.point2')}
                     </Typography>
                   </li>
                   <li className="flex items-start">
@@ -177,7 +177,7 @@ export default function CompanyInfo() {
                         textAlign: 'justify'
                       }}
                     >
-                      Innovation continue dans nos solutions
+                      {t('companyInfo.philosophy.fallback.point3')}
                     </Typography>
                   </li>
                 </>

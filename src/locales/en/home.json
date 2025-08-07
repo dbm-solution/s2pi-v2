@@ -11,8 +11,15 @@
   },
   "companyInfo": {
     "title": "S2PI - YOUR INSULATION PARTNER",
-    "history": "S2PI is an industrial project initiated by Jean-Luc BELLI, who has over two decades of experience in the insulation manufacturing sector. S2PI is also a team of committed employees determined to deliver the best so clients can benefit from the quality of our products. S2PI continuously improves its products and internal processes to adapt to evolving demand, market trends, and regulations.",
-    "description": "Located in the Rhône department, S2PI is an innovative, human-scale company that manufactures and distributes thermal, acoustic, and fire protection insulation made from slag wool. S2PI is committed to constantly improving its production processes. The client is at the heart of our focus. Every product is tailored to meet market needs and standards, undergoing rigorous quality control by accredited testing laboratories (EFECTIS, LNE). Our products are ACERMI certified and have Technical Assessments from CCFAT in the absence of DTU.",
+    "history": {
+      "bold": "S2PI is an industrial project initiated by Jean-Luc BELLI",
+      "text": "who has over two decades of experience in the insulation manufacturing sector. S2PI is also a team of committed employees determined to deliver the best so clients can benefit from the quality of our products. S2PI continuously improves its products and internal processes to adapt to evolving demand, market trends, and regulations."
+    },
+    "description": {
+      "prefix": "Located in the Rhône department,",
+      "bold": "S2PI is an innovative, human-scale company",
+      "text": "that manufactures and distributes thermal, acoustic, and fire protection insulation made from slag wool. S2PI is committed to constantly improving its production processes. The client is at the heart of our focus. Every product is tailored to meet market needs and standards, undergoing rigorous quality control by accredited testing laboratories (EFECTIS, LNE). Our products are ACERMI certified and have Technical Assessments from CCFAT in the absence of DTU."
+    },
     "philosophy": {
       "title": "Our Philosophy",
       "points": [
@@ -20,7 +27,12 @@
         "All our marketed products are certified",
         "Fulfill our delivery time commitments",
         "Manufacture our products in France and ensure consistent quality – ISO 9001 certified company"
-      ]
+      ],
+      "fallback": {
+        "point1": "Quality and performance of our products",
+        "point2": "Responsive and personalized customer service",
+        "point3": "Continuous innovation in our solutions"
+      }
     },
     "images": {
       "facility": "S2PI Industrial Facility",

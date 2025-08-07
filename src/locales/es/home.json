@@ -11,17 +11,28 @@
   },
   "companyInfo": {
     "title": "S2PI - SU SOCIO EN AISLAMIENTO",
-    "history": "S2PI es un proyecto industrial iniciado por Jean‑Luc BELLI, con más de dos décadas de experiencia en el sector de producción de aislantes. S2PI también es un equipo de colaboradores unidos por la voluntad de dar lo mejor de sí mismos para que los clientes disfruten de la calidad de los productos de la empresa. S2PI mejora constantemente sus productos y procesos internos para adaptarse a la evolución de la demanda, del mercado y de las normativas.",
-    "description": "Ubicada en el departamento del Ródano, S2PI es una empresa innovadora a escala humana que fabrica y distribuye aislantes térmicos, acústicos y de protección contra incendios a base de lana de escoria. S2PI mantiene una mejora continua en sus procesos productivos. El cliente está en el centro de sus preocupaciones. Cada producto cumple con las necesidades y normas del mercado, y se somete a un control de calidad extremadamente riguroso por laboratorios acreditados (EFECTIS, LNE). Nuestros productos están certificados por ACERMI y cuentan con Avisos Técnicos emitidos por el CCFAT en ausencia de DTU.",
+    "history": {
+      "bold": "S2PI es un proyecto industrial iniciado por Jean‑Luc BELLI",
+      "text": "con más de dos décadas de experiencia en el sector de producción de aislantes. S2PI también es un equipo de colaboradores unidos por la voluntad de dar lo mejor de sí mismos para que los clientes disfruten de la calidad de los productos de la empresa. S2PI mejora constantemente sus productos y procesos internos para adaptarse a la evolución de la demanda, del mercado y de las normativas."
+    },
+    "description": {
+      "prefix": "Ubicada en el departamento del Ródano,",
+      "bold": "S2PI es una empresa innovadora a escala humana",
+      "text": "que fabrica y distribuye aislantes térmicos, acústicos y de protección contra incendios a base de lana de escoria. S2PI mantiene una mejora continua en sus procesos productivos. El cliente está en el centro de sus preocupaciones. Cada producto cumple con las necesidades y normas del mercado, y se somete a un control de calidad extremadamente riguroso por laboratorios acreditados (EFECTIS, LNE). Nuestros productos están certificados por ACERMI y cuentan con Avisos Técnicos emitidos por el CCFAT en ausencia de DTU."
+    },
     "philosophy": {
-      
       "title": "Nuestra filosofía",
       "points": [
         "Garantizar a nuestros clientes la calidad y el rendimiento de nuestros productos",
         "Todos nuestros productos comercializados están certificados",
         "Cumplir nuestros compromisos de tiempos de entrega",
-        "Fabricar nuestros productos en Francia y garantizar la constancia de su calidad, empresa con certificación ISO 9001"
-      ]
+        "Fabricar nuestros productos en Francia y garantizar la constancia de su calidad, empresa con certificación ISO 9001"
+      ],
+      "fallback": {
+        "point1": "Calidad y rendimiento de nuestros productos",
+        "point2": "Servicio al cliente reactivo y personalizado",
+        "point3": "Innovación continua en nuestras soluciones"
+      }
     },
     "images": {
       "facility": "Instalación industrial de S2PI",
