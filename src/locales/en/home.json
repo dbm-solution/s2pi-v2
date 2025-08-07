@@ -46,9 +46,15 @@
     "title": "PEOPLE PROTECTION & ENVIRONMENTAL CHALLENGES",
     "parallaxTitle": "S2PI is continuously improving its production processes.",
     "content": {
-      "part1": "While fire safety in buildings requires a combination of actions like facilitating evacuation, installing alert systems, and smoke extraction equipment… passive protection remains the most effective. It is considered from the project's outset by integrating construction systems using non-combustible materials that do not contribute to starting or spreading fires. Passive fire protection also complements energy efficiency goals to help fight climate change. This strong belief has driven me for years and continues to guide my actions.",
-      "part2": "To meet environmental challenges and protect people and property, one must be truly committed and act with determination. This is the ambition I set when founding S2PI: to manufacture technical, economical, innovative, and reliable solutions based on shared expertise and experience.",
-      "quote": "“In the world of ideas everything depends on enthusiasm. In the real world all rests on perseverance.”",
+      "part1": {
+        "bold": "While fire safety in buildings requires a combination of actions",
+        "text": " like facilitating evacuation, installing alert systems, and smoke extraction equipment… passive protection remains the most effective. It is considered from the project's outset by integrating construction systems using non-combustible materials that do not contribute to starting or spreading fires. Passive fire protection also complements energy efficiency goals to help fight climate change. This strong belief has driven me for years and continues to guide my actions."
+      },
+      "part2": {
+        "bold": "To meet environmental challenges and protect people and property, one must be truly committed and act with determination.",
+        "text": "This is the ambition I set when founding S2PI: to manufacture technical, economical, innovative, and reliable solutions based on shared expertise and experience."
+      },
+      "quote": "In the world of ideas everything depends on enthusiasm. In the real world all rests on perseverance.",
       "quoteAuthor": "Johann Wolfgang von Goethe",
       "signature": "Jean-Luc Belli",
       "title": "Chairman & CEO"

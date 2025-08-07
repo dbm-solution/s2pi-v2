@@ -46,9 +46,14 @@
     "title": "PROTECTION DES PERSONNES & DÉFIS ENVIRONNEMENTAUX",
     "parallaxTitle": "S2PI s'inscrit dans une recherche permanente d'amélioration de ses process de production.",
     "content": {
-      "part1": "Si la sécurité incendie des bâtiments doit conjuguer l'ensemble des actions comme faciliter l'évacuation des personnes, mettre en place des dispositifs d'alerte, des équipements de désenfumage,… la protection passive reste la plus efficace et se décide dès le début du projet en prévoyant des systèmes constructifs ayant recours à des matériaux non combustibles ne participant ni à alimenter l'incendie ni à le propager. La protection passive en sécurité incendie s'allie aussi avec l'efficacité énergétique pour répondre aux objectifs nationaux de lutte contre le changement climatique. Cette conviction profonde m'anime depuis plusieurs années et guide mon action.",
-      "part2": "Pour répondre aux défis environnementaux, ceux de protection des personnes et des biens, il faut être convaincu et agir avec détermination. C'est l'ambition que j'ai fixée en créant la société S2PI de fabriquer des solutions techniques, économiques, innovantes et fiables issues du partage de l'expertise et de l'expérience de ses membres.",
-      "quote": "« Dans le monde des idées tout dépend de l'enthousiasme. Dans le monde du réel tout dépend de la persévérance. »",
+      "part1": {
+        "bold": "Si la sécurité incendie des bâtiments doit conjuguer l’ensemble",
+        "text": " des actions comme faciliter l’évacuation des personnes, mettre en place des dispositifs d’alerte, des équipements de désenfumage,… la protection passive reste la plus efficace et se décide dès le début du projet en prévoyant des systèmes constructifs ayant recours à des matériaux non combustibles ne participant ni à alimenter l’incendie ni à le propager. La protection passive en sécurité incendie s’allie aussi avec l’efficacité énergétique pour répondre aux objectifs nationaux de lutte contre le changement climatique. Cette conviction profonde m’anime depuis plusieurs années et guide mon action."
+      },
+      "part2": {
+        "text": "Pour répondre aux défis environnementaux, ceux de protection des personnes et des biens, il faut être convaincu et agir avec détermination. C’est l’ambition que j’ai fixée en créant la société S2PI de fabriquer des solutions techniques, économiques, innovantes et fiables issues du partage de l’expertise et de l’expérience de ses membres."
+      },
+      "quote": "Dans le monde des idées tout dépend de l'enthousiasme. Dans le monde du réel tout dépend de la persévérance. ",
       "quoteAuthor": "Johann Wolfgang von Goethe",
       "signature": "Jean-Luc Belli",
       "title": "Président Directeur Général"

@@ -46,9 +46,14 @@
     "title": "PROTECCIÓN DE PERSONAS Y DESAFÍOS AMBIENTALES",
     "parallaxTitle": "S2PI mantiene una mejora continua en sus procesos productivos.",
     "content": {
-      "part1": "Si la seguridad contra incendios en los edificios requiere combinar acciones como facilitar la evacuación, implementar sistemas de alerta, equipos de extracción de humos… la protección pasiva sigue siendo la más eficaz. Se planifica desde el inicio del proyecto mediante sistemas constructivos con materiales no combustibles que no alimentan ni propagan el fuego. La protección pasiva también complementa la eficiencia energética para alcanzar los objetivos nacionales de lucha contra el cambio climático. Esta convicción profunda me ha guiado durante años y dirige mi acción.",
-      "part2": "Para responder a los desafíos ambientales, y proteger a las personas y bienes, se necesita convicción y determinación. Esa es la ambición que establecí al fundar S2PI: fabricar soluciones técnicas, económicas, innovadoras y fiables, basadas en la compartición de experiencia y pericia entre sus miembros.",
-      "quote": "« En el mundo de las ideas todo depende del entusiasmo. En el mundo real, todo depende de la perseverancia. »",
+      "part1": {
+        "bold": "Si la seguridad contra incendios en los edificios requiere combinar acciones como facilitar la evacuación, implementar sistemas de alerta, equipos de extracción de humos… la protección pasiva sigue siendo la más eficaz. Se planifica desde el inicio del proyecto mediante sistemas constructivos con materiales no combustibles que no alimentan ni propagan el fuego. La protección pasiva también complementa la eficiencia energética para alcanzar los objetivos nacionales de lucha contra el cambio climático. Esta convicción profunda me ha guiado durante años y dirige mi acción.",
+        "text": "Para responder a los desafíos ambientales, y proteger a las personas y bienes, se necesita convicción y determinación. Esa es la ambición que establecí al fundar S2PI: fabricar soluciones técnicas, económicas, innovadoras y fiables, basadas en la compartición de experiencia y pericia entre sus miembros."
+      },
+      "part2": {
+        "text": "Esa es la ambición que establecí al fundar S2PI: fabricar soluciones técnicas, económicas, innovadoras y fiables, basadas en la compartición de experiencia y pericia entre sus miembros."
+      },
+      "quote": "En el mundo de las ideas todo depende del entusiasmo. En el mundo real, todo depende de la perseverancia. ",
       "quoteAuthor": "Johann Wolfgang von Goethe",
       "signature": "Jean‑Luc Belli",
       "title": "Presidente y Director General"
