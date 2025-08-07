@@ -46,11 +46,11 @@ export default function Footer({ locale = 'fr' }: FooterProps) {
                   <p className={styles.contactNormal}>04 58 00 02 20</p>
                   <p className={styles.contactLast}>contact@s2pi.fr</p>
                 </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* Bottom Bar */}
       <div id="bottom-bar" className={`${styles.bottomBar} logo-center`} role="contentinfo">

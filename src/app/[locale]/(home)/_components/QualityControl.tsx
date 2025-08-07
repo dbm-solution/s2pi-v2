@@ -1,79 +1,55 @@
 "use client";
 
-import { Typography } from "@/components/ui/typography/typography";
-import { useClientTranslations } from '@/components/providers/ClientTranslationProvider';
-
 export default function QualityControl() {
-  const t = useClientTranslations('home.qualityControl');
-
   return (
-    <div className="relative w-full">
-      {/* Top Angled Shape */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden" style={{ height: '60px', transform: 'translateY(-1px)' }}>
-        <svg 
-          className="absolute bottom-0 w-full h-full" 
-          viewBox="0 0 2000 90" 
-          preserveAspectRatio="none"
-          style={{ fill: '#f9f9f9' }}
-        >
-          <polygon points="535.084,64.886 0,0 0,90 2000,90 2000,0" />
-        </svg>
-      </div>
-
-      {/* Main Content Section */}
+    <div className="relative w-full" style={{ backgroundColor: '#f9f9f9' }}>
       <div 
-        className="relative w-full py-36"
+        className="relative w-full"
         style={{
-          backgroundImage: 'url("/images/backgrounds/header-01.jpg")',
+          backgroundImage: 'url("/images/home-page/background/10019.jpg")',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          minHeight: '400px'
+          backgroundPosition: '50% 50%',
+          paddingTop: '330px',
+          paddingBottom: '330px',
+          clipPath: 'polygon(74% 1%, 100% 7%, 100% 91%, 75% 100%, 0 91%, 0 9%)',
         }}
       >
-        {/* Semi-transparent white overlay */}
+        {/* Background Overlay */}
         <div 
-          className="absolute inset-0" 
-          style={{ backgroundColor: 'rgba(255,255,255,0.6)' }}
-        />
-
-        {/* Content Container */}
-        <div className="relative z-10 container mx-auto px-8">
-          <div className="max-w-5xl mx-auto">
-            <Typography 
-              as="h2"
-              className="text-center"
-              style={{
-                fontFamily: 'Prata, serif',
-                fontSize: '42px',
-                lineHeight: '1.4',
-                fontWeight: 'normal',
-                color: '#2d2d2d',
-                textAlign: 'center',
-                letterSpacing: 'normal',
-                wordSpacing: 'normal',
-                maxWidth: '1000px',
-                margin: '0 auto',
-                padding: '0 20px'
-              }}
-            >
-              {t('title')}
-            </Typography>
+          className="absolute inset-0 flex items-center justify-center"
+          style={{ 
+            backgroundColor: 'rgba(255,255,255,0.6)',
+            zIndex: 1
+          }}
+        >
+          <div className="z-10 w-full">
+            <div className="container mx-auto px-4">
+              <h2 
+                style={{
+                  textAlign: 'center',
+                  fontFamily: 'Prata',
+                  fontSize: '42px',
+                  fontWeight: '300',
+                  lineHeight: '1.4',
+                  color: '#000000',
+                  letterSpacing: 'normal',
+                  margin: '0 auto',
+                  maxWidth: '1199px',
+                  padding: '0 20px',
+                  unicodeBidi: 'isolate',
+                  position: 'relative',
+                  zIndex: '99999'
+                }}
+              >
+                Chaque produit est conforme aux besoins et aux normes du marché. Il est soumis à un contrôle de qualité extrêmement rigoureux par des laboratoires d'essais accrédités.
+              </h2>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Angled Shape */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden" style={{ height: '60px', transform: 'translateY(1px)' }}>
-        <svg 
-          className="absolute top-0 w-full h-full" 
-          viewBox="0 0 2000 90" 
-          preserveAspectRatio="none"
-          style={{ fill: '#f9f9f9' }}
-        >
-          <polygon points="535.084,64.886 0,0 0,90 2000,90 2000,0" />
-        </svg>
+    
       </div>
     </div>
   );
-}; 
+}

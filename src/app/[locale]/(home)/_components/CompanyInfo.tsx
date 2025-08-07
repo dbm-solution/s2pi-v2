@@ -7,7 +7,7 @@ import { DottedDivider } from "@/components/ui/dotted-divider/DottedDivider";
 export default function CompanyInfo() {
   const { isLoading } = useClientLocale();
   const t = useClientTranslations('home');
-
+  
   // Show loading state while translations are loading
   if (isLoading) {
     return (
@@ -28,7 +28,7 @@ export default function CompanyInfo() {
   const philosophyPoints = t.raw('companyInfo.philosophy.points') || [];
 
   return (
-    <div className="bg-white py-20">
+    <div className="py-20">
       <div className="container-s2pi">
 
         <div className="mb-16">
@@ -45,12 +45,12 @@ export default function CompanyInfo() {
             }}
           >
             {t('companyInfo.title')}
-          </Typography>
+        </Typography>
           <DottedDivider dotCount={50} dotSize={3} dotColor="#b52626" spacing="superTight" />
 
         </div>
 
-
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Column 1 - Company History */}
           <div className="space-y-6">
@@ -67,10 +67,10 @@ export default function CompanyInfo() {
             >
               <strong style={{ fontWeight: 700 }}>{t('companyInfo.history.bold')}</strong> {t('companyInfo.history.text')}
             </Typography>
-
+            
             {/* Industrial facility image */}
             <div className="bg-gray-100 h-48 flex items-center justify-center overflow-hidden">
-              <img
+              <img 
                 src="/images/home-page/10021.jpg"
                 alt={t('companyInfo.images.facility') || 'Installation industrielle S2PI'}
                 className="w-full h-full object-cover"
@@ -101,7 +101,7 @@ export default function CompanyInfo() {
               <DottedDivider dotCount={5} dotSize={2} dotColor="#2d2d2d" spacing="superTight" />
               <Typography variant="h4" className="mb-6  text-center text-[#2d2d2d]">
                 {t('companyInfo.philosophy.title')}
-              </Typography>
+            </Typography>
               <DottedDivider dotCount={5} dotSize={3} dotColor="#2d2d2d" spacing="superTight" />
             </div>
             <ul className="space-y-4 mb-8 text-left">
@@ -187,8 +187,8 @@ export default function CompanyInfo() {
             {/* Bureau Veritas Certification Badge */}
             <div className="flex justify-center">
               <div className="bg-white p-4 rounded-lg shadow-md">
-                <img
-                  src="/images/bureau-veritas-logo.jpg"
+                <img 
+                  src="/images/bureau-veritas-logo.jpg" 
                   alt={t('companyInfo.images.certification') || 'Certification Bureau Veritas ISO 9001:2015'}
                   className="h-20 w-auto"
                 />

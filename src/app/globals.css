@@ -68,7 +68,7 @@
     --s2pi-text-black: #000;       /* Black text */
 
     /* S2PI Background Colors - AUTHENTIC */
-    --s2pi-background-body: #ffffff;  /* White background */
+    --s2pi-background-body: #f9f9f9;  /* Light gray background */
     --s2pi-background-white: #fff;    /* Pure white */
     --s2pi-background-dark: #3e3f3f;  /* Dark background from main.min.css */
     --s2pi-background-gray: #a5a6a7;  /* Gray background */

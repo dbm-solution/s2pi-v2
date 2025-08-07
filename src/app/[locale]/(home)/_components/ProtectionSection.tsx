@@ -8,11 +8,11 @@ export default function ProtectionSection() {
   const t = useClientTranslations('home');
   
   return (
-    <div className="bg-white py-20 scroll-fade-in">
+    <div className="py-20 scroll-fade-in">
       <div className="container-s2pi">
         {/* Main Title */}
         <div className="text-center mb-16">
-          <h2 style={{
+          <h2 className='scroll-fade-in' style={{
             fontSize: '36px',
             color: '#565656',
             lineHeight: '46px',
