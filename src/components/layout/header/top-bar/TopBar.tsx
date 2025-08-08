@@ -7,6 +7,7 @@ import { LanguageSelector } from '@/components/ui/language-selector/language-sel
 import { changeLanguage } from '@/lib/actions/locale';
 import type { Language } from '@/content/data/languages';
 import styles from './TopBar.module.css';
+import EnquetteButton from '@/components/ui/buttons/enquette/enquette.button';
 
 interface TopBarProps {
   locale?: string;
@@ -105,12 +106,19 @@ export default function TopBar({ locale = 'fr', isSticky = false }: TopBarProps)
             </Link>
 
             {/* Enquête Button */}
+
+            <EnquetteButton 
+               href="/enquete-de-satisfaction" 
+               variant="standard"
+               hoverStyle={{ backgroundColor: '#a01f1f' }}
+                />
+{/* 
             <Link
               href="/enquete-de-satisfaction"
               className={styles.enqueteButton}
             >
               ENQUÊTE
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

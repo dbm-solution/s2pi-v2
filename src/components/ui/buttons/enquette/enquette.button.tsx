@@ -7,6 +7,8 @@ export interface EnquetteButtonProps {
   variant?: 'topbar' | 'standard' | 'large' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  style?: React.CSSProperties;
+  hoverStyle?: React.CSSProperties;
   children?: React.ReactNode;
   icon?: React.ReactNode;
   target?: '_blank' | '_self';
@@ -35,6 +37,8 @@ export default function EnquetteButton({
   variant = 'topbar',
   size = 'md',
   className = '',
+  style,
+  hoverStyle,
   children,
   icon,
   target = '_self',
@@ -56,6 +60,32 @@ export default function EnquetteButton({
 
   // Default icon
   const defaultIcon = <span className={styles.defaultIcon}>❤</span>;
+
+  // Hover event handlers
+  const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
+    if (hoverStyle && !disabled) {
+      // Store original styles before applying hover
+      const element = e.currentTarget as HTMLElement;
+      if (!element.dataset.originalStyles) {
+        element.dataset.originalStyles = JSON.stringify({
+          backgroundColor: element.style.backgroundColor || '',
+          color: element.style.color || '',
+          border: element.style.border || ''
+        });
+      }
+      Object.assign(element.style, hoverStyle);
+    }
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
+    if (hoverStyle && !disabled) {
+      const element = e.currentTarget as HTMLElement;
+      if (element.dataset.originalStyles) {
+        const originalStyles = JSON.parse(element.dataset.originalStyles);
+        Object.assign(element.style, originalStyles);
+      }
+    }
+  };
 
   // Combine classes
   const buttonClasses = [
@@ -85,6 +115,9 @@ export default function EnquetteButton({
         disabled={disabled}
         title={title}
         type="button"
+        style={style}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         {buttonContent}
       </button>
@@ -99,6 +132,9 @@ export default function EnquetteButton({
       rel={rel}
       className={buttonClasses}
       title={title}
+      style={style}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {buttonContent}
     </Link>
