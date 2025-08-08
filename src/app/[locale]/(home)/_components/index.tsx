@@ -9,6 +9,7 @@ import QualityControl  from './QualityControl';
 import  ProtectionSection   from './ProtectionSection';     
 import { S2PILayerSlider } from '@/components/ui/slider/hero-slider/S2PILayerSlider';
 import { useAutoScrollAnimation } from '@/hooks/use-scroll-animation';
+import Parallex from './Parallex';
 
 interface HomeContentProps {
   locale: string;
@@ -25,6 +26,7 @@ export default function HomeContent({ locale }: HomeContentProps) {
       <CompanyInfo />
       <QualityControl />
       <ProtectionSection />
+      <Parallex />
     </ClientTranslationProvider>
   );
 }
