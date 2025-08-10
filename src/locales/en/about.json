@@ -1,15 +1,68 @@
 {
   "title": "A COMPANY THAT LISTENS TO YOU",
   "introduction": {
-    "paragraph1": "S2PI was founded in 2014...",
-    "paragraph2": "S2PI is the second leading player..."
+    "left": {
+      "bolder": "The company S2PI was founded in 2014. ",
+      "text": "It is a manufacturer of insulation materials based on slag wool intended for the thermal, acoustic, and fire protection insulation market of horizontal surfaces such as floors. This spraying market has been traditional for more than 80 years."
+    },
+    "right": "S2PI is the second largest player and represents about one-third of the market, or 20 million m² of insulated surfaces by spraying. S2PI also distributes products such as insulating panels intended for fire protection as well as intumescent paint."
   },
   "commitments": {
-    "title": "S2PI's key commitments to its clients:",
+    "title": "The major commitments of S2PI towards its clients:",
     "items": [
-      "An ISO 9001 certified company...",
-      "High-quality products...",
-      "A commitment to meeting deadlines..."
+      "A company certified ISO 9001 to guarantee the consistency of manufacturing and quality of products made and distributed by S2PI.",
+      "Quality products for companies with zero machine breakdowns.",
+      "A commitment to respect delivery deadlines.",
+      "Products made in France.",
+      "Qualified products whose performances are validated by test reports and certifications issued by independent third-party organizations.",
+      "Products meeting regulatory requirements in thermal, acoustic, fire safety, environmental, and health areas.",
+      "Products whose performances are eligible for aids and subsidies, notably for CEE, MaPrimeRénov...",
+      "Products whose environmental and health performances are evaluated to support public policies on these subjects."
     ]
+  },
+  "environmental": {
+    "left": "S2PI's commitments and development are also linked to environmental policies. Since the Grenelle laws and LTECV (Energy Transition Law for Green Growth), the need to offer the market complete insulation solutions for both new construction and renovation, reliable in terms of performance achieved on site and practical for companies, has become obvious. This was further confirmed by the Climate and Resilience law.",
+    "right": "In this context of both energy efficiency and safety of people regarding fire safety, S2PI decided to invest in developing products and processes combining thermal performance and fire safety while considering professionals' requirements for rapid learning of implementation and guaranteed, verifiable results."
+  },
+  "associations": {
+    "title": "S2PI is a member of associations and unions whose messages and convictions it shares",
+    "subtitle": "",
+    "items": {
+      "gtfi": {
+        "title": "FRENCH TECHNICAL GROUP AGAINST FIRE",
+        "subtitle": "GTFI",
+        "description": "The GTFI: FRENCH TECHNICAL GROUP AGAINST FIRE whose main mission is to promote passive fire protection and engage in actions.",
+        "points": [
+          "Represent professionals in passive fire protection",
+          "Contribute to the development of techniques, products, and applications to improve the fire behavior of materials and promote fire protection professions.",
+          "Be a driving force with public authorities and official bodies during the drafting of regulatory, normative, and European evolutions.",
+          "Help its members implement standards and legislation to enable them to adapt and master the evolution of their products.",
+          "Establish links with testing laboratories, technical centers, design offices, and control bodies to foster technological partnerships and studies on fire-classified products and materials.",
+          "Participate in drafting documents such as DTUs and professional rules or guides to develop quality products and services compliant with European standards and national regulations.",
+          "Enable its members to be at the heart of a unique information network and sharing of experience and expertise in their fire protection profession.",
+          "Strengthen the profession's image through information and communication actions: event organization"
+        ]
+      },
+      "sni": {
+        "title": "NATIONAL INSULATION SYNDICATE",
+        "subtitle": "SNI",
+        "description": "The SNI: National Insulation Syndicate which brings together consolidated expertise for more than 80 years, is a professional organization whose social purpose is to promote the professional insulation sector (thermal and acoustic) in France and Europe and to support its members in technical, legal, and social areas.",
+        "points": [
+          "The SNI currently brings together nearly 200 members divided into three colleges: companies, manufacturers/distributors, and associates (training organizations, legal experts, etc.) who each contribute their skills to enhance their professions both in industry and in the building sector.",
+          "Represented before ministries, in normalization commissions, qualification and certification committees, the SNI is a privileged actor to propose and provide global solutions such as acoustic performance, energy savings, and CO2 emission reduction.",
+          "The SNI today promotes seven complementary professions."
+        ]
+      },
+      "symbiote": {
+        "title": "SYMBIOTE MOVEMENT",
+        "subtitle": "SYMBIOTE",
+        "description": "The SYMBIOTE MOVEMENT (Multi-Branch Syndicate of Industries and Operators of the Energy Transition) is a group of actors committed to a controlled and quality energy transition. The movement pursues a single ambition: to allow the greatest number of people to benefit from energy-saving work.",
+        "points": [
+          "Promote and democratize all existing aid schemes.",
+          "Training, a major challenge for renovation energy actors",
+          "Environmental challenges, the recovery plan, the roadmap for energy renovation, and France's commitments to reduce energy consumption require that the renovation sector structures itself, invests in the skills development of its actors, and defines criteria for requirements and quality."
+        ]
+      }
+    }
   }
 }

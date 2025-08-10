@@ -19,7 +19,7 @@ export default function Footer({ locale = 'fr' }: FooterProps) {
             {/* Logo and Company Info */}
             <div className={styles.logoSection}>
               <Image
-                src="/images/Logo-S2PI.png"
+                src="/images/side-bar/Logo-S2PI.png"
                 width={280}
                 height={90}
                 alt="S2PI - Société de Production de Produits Isolants"

@@ -5,9 +5,10 @@ import { LANGUAGE_CONFIG } from "@/lib/i18n/config";
 import "./globals.css";
 
 const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'], // 300 = Light, 700 = Bold
+  variable: '--font-roboto',
+  display: 'swap',
 });
 
 const oswald = Oswald({

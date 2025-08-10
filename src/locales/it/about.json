@@ -1,23 +1,68 @@
 {
-  "title": "UN'AZIENDA AL TUO SERVIZIO",
+  "title": "UN'AZIENDA CHE TI ASCOLTA",
   "introduction": {
-    "paragraph1": "La società S2PI è stata fondata nel 2014...",
-    "paragraph2": "S2PI è il secondo attore..."
+    "left": {
+      "bolder": "L'azienda S2PI è stata fondata nel 2014. ",
+      "text": "È un produttore di isolanti a base di lana di scorie destinati al mercato dell'isolamento termico, acustico e della protezione antincendio delle superfici orizzontali come i pavimenti. Questo mercato della spruzzatura è tradizionale da più di 80 anni."
+    },
+    "right": "S2PI è il secondo attore più importante e rappresenta circa un terzo del mercato, ovvero 20 milioni di m² di superfici isolate tramite spruzzatura. S2PI distribuisce anche prodotti come pannelli isolanti destinati alla protezione antincendio e vernici intumescenti."
   },
   "commitments": {
     "title": "I principali impegni di S2PI verso i suoi clienti:",
     "items": [
-      "Un'azienda certificata ISO 9001...",
-      "Prodotti di qualità...",
-      "Un impegno nel rispetto delle scadenze..."
+      "Un'azienda certificata ISO 9001 per garantire la costanza nella produzione e nella qualità dei prodotti realizzati e distribuiti da S2PI.",
+      "Prodotti di qualità per aziende con zero guasti alle macchine.",
+      "Impegno a rispettare i tempi di consegna.",
+      "Prodotti realizzati in Francia.",
+      "Prodotti qualificati le cui prestazioni sono validate da rapporti di prova e certificazioni rilasciate da organismi terzi indipendenti.",
+      "Prodotti che soddisfano i requisiti normativi in ambito termico, acustico, sicurezza antincendio, ambiente e salute.",
+      "Prodotti le cui prestazioni sono idonee ad accedere a incentivi e sovvenzioni, in particolare per CEE, MaPrimeRénov...",
+      "Prodotti le cui prestazioni ambientali e sanitarie sono valutate per supportare le politiche pubbliche su questi temi."
     ]
   },
-  "philosophy": {
-    "points": [
-      "Offrire ai nostri clienti un impegno di qualità e prestazioni per i nostri prodotti",
-      "I nostri prodotti sul mercato sono certificati",
-      "Rispettare i tempi di consegna",
-      "Produzione dei nostri prodotti in Italia e garanzia della stabilità della qualità, la società è certificata ISO 9001"
-    ]
+  "environmental": {
+    "left": "Gli impegni e lo sviluppo di S2PI sono anche legati alle politiche ambientali. Dalle leggi Grenelle e LTECV (Legge sulla Transizione Energetica per la Crescita Verde), la necessità di proporre al mercato soluzioni complete di isolamento sia per il nuovo che per la ristrutturazione, affidabili nelle prestazioni realizzate in loco e pratiche per le aziende, è diventata ovvia. Ciò è stato ulteriormente confermato dalla legge Clima e Resilienza.",
+    "right": "In questo contesto di efficienza energetica e sicurezza delle persone in materia di sicurezza antincendio, S2PI ha deciso di investire nello sviluppo di prodotti e processi che combinano prestazioni termiche e sicurezza antincendio, tenendo conto delle esigenze dei professionisti per un rapido apprendimento dell'applicazione e risultati garantiti e verificabili."
+  },
+  "associations": {
+    "title": "S2PI è membro di associazioni e sindacati i cui messaggi e convinzioni condivide",
+    "subtitle": "",
+    "items": {
+      "gtfi": {
+        "title": "GRUPPO TECNICO FRANCESE CONTRO GLI INCENDI",
+        "subtitle": "GTFI",
+        "description": "Il GTFI: GRUPPO TECNICO FRANCESE CONTRO GLI INCENDI, la cui missione principale è promuovere la protezione passiva contro l'incendio e impegnarsi in azioni.",
+        "points": [
+          "Rappresentare i professionisti della protezione passiva contro l'incendio",
+          "Contribuire allo sviluppo di tecniche, prodotti e applicazioni per migliorare il comportamento al fuoco dei materiali e promuovere le professioni della protezione antincendio.",
+          "Essere una forza propositiva presso le autorità pubbliche e gli organismi ufficiali durante l'elaborazione di normative, regolamenti e evoluzioni europee.",
+          "Aiutare i propri aderenti a implementare norme e legislazioni per consentire loro di adattare e padroneggiare l'evoluzione dei loro prodotti.",
+          "Stabilire collegamenti con laboratori di prova, centri tecnici, studi di progettazione e organismi di controllo per favorire partenariati tecnologici e studi su prodotti e materiali classificati al fuoco.",
+          "Partecipare alla redazione di documenti quali DTU e regole o guide professionali per sviluppare prodotti e servizi di qualità conformi alle norme europee e alle regolamentazioni nazionali.",
+          "Consentire ai propri aderenti di essere al centro di una rete unica di informazioni e condivisione di esperienze e competenze nella loro professione della protezione antincendio.",
+          "Rafforzare l'immagine della professione attraverso azioni di informazione e comunicazione: organizzazione di eventi"
+        ]
+      },
+      "sni": {
+        "title": "SINDACATO NAZIONALE DELL'ISOLAMENTO",
+        "subtitle": "SNI",
+        "description": "Il SNI: Sindacato Nazionale dell'Isolamento, che riunisce un'esperienza consolidata da oltre 80 anni, è un'organizzazione professionale il cui scopo sociale è promuovere il settore professionale dell'isolamento termico e acustico in Francia e in Europa e supportare i suoi membri in ambito tecnico, legale e sociale.",
+        "points": [
+          "Il SNI riunisce attualmente quasi 200 membri suddivisi in tre collegi: aziende, produttori/distributori e associati (organismi di formazione, esperti legali, ecc.) che apportano ciascuno le proprie competenze per valorizzare le loro professioni sia nell'industria che nel settore edilizio.",
+          "Rappresentato presso i ministeri, nelle commissioni di normazione, nei comitati di qualificazione e certificazione, il SNI è un attore privilegiato per proporre e fornire soluzioni globali quali prestazioni acustiche, risparmio energetico e riduzione delle emissioni di CO2.",
+          "Il SNI promuove oggi sette professioni complementari."
+        ]
+      },
+      "symbiote": {
+        "title": "MOVIMENTO SYMBIOTE",
+        "subtitle": "SYMBIOTE",
+        "description": "Il MOVIMENTO SYMBIOTE (Sindacato Multi-Rami delle Industrie e Operatori della Transizione Energetica) è un gruppo di attori impegnati per una transizione energetica controllata e di qualità. Il movimento persegue un'unica ambizione: permettere al maggior numero di persone di beneficiare di lavori per il risparmio energetico.",
+        "points": [
+          "Valorizzare e democratizzare tutti i dispositivi di aiuto esistenti.",
+          "La formazione, una sfida importante per gli attori della ristrutturazione energetica",
+          "Le sfide ambientali, il piano di rilancio, la tabella di marcia per la ristrutturazione energetica e gli impegni della Francia per ridurre i consumi energetici richiedono che il settore della ristrutturazione si strutturi, investa nello sviluppo delle competenze dei suoi attori e definisca criteri di requisiti e qualità."
+        ]
+      }
+    }
   }
 }

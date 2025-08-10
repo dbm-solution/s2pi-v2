@@ -23,25 +23,23 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children, showSidebar = 
         isMobileMenuOpen={isMobileMenuOpen}
       />
 
+
       {/* Mobile Menu */}
       {/* <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} /> */}
 
-      <div id="main" className={`${styles.main} ${showSidebar ? styles.sidebarRight : ''} ${styles.sidebarDividerVertical}`}>
-        <div className={styles.mainGradient}></div>
+      <div id="main" className={`${styles.main} `}>
         <div className={styles.wfWrap}>
           <div className={styles.wfContainerMain}>
 
             {/* Main Content */}
-            <div id="content" className={`${styles.content} content`} role="main">
+            <div id="content" className={`${styles.content}`} role="main">
               {children}
             </div>
 
             {/* Sidebar */}
             {showSidebar && (
-              <aside id="sidebar" className={`${styles.sidebar} sidebar`}>
-                <div className={styles.sidebarContent}>
-                  <Sidebar />
-                </div>
+              <aside id="sidebar" className={styles.sidebar}>
+                <Sidebar />
               </aside>
             )}
 
