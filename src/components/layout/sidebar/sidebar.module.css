@@ -1,25 +1,45 @@
 /* S2PI Sidebar Styles - Following original structure */
+.sidebar {
+  box-sizing: border-box;
+  display: block;
+  height: auto; /* Changed from fixed height to auto */
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Changed to 100% to fill parent container */
+}
+
 .sidebarContent {
-  color: #232323;
+  color: rgb(35, 35, 35);
   font-size: 17px;
   font-weight: 300;
   line-height: 31px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", Helvetica, Arial, Verdana, sans-serif;
+  background-color: transparent;
+  text-size-adjust: 100%;
+  text-transform: none;
+  word-spacing: 0px;
+  letter-spacing: normal;
+  padding-left: 35px; /* Move padding here */
+  padding-right: 0;
+  padding-top: 0; /* Ensure no top padding */
+  padding-bottom: 0;
 }
 
 /* Widget Structure */
 .widget {
   margin-bottom: 0;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.3);
+  margin-top: 0; /* Remove top margin */
 }
 
 .widgetMediaImage {
-  padding: 30px 20px 20px 35px;
+  /* padding: 30px 20px 20px 35px; */
   text-align: center;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.3);
   margin-bottom: 0;
+  margin-top: 0; /* Remove top margin */
 }
 
 .widgetText {
@@ -41,8 +61,8 @@
 
 /* Text Widget Content */
 .textwidget {
-  padding: 25px 35px 25px 35px;
-  background-color: #ffffff;
+  padding: 25px 0;
+
 }
 
 /* Logo Section */
@@ -136,7 +156,7 @@
 
 /* Widget Spacing Adjustments */
 .widget:first-child {
-  margin-top: 30px;
+  margin-top: 0; /* Remove the 30px top margin from first widget */
 }
 
 .widget:last-child {
@@ -153,9 +173,6 @@
     padding: 30px 20px 20px 20px;
   }
 
-  .textwidget {
-    padding: 20px 25px;
-  }
 
   .widgetTitle {
     margin: 0 -20px 20px -20px;

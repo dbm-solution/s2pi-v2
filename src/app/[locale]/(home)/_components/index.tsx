@@ -1,4 +1,3 @@
-// src/app/[locale]/(home)/_components/index.tsx
 "use client";
 
 import { ClientTranslationProvider } from '@/components/providers/ClientTranslationProvider';
@@ -16,7 +15,6 @@ interface HomeContentProps {
 }
 
 export default function HomeContent({ locale }: HomeContentProps) {
-  // Initialize scroll animations for all scroll animation classes
   useAutoScrollAnimation();
 
   return (

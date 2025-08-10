@@ -1,0 +1,165 @@
+.wrapper {
+  position: relative;
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--slider-radius, 8px);
+  height: var(--slider-height, 492px);
+  width: 100%;
+}
+
+.clickArea {
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.zoomOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Allow clicks to pass through to the image */
+}
+
+.clickArea:hover .zoomOverlay {
+  opacity: 1;
+}
+
+.zoomIcon {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #b52626;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 1; /* Always visible */
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #d63333; /* Subtle lighter red on hover */
+}
+
+.arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.arrowLeft { 
+  left: -45px; /* Move outside the image */
+}
+
+.arrowRight { 
+  right: -45px; /* Move outside the image */
+}
+
+/* Navigation dots */
+.dotsContainer {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dot:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.dotActive {
+  background-color: #b52626;
+}
+
+.titleWrap {
+  display: none; /* Hide title in regular mode */
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1f2937; /* gray-800 */
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .arrowLeft { 
+    left: -18px; /* Adjust for smaller arrow size on mobile */
+  }
+  
+  .arrowRight { 
+    right: -18px; /* Adjust for smaller arrow size on mobile */
+  }
+  
+  .dotsContainer {
+    bottom: 8px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}

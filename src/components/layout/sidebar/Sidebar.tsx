@@ -9,6 +9,10 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
   return (
+
+    <div className={styles.sidebar}>
+
+    
     <div className={`${styles.sidebarContent} ${className}`}>
       
       {/* Logo Section */}
@@ -117,6 +121,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
         </div>
       </section>
 
+    </div>
     </div>
   )
 }

@@ -1,4 +1,9 @@
 /* S2PI Header - Exact styling from specifications */
+
+/* =============================================================================
+   DESKTOP STYLES (DEFAULT - 1024px+)
+   ============================================================================= */
+
 /* Very subtle, imperceptible transition */
 .masthead {
   position: relative;
@@ -6,8 +11,8 @@
   background: var(--s2pi-background-white);
   width: 100%;
   display: block;
-  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.15);
   transition: all 0.2s ease-out;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.538);
 }
 
 /* Sticky mode styling - nav appears directly at top */
@@ -43,8 +48,10 @@
   z-index: 90;
   display: block;
   width: 100%;
-  max-width: 1300px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
+  /* box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.15); */
+  background-image: url("/images/header/halftone-dark.png");
 }
 
 .headerMainSticky {
@@ -188,11 +195,32 @@
   border-radius: 1px;
 }
 
-/* Responsive Design */
-@media (max-width: 1050px) {
-  .headerMain {
-    padding: 15px 0;
-  }
+/* Hover effects */
+.logoLink:hover .logoImage {
+  opacity: 0.9;
+}
+
+.badgeImage:hover {
+  opacity: 0.9;
+}
+
+/* Loading state for images */
+.logoImage,
+.badgeImage {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logoImage[data-loading="true"],
+.badgeImage[data-loading="true"] {
+  opacity: 0.7;
+}
+
+/* =============================================================================
+   TABLET STYLES (768px - 1023px)
+   ============================================================================= */
+
+@media (max-width: 1023px) {
+
   
   .leftSection {
     gap: 15px;
@@ -208,10 +236,12 @@
   }
 }
 
-@media (max-width: 778px) {
-  .headerMain {
-    padding: 10px 0;
-  }
+/* =============================================================================
+   MOBILE STYLES (0 - 767px)
+   ============================================================================= */
+
+@media (max-width: 767px) {
+
   
   .headerContent {
     height: 60px;
@@ -244,11 +274,10 @@
   .mobileMenuToggle {
     display: flex;
   }
-}
 
-@media (max-width: 640px) {
-  .headerMain {
-    padding: 8px 0;
+  /* Smaller mobile adjustments */
+  .logoImage {
+    max-width: 160px;
   }
   
   .headerContent {
@@ -258,10 +287,6 @@
   .stickyMode .headerContent {
     height: 0;
     opacity: 0;
-  }
-  
-  .logoImage {
-    max-width: 160px;
   }
   
   .mobileMenuToggle {
@@ -274,6 +299,10 @@
     height: 2px;
   }
 }
+
+/* =============================================================================
+   INTERACTIVE STATES & ANIMATIONS
+   ============================================================================= */
 
 /* Mobile menu open state */
 .mobileMenuToggle[aria-expanded="true"] .hamburger:nth-child(1) {
@@ -288,30 +317,14 @@
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Accessibility */
+/* =============================================================================
+   ACCESSIBILITY & SPECIAL STATES
+   ============================================================================= */
+
+/* Focus states */
 .mobileMenuToggle:focus {
   outline: 2px solid var(--s2pi-red);
   outline-offset: 2px;
-}
-
-/* Loading state for images */
-.logoImage,
-.badgeImage {
-  transition: opacity 0.3s ease-in-out;
-}
-
-.logoImage[data-loading="true"],
-.badgeImage[data-loading="true"] {
-  opacity: 0.7;
-}
-
-/* Hover effects */
-.logoLink:hover .logoImage {
-  opacity: 0.9;
-}
-
-.badgeImage:hover {
-  opacity: 0.9;
 }
 
 /* Print styles */

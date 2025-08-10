@@ -14,19 +14,15 @@
   
   /* Background styling - correct path */
   background-image: url('/images/backgrounds/s2pi-fond-05.jpg');
-  background-repeat: repeat;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: right top;
   background-size: auto;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
-.sidebarRight {
-  /* Main content with sidebar on the right */
-}
 
-.sidebarDividerVertical {
-  /* Vertical divider styling */
-}
+
+
 
 .mainGradient {
   position: absolute;
@@ -51,8 +47,7 @@
 
 .wfContainerMain {
   display: flex;
-  gap: 30px;
-  align-items: flex-start;
+  align-items: flex-start; /* Ensure top alignment */
 }
 
 /* Main Content - S2PI Original Style */
@@ -60,39 +55,31 @@
   flex: 1;
   min-height: 500px;
   position: relative;
-  }
+  margin-top: 0; /* Ensure no top margin */
+  padding-top: 0; /* Ensure no top padding */
+}
 
 /* Sidebar - S2PI Original Style */
 .sidebar {
   width: 231.5px;
-  flex-shrink: 0;
   position: relative;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-left: 1px solid rgba(224, 224, 224, 0.5); /* Add left border */
 }
 
 .sidebarContent {
-  position: relative;
   z-index: 1;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* 
 .wfFloatLeft a {
   color: #95a5a6;
   text-decoration: none;
   margin: 0 5px;
-}
+} */
 
 .wfFloatLeft a:hover {
   color: white;
@@ -135,7 +122,6 @@
 
   .wfContainerMain {
     flex-direction: column;
-    gap: 20px;
   }
 
   .content {
